@@ -1,5 +1,5 @@
 // Reports stay on the student's device until they choose to send an email.
-export const PILOT_VERSION='0.3.0';
+export const PILOT_VERSION='0.5.0';
 export function reportRecipient(value){return typeof value==='string'&&/^[^\s@<>,;?&#]+@[^\s@<>,;?&#]+\.[^\s@<>,;?&#]+$/.test(value.trim())?value.trim():'';}
 export function questionReport(q,entry,{issue='',bankVersion='',pageUrl='',email=''}={}){
  let link='Offline preview';
@@ -14,7 +14,7 @@ export function questionReport(q,entry,{issue='',bankVersion='',pageUrl='',email
  const score=entry.result?`${entry.result.score}/${q.maxMarks}${entry.result.selfAssessedMarks!==null&&entry.result.selfAssessedMarks!==undefined?' (self-assessed)':''}; ${entry.result.ecfMarks||0} error carried forward marks`:entry.phase==='self-assess'?'Awaiting self-assessment':'Not marked yet';
  const subject=`Question report: ${q.id} — ${q.title}`;
  const body=[
-  'Question report — AAQ Applied Science Physics',`Question code: ${q.id}`,`Question: ${q.title}`,`Pilot version: ${PILOT_VERSION}`,`Bank version: ${bankVersion}`,`Question version: ${q.contentVersion}`,`Link: ${link}`,
+  'Question report — AAQ Applied Science Physics',`Question code: ${q.id}`,`Question: ${q.title}`,`App version: ${globalThis.window?.AAQ_BUILD?.label||PILOT_VERSION}`,`Bank version: ${bankVersion}`,`Question version: ${q.contentVersion}`,`Link: ${link}`,
   '', 'Problem noticed:',String(issue).trim()||'[Describe the problem here]',
   '', 'Question wording:',q.prompt,
   '', 'My answer:',answers.join('\n\n'),

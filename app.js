@@ -1,6 +1,6 @@
-import {selectSession,eligibility,seededRandom,markQuestion,beginSelfAssessment,recordSelfScore,formatNumber} from './pilot-core.mjs';
-import {KEYS,copy,createStore,questionKey,addAttempt,sessionStats,validateSession} from './state.mjs';
-import {questionReport,reportRecipient} from './report.mjs';
+import {selectSession,eligibility,seededRandom,markQuestion,beginSelfAssessment,recordSelfScore,formatNumber} from './pilot-core.mjs?v=r-4ef47b0d0f64362951b1';
+import {KEYS,copy,createStore,questionKey,addAttempt,sessionStats,validateSession} from './state.mjs?v=r-4ef47b0d0f64362951b1';
+import {questionReport,reportRecipient} from './report.mjs?v=r-4ef47b0d0f64362951b1';
 
 const $=selector=>document.querySelector(selector),$$=selector=>[...document.querySelectorAll(selector)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -11,14 +11,16 @@ const defaults={schema:1,lessons:[],types:[...types],celebrations:true,sound:fal
 const S={bank:null,map:null,prefs:null,progress:null,session:null,parked:null,view:'setup',seed:Date.now()>>>0,plan:null,assetCache:{},dialogFocus:null,archiveView:null,reportEmail:''};
 let native;try{native=window.localStorage;}catch{}
 const storage=createStore(native,message=>{if($('#storage-note'))$('#storage-note').textContent=message;});
-const titleFor=id=>S.map.lessons.find(l=>l.id===id)?.title||id;
+const titleFor=id=>wavesTopics().find(t=>t.ids.includes(id))?.title||S.map.lessons.find(l=>l.id===id)?.title||id;
 const qRecord=q=>S.progress.records[questionKey(q)];
 const hasActive=()=>S.session&&!S.session.finished;
 const current=()=>S.session?.questions[S.session.index];
 function save(){
- storage.set(KEYS.prefs,S.prefs);storage.set(KEYS.progress,S.progress);
- storage.set(KEYS.active,{schema:1,current:S.session,parked:S.parked,view:S.view});
+ const prefsSaved=storage.set(KEYS.prefs,S.prefs),progressSaved=storage.set(KEYS.progress,S.progress);
+ const draftSaved=storage.set(KEYS.active,{schema:1,current:S.session,parked:S.parked,view:S.view});
+ return prefsSaved&&progressSaved&&draftSaved;
 }
+window.addEventListener('revision:before-update',event=>{if(S.bank&&S.progress&&!save())event.preventDefault();});
 function announce(message){const host=$('#live-status');if(!host)return;host.textContent='';queueMicrotask(()=>{if(host.isConnected)host.textContent=message;});}
 function focusHeading(selector='h1'){
  const el=app().querySelector(selector);if(!el)return;el.setAttribute('tabindex','-1');el.focus({preventScroll:true});
@@ -32,7 +34,14 @@ function renderShell(view){
  document.documentElement.style.setProperty('--session-bar-space','0px');
 }
 function button(text,id,cls='btn'){return `<button type="button" class="${cls}" id="${esc(id)}">${text}</button>`;}
-function previewLabel(){return '<p class="pilot-label">Waves pilot · Teacher preview</p>';}
+function wavesTopics(){
+ const grouped=new Map();
+ for(const l of S.map.lessons.filter(l=>l.topic==='Waves'))(grouped.get(l.group)||grouped.set(l.group,[]).get(l.group)).push(l);
+ return [...grouped].map(([group,ls])=>({id:group==='Total Internal Reflection'?'WA12':group==='Uses of Waves'?'WA16':ls[0].id,title:group==='Total Internal Reflection'?'Optical Fibres':group,ids:ls.map(l=>l.id),description:group==='Total Internal Reflection'?'Refraction, critical angle, total internal reflection and fibre applications.':group==='Uses of Waves'?'Electromagnetic spectrum, analogue and digital signals, and communication.':''}));
+}
+function syncTopicRows(){
+ $$('[data-lesson]').forEach(input=>{const ids=JSON.parse(input.dataset.lessonIds),count=ids.filter(id=>S.prefs.lessons.includes(id)).length;input.checked=count===ids.length;input.indeterminate=count>0&&count<ids.length;});
+}
 function matchingBank({mistakes=false}={}){
  return {...S.bank,questions:S.bank.questions.filter(q=>S.prefs.types.includes(q.interaction)&&(!mistakes||needsReview(q)))};
 }
@@ -46,9 +55,9 @@ function bindDisclosures(){
  $$('[data-disclosure]').forEach(el=>el.addEventListener('toggle',()=>{S.prefs.disclosures[el.dataset.disclosure]=el.open;save();}));
 }
 function lessonRow(l){
- const direct=S.bank.questions.filter(q=>q.primaryLessonId===l.id&&S.prefs.types.includes(q.interaction));
+ const direct=S.bank.questions.filter(q=>l.ids.includes(q.primaryLessonId)&&S.prefs.types.includes(q.interaction));
  const count=direct.length;
- return `<label class="lesson-row"><input type="checkbox" data-lesson="${esc(l.id)}" ${S.prefs.lessons.includes(l.id)?'checked':''}><span>${esc(l.title)}<small>${count?`${count} sample ${count===1?'question':'questions'}`:'No matching question types'}${direct.some(q=>q.requiredLessonIds.length>1)?' · some need other lessons':''}</small></span></label>`;
+ return `<label class="lesson-row"><input type="checkbox" data-lesson="${esc(l.id)}" data-lesson-ids="${esc(JSON.stringify(l.ids))}"><span>${esc(l.title)}${l.description?`<small>${esc(l.description)}</small>`:''}<small>${count?`${count} ${count===1?'question':'questions'}`:'No matching question types'}${direct.some(q=>q.requiredLessonIds.some(id=>!l.ids.includes(id)))?' · some need other topics':''}</small></span></label>`;
 }
 function resumeActions(){
  let html='';
@@ -58,25 +67,25 @@ function resumeActions(){
 }
 function showSetup(){
  renderShell('setup');
- const groups=new Map();for(const l of S.map.lessons.filter(l=>l.topic==='Waves'))(groups.get(l.group)||groups.set(l.group,[]).get(l.group)).push(l);
- app().innerHTML=`<section class="card setup-page">${previewLabel()}<header class="page-heading"><h1>Choose your topics</h1><p>Select lessons you have studied.</p></header>
+ app().innerHTML=`<section class="card setup-page"><header class="page-heading"><h1>Choose your topics</h1><p>Select topics you have studied.</p></header>
  <details class="module-section" ${disclosureAttrs('waves',true)}><summary><span>Waves</span><span class="module-selected" id="waves-selected"></span></summary>
  <div class="topic-tools">${button('Select all Waves','select-all','btn text-button')}${button('Clear selection','select-none','btn text-button')}</div>
- ${[...groups.entries()].map(([g,ls])=>ls.length===1?lessonRow(ls[0]):`<details class="lesson-subgroup" ${disclosureAttrs(g)}><summary>${esc(g)}</summary>${ls.map(lessonRow).join('')}</details>`).join('')}</details>
- <div class="planned-topic"><strong>Forces</strong><span>Questions coming later</span></div><div class="planned-topic"><strong>Electricity</strong><span>Questions coming later</span></div>
+ <div class="wave-topic-list">${wavesTopics().map(lessonRow).join('')}</div></details>
+ <details class="module-section" ${disclosureAttrs('forces')}><summary><span>Forces</span><span class="module-selected">Coming later</span></summary><p class="small-note">Questions for this unit are not available yet.</p></details>
+ <details class="module-section" ${disclosureAttrs('electricity-energy')}><summary><span>Electricity and Energy</span><span class="module-selected">Coming later</span></summary><p class="small-note">Questions for this unit are not available yet.</p></details>
  <details class="practice-settings" ${disclosureAttrs('settings')}><summary>Practice settings</summary><h2>Question types</h2><div class="settings-options">${types.map(t=>`<label><input type="checkbox" data-type="${t}" ${S.prefs.types.includes(t)?'checked':''}>${labels[t]}</label>`).join('')}</div>
  <label class="topic"><input type="checkbox" id="effects-pref" ${S.prefs.celebrations?'checked':''}><span>Celebration effects<span class="topic-code">Reduced-motion preferences are respected.</span></span></label>
- <label class="topic"><input type="checkbox" id="sound-pref" ${S.prefs.sound?'checked':''}><span>Party-blower sound<span class="topic-code">Perfect sessions only · off by default.</span></span></label>
  <p class="small-note">Sessions target 20 available marks and an equal number of recall and application questions. Your selected lessons determine what is available.</p>
- <details ${disclosureAttrs('teacher-review')}><summary>Teacher question review</summary><p class="small-note">Open a single draft question to check its content and marking.</p><label for="review-question">Question</label><select class="review-select" id="review-question">${S.bank.questions.map(q=>`<option value="${q.id}">${q.id} · ${esc(q.title)}</option>`).join('')}</select>${button('Open question','open-review','btn secondary')}<div class="celebration-preview-controls"><h3>Celebration previews</h3><label for="preview-celebration">Effect</label><select class="review-select" id="preview-celebration"><option value="random">Random question celebration</option><option value="comet">Comet parade</option><option value="starburst">Starburst spectacular</option><option value="ribbons">Ribbon carnival</option><option value="orbit">Orbiting stars</option><option value="trophy">Trophy triumph</option><option value="session">Perfect-session finale</option></select>${button('Play celebration','play-celebration','btn secondary')}<p id="celebration-preview-status" class="small-note" role="status"></p></div></details></details>
+ <details ${disclosureAttrs('question-browser')}><summary>Question browser</summary><p class="small-note">Open an individual question without recording a practice score.</p><label for="review-question">Question</label><select class="review-select" id="review-question">${S.bank.questions.map(q=>`<option value="${q.id}">${q.id} · ${esc(q.title)}</option>`).join('')}</select>${button('Open question','open-review','btn secondary')}<div class="celebration-preview-controls"><h3>Celebration previews</h3><label for="preview-celebration">Effect</label><select class="review-select" id="preview-celebration"><option value="random">Random question celebration</option><option value="comet">Comet parade</option><option value="starburst">Starburst spectacular</option><option value="ribbons">Ribbon carnival</option><option value="orbit">Orbiting stars</option><option value="trophy">Trophy triumph</option><option value="session">Perfect-session finale</option></select>${button('Play celebration','play-celebration','btn secondary')}<p id="celebration-preview-status" class="small-note" role="status"></p></div></details></details>
  <div class="session-plan" id="session-plan" aria-live="polite"></div><div id="missing-lessons"></div>
  <div class="setup-actions action-dock">${resumeActions()}${button(hasActive()?'Start a new session':'Start practice','start-practice')}</div>
- <p class="small-note">${S.bank.summary.questionCount} questions · ${S.bank.summary.recallQuestions} recall and ${S.bank.summary.applicationQuestions} application. Draft content for review.</p></section>`;
+ <p class="small-note">${S.bank.summary.questionCount} questions · ${S.bank.summary.recallQuestions} recall and ${S.bank.summary.applicationQuestions} application.</p></section>`;
  bindDisclosures();
- $$('[data-lesson]').forEach(el=>el.onchange=()=>{S.prefs.lessons=$$('[data-lesson]:checked').map(x=>x.dataset.lesson);S.seed=Date.now()>>>0;updatePlan();save();});
+ syncTopicRows();
+ $$('[data-lesson]').forEach(el=>el.onchange=()=>{const ids=JSON.parse(el.dataset.lessonIds),selected=new Set(S.prefs.lessons);for(const id of ids)el.checked?selected.add(id):selected.delete(id);S.prefs.lessons=[...selected];syncTopicRows();S.seed=Date.now()>>>0;updatePlan();save();});
  $('#select-all').onclick=()=>setLessons(S.map.lessons.filter(l=>l.topic==='Waves').map(l=>l.id));$('#select-none').onclick=()=>setLessons([]);
  $$('[data-type]').forEach(el=>el.onchange=()=>{S.prefs.types=$$('[data-type]:checked').map(x=>x.dataset.type);S.seed=Date.now()>>>0;updatePlan();save();});
- $('#effects-pref').onchange=e=>{S.prefs.celebrations=e.target.checked;updateEffects();save();};$('#sound-pref').onchange=e=>{S.prefs.sound=e.target.checked;updateEffects();save();};
+ $('#effects-pref').onchange=e=>{S.prefs.celebrations=e.target.checked;updateEffects();save();};
  $('#open-review').onclick=()=>openSingle($('#review-question').value,'review');$('#start-practice').onclick=()=>startPlan(S.plan,'practice');
  $('#play-celebration').onclick=()=>{
   const played=window.AAQEffects?.preview?.($('#preview-celebration').value);
@@ -84,16 +93,17 @@ function showSetup(){
  };
  bindResume();updatePlan();save();focusHeading();
 }
-function setLessons(ids){S.prefs.lessons=ids;S.seed=Date.now()>>>0;$$('[data-lesson]').forEach(x=>x.checked=ids.includes(x.dataset.lesson));updatePlan();save();}
+function setLessons(ids){S.prefs.lessons=ids;S.seed=Date.now()>>>0;syncTopicRows();updatePlan();save();}
 function updatePlan(){
  S.plan=calculatePlan();const p=S.plan;
- $('#waves-selected').textContent=`${S.prefs.lessons.length} selected`;
+ const topics=wavesTopics(),selectedCount=topics.filter(t=>t.ids.every(id=>S.prefs.lessons.includes(id))).length,partialCount=topics.filter(t=>t.ids.some(id=>S.prefs.lessons.includes(id))&&!t.ids.every(id=>S.prefs.lessons.includes(id))).length;
+ $('#waves-selected').textContent=`${selectedCount} selected${partialCount?` · ${partialCount} partly selected`:''}`;
  const message=!S.prefs.lessons.length?'Select lessons you have studied.':!S.prefs.types.length?'Select at least one question type in Practice settings.':!p.questionCount?'No questions are available yet for this selection. Check the required lessons below.':p.shortPool?`Only ${p.actualMarks} marks are available from these lessons. Start this shorter session or select more lessons.`:'';
  $('#session-plan').innerHTML=`<strong>${p.actualMarks} available marks</strong>${p.questionCount?`<p>${p.questionCount} questions · ${p.recallCount} recall · ${p.applicationCount} application</p>`:''}${message?`<p>${esc(message)}</p>`:''}${p.questionCount&&!p.exactRecallBalance?'<p class="small-note">This selection cannot provide an exact 50/50 recall split at this mark total.</p>':''}`;
  $('#start-practice').disabled=!p.questionCount;
  const missing=new Set(p.blocked.filter(x=>{const q=S.bank.questions.find(q=>q.id===x.id);return S.prefs.lessons.includes(q.primaryLessonId);}).flatMap(x=>x.missingLessonIds));
- $('#missing-lessons').innerHTML=missing.size?`<details><summary>Some questions need other lessons</summary><p>${[...missing].map(titleFor).map(esc).join(', ')}</p>${button('Select these lessons too','add-prerequisites','btn secondary')}</details>`:'';
- if($('#add-prerequisites'))$('#add-prerequisites').onclick=()=>setLessons([...new Set([...S.prefs.lessons,...missing])]);
+ $('#missing-lessons').innerHTML=missing.size?`<aside class="prerequisite-note"><p>Some questions need other topics: ${[...new Set([...missing].map(titleFor))].map(esc).join(', ')}.</p>${button('Select these topics too','add-prerequisites','btn secondary')}</aside>`:'';
+ if($('#add-prerequisites'))$('#add-prerequisites').onclick=()=>setLessons([...new Set([...S.prefs.lessons,...wavesTopics().filter(t=>t.ids.some(id=>missing.has(id))).flatMap(t=>t.ids)])]);
 }
 function bindResume(){if($('#resume-session'))$('#resume-session').onclick=()=>showQuestion();if($('#resume-parked'))$('#resume-parked').onclick=resumeParked;}
 function showDialog(title,content,onBind,returnFocus=document.activeElement){
@@ -125,7 +135,7 @@ function openSingle(id,mode='review'){
 function resumeParked(){if(!S.parked)return;S.session=S.parked;S.parked=null;showQuestion();save();}
 function sessionMenu(){
  const s=sessionStats(S.session);
- return `<details class="session-menu"><summary>Session menu</summary><div class="session-menu-panel"><p class="small">${s.completedMarks}/${s.planned} available marks completed</p>${button('Change topics','menu-topics','btn text-button')}${button('Mistakes','menu-mistakes','btn text-button')}${button('Progress','menu-progress','btn text-button')}${button('Finish session','menu-finish','btn text-button')}</div></details>`;
+ return `<details class="session-menu"><summary>Session menu</summary><div class="session-menu-panel"><p class="small">${s.completedMarks}/${s.planned} available marks completed</p>${button('Change topics','menu-topics','btn text-button')}${button('Mistakes','menu-mistakes','btn text-button')}${button('Progress','menu-progress','btn text-button')}${button('Finish session','menu-finish','btn text-button')}<label class="topic"><input type="checkbox" id="session-sound-pref" ${S.prefs.sound?'checked':''}><span>Party-blower sound<span class="topic-code">Perfect sessions only · off by default.</span></span></label></div></details>`;
 }
 function tableMarkup(t){return `<table class="data-table"><thead><tr>${t.headers.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(row=>`<tr>${row.map((c,i)=>i===0?`<th scope="row">${esc(c)}</th>`:`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;}
 function renderedParts(q,e){return e.mode==='final-answer'?[q.parts.find(p=>p.id===q.unscaffoldedFinalAnswerRoute.partId)]:q.parts;}
@@ -171,9 +181,9 @@ function showQuestion(){
  if(!S.session)return showSetup();
  const q=current(),e=S.session.entries[q.id],stats=sessionStats(S.session);
  renderShell(e.phase==='answering'?'question':'feedback');
- app().innerHTML=`<article class="card question-screen">${previewLabel()}<div class="question-chrome"><div class="question-meta"><span>Question ${S.session.index+1} of ${S.session.questions.length}</span><span>${q.maxMarks} ${q.maxMarks===1?'mark':'marks'}</span><span>${esc(q.id)}</span></div><progress class="session-progress" max="${stats.planned}" value="${stats.completedMarks}" aria-label="Available marks completed"></progress><p class="workload-label">${stats.completedMarks}/${stats.planned} available marks completed${S.session.mode==='review'?' · Individual question review':''}${S.session.mode==='retry'?' · Mistake review':''}</p>${sessionMenu()}</div>
+ app().innerHTML=`<article class="card question-screen"><div class="question-chrome"><div class="question-meta"><span>Question ${S.session.index+1} of ${S.session.questions.length}</span><span>${q.maxMarks} ${q.maxMarks===1?'mark':'marks'}</span><span>${esc(q.id)}</span></div><progress class="session-progress" max="${stats.planned}" value="${stats.completedMarks}" aria-label="Available marks completed"></progress><p class="workload-label">${stats.completedMarks}/${stats.planned} available marks completed${S.session.mode==='review'?' · Individual question review':''}${S.session.mode==='retry'?' · Mistake review':''}</p>${sessionMenu()}</div>
  <h1>${esc(q.title)}</h1><section class="task-instructions" aria-label="Your task"><p class="task-sentence">${esc(q.prompt)}</p></section>
- ${q.dataTable?tableMarkup(q.dataTable):''}${q.asset?`<figure class="wave-figure"><img src="${esc(q.asset)}" alt="${esc(q.accessibleDescription)}"><div class="figure-actions">${button('Enlarge diagram','enlarge-diagram','btn text-button')}</div><details class="graph-data"><summary>Diagram description and data</summary><p>${esc(q.accessibleDescription)}</p></details></figure>`:''}
+ <div class="question-context">${q.dataTable?tableMarkup(q.dataTable):''}${q.asset?`<figure class="wave-figure"><img src="${esc(q.asset)}" alt="${esc(q.accessibleDescription)}"><div class="figure-actions">${button('Enlarge diagram','enlarge-diagram','btn text-button')}</div><details class="graph-data"><summary>Diagram description and data</summary><p>${esc(q.accessibleDescription)}</p></details></figure>`:''}</div>
  <div id="task">${q.interaction==='written-self-assessment'?`<label class="writing-label" for="written-response">Your answer</label><textarea class="written-response" id="written-response" maxlength="${q.selfAssessment.maxCharacters}" ${e.phase!=='answering'?'readonly':''}>${esc(e.writtenText)}</textarea>`:`${q.unscaffoldedFinalAnswerRoute?`<fieldset class="answer-part route-toggle"><legend>Answer method</legend><label><input type="radio" name="answer-mode" value="scaffold" ${e.mode==='scaffold'?'checked':''} ${e.phase!=='answering'?'disabled':''}>Use calculation steps</label><label><input type="radio" name="answer-mode" value="final-answer" ${e.mode==='final-answer'?'checked':''} ${e.phase!=='answering'?'disabled':''}>Enter a final answer</label></fieldset>`:''}${q.answerOpening?`<div class="answer-opening"><p class="small-note">Complete the answer. The supplied opening earns no marks.</p><p class="completed-answer" id="completion-preview">${completionPreview(q,e)}</p></div>`:''}${renderedParts(q,e).map(p=>partMarkup(q,p,e)).join('')}`}</div>
  ${e.phase==='answering'?`<details class="hint-panel" id="hint-panel" ${e.hintUsed?'open':''}><summary>Optional hint</summary><p>${esc(q.hint)}</p></details><div id="submission-warning"></div><div class="answer-actions">${button('Reveal answer','reveal-answer','btn text-button')}${button(q.interaction==='written-self-assessment'?'Show marking points':'Check answer','check-answer')}</div>`:''}
  <section id="feedback" tabindex="-1" aria-label="Answer feedback"></section>${reportControls()}</article>`;
@@ -182,7 +192,13 @@ function showQuestion(){
  if(e.phase==='answering'){
   $('#check-answer').onclick=()=>submitQuestion();$('#reveal-answer').onclick=revealAnswer;
   $('#hint-panel').addEventListener('toggle',()=>{if($('#hint-panel')?.open){e.hintUsed=true;save();}});
- }else showFeedback(q,e);
+ }else{
+  // Move existing controls into a closed disclosure so answers stay available for review.
+  const task=$('#task'),review=document.createElement('details');review.className='review-context answer-review-disclosure';
+  const summary=document.createElement('summary');summary.textContent='View your answer';review.append(summary);task.before(review);review.append(task);
+  const context=$('.question-context');if(context?.children.length){const details=document.createElement('details');details.className='review-context';details.innerHTML='<summary>View question diagram and data</summary>';while(context.firstChild)details.append(context.firstChild);context.append(details);}
+  showFeedback(q,e);
+ }
  save();focusHeading();
 }
 function bindQuestionInputs(q,e){
@@ -234,7 +250,8 @@ function showFeedback(q,e){
  const headline=revealed?'Answer revealed':self?`${r.selfAssessedMarks}/${q.maxMarks} self-assessed marks`:`${r.score}/${q.maxMarks} marks`;
  const breakdown=revealed?'No marks awarded.':self?'You awarded this score using the marking points.':`${r.directMarks} direct ${r.directMarks===1?'mark':'marks'}${r.ecfMarks?` + ${r.ecfMarks} method ${r.ecfMarks===1?'mark':'marks'} (error carried forward)`:''}${e.hintUsed?' · Hint used':''}`;
  const details=(r.parts||[]).map(result=>{const p=q.parts.find(p=>p.id===result.id),state=result.status==='direct'?'Correct':result.status==='ecf'?'Method mark awarded (error carried forward)':result.status==='unanswered'?'Not answered':result.status==='dependent'?'Linked mark not awarded':'Check this part';return `<div class="part-feedback ${result.status}"><h3>${esc(p.prompt)}</h3><p><strong>${state} · ${result.marks}/${p.marks}</strong></p>${result.status!=='direct'?`<p>${esc(result.feedback)}</p>${p.type==='numeric'?`<p>Correct value: <strong>${esc(correctPartText(p))}</strong></p>`:''}`:`<p>${esc(result.feedback)}</p>`}</div>`;}).join('');
- $('#feedback').innerHTML=`<div class="feedback-panel"><p class="feedback-score">${esc(headline)}</p><p class="feedback-breakdown">${esc(breakdown)}</p>${q.interaction==='answer-completion'?`<h2>Completed answer</h2><p>${esc(q.modelAnswer)}</p>`:''}${details}${!details&&!self&&!revealed?`<p>${esc(r.feedback||'')}</p>`:''}${revealed||self?`<h2>${self?'Example answer':'Worked answer'}</h2><p>${esc(q.modelAnswer)}</p>${revealed?`<ul>${q.generalFeedback.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>`:''}`:q.interaction!=='answer-completion'?`<details class="model-answer"><summary>Worked answer</summary><p>${esc(q.modelAnswer)}</p></details>`:''}<div class="next-action">${revealed||!self&&r.score<q.maxMarks?button('Try again','retry-question','btn secondary'):''}${button(S.session.index===S.session.questions.length-1?'View summary':'Next question','next-question')}</div></div>`;
+ const detailsMarkup=r.score===q.maxMarks&&details?`<details class="marking-detail"><summary>View marking detail</summary>${details}</details>`:details;
+ $('#feedback').innerHTML=`<div class="feedback-panel"><p class="feedback-score">${esc(headline)}</p><p class="feedback-breakdown">${esc(breakdown)}</p>${q.interaction==='answer-completion'?`<h2>Completed answer</h2><p>${esc(q.modelAnswer)}</p>`:''}${detailsMarkup}${!details&&!self&&!revealed?`<p>${esc(r.feedback||'')}</p>`:''}${revealed||self?`<h2>${self?'Example answer':'Worked answer'}</h2><p>${esc(q.modelAnswer)}</p>${revealed?`<ul>${q.generalFeedback.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>`:''}`:q.interaction!=='answer-completion'?`<details class="model-answer"><summary>Worked answer</summary><p>${esc(q.modelAnswer)}</p></details>`:''}<div class="next-action">${revealed||!self&&r.score<q.maxMarks?button('Retry question','retry-question','btn secondary'):''}${button(S.session.index===S.session.questions.length-1?'View summary':'Next question','next-question')}</div></div>`;
  $('#next-question').onclick=nextQuestion;if($('#retry-question'))$('#retry-question').onclick=()=>openSingle(q.id,'retry');
 }
 function nextQuestion(){if(S.session.index<S.session.questions.length-1){S.session.index++;showQuestion();}else finishSession();save();}
@@ -250,7 +267,7 @@ function finishSession(){
 }
 function showSummary(session){
  renderShell('summary');S.archiveView=session;const s=sessionStats(session);
- app().innerHTML=`<section class="card summary-page">${previewLabel()}<h1>Session summary</h1><p>${s.completedMarks}/${s.planned} available marks completed · ${s.completedQuestions}/${session.questions.length} questions</p><div class="summary-score">${s.autoMax?`${s.direct+s.ecf}/${s.autoMax}<span>Automatically marked points · ${s.direct} direct + ${s.ecf} error-carried-forward</span>`:'<span>No automatically marked questions submitted.</span>'}</div>${s.selfMax?`<p><strong>${s.self}/${s.selfMax} self-assessed marks</strong></p>`:''}${s.selfPending?'<p class="notice">One written answer is awaiting your self-assessed score.</p>':''}${s.unsubmitted?`<p>${s.unsubmitted} ${s.unsubmitted===1?'question was':'questions were'} left unsubmitted. Any saved answers are retained below.</p>`:''}${s.revealed?`<p class="small-note">${s.revealed} ${s.revealed===1?'answer was':'answers were'} revealed without marks.</p>`:''}
+ app().innerHTML=`<section class="card summary-page"><h1>Session summary</h1><p>${s.completedMarks}/${s.planned} available marks completed · ${s.completedQuestions}/${session.questions.length} questions</p><div class="summary-score">${s.autoMax?`${s.direct+s.ecf}/${s.autoMax}<span>Automatically marked points · ${s.direct} direct + ${s.ecf} error-carried-forward</span>`:'<span>No automatically marked questions submitted.</span>'}</div>${s.selfMax?`<p><strong>${s.self}/${s.selfMax} self-assessed marks</strong></p>`:''}${s.selfPending?'<p class="notice">One written answer is awaiting your self-assessed score.</p>':''}${s.unsubmitted?`<p>${s.unsubmitted} ${s.unsubmitted===1?'question was':'questions were'} left unsubmitted. Any saved answers are retained below.</p>`:''}${s.revealed?`<p class="small-note">${s.revealed} ${s.revealed===1?'answer was':'answers were'} revealed without marks.</p>`:''}
  <div class="row">${button('Choose topics','summary-topics')}${s.unsubmitted||s.selfPending?button('Continue unfinished questions','continue-session','btn secondary'):''}${S.parked?button('Return to saved practice','resume-parked','btn secondary'):''}</div>
  <h2>Question review</h2>${session.questions.map(q=>{const e=session.entries[q.id];return `<details class="review-details"><summary><span>${esc(q.id+' · '+q.title)}</span><span>${e.submission?.revealed?'Revealed':e.phase==='self-assess'?'Awaiting score':e.submission?`${e.result?.score??0}/${q.maxMarks}${q.interaction==='written-self-assessment'?' self-assessed':''}`:'Not submitted'}</span></summary><p>${esc(q.prompt)}</p>${q.interaction==='written-self-assessment'&&e.writtenText?`<p class="preserved-writing">${esc(e.writtenText)}</p>`:''}${e.submission?`<p>${esc(q.modelAnswer)}</p>`:'<p>Your draft is retained for continuing the session.</p>'}${button('Review this question','review-'+q.id,'btn secondary')}</details>`;}).join('')}</section>`;
  $('#summary-topics').onclick=showSetup;if($('#resume-parked'))$('#resume-parked').onclick=resumeParked;
@@ -260,7 +277,7 @@ function showSummary(session){
 function showMistakes(){
  renderShell('mistakes');const eligible=eligibility(S.bank,S.prefs.lessons,{allowDrafts:true}).eligible,qs=eligible.filter(needsReview);
  const plan=calculatePlan(true);
- app().innerHTML=`<section class="card progress-page">${previewLabel()}<h1>Review mistakes</h1><p>${qs.length?`${qs.length} questions to revisit from your selected lessons.`:'No questions to revisit from your selected lessons yet.'}</p>${resumeActions()}${qs.length?`<ul class="recent-mistakes">${qs.map(q=>`<li><div><strong>${esc(q.title)}</strong><span>${qRecord(q).first.revealed?'Answer revealed':`${qRecord(q).first.result?.score??0}/${q.maxMarks} first-attempt marks`}${q.interaction==='written-self-assessment'?' · self-assessed':''}</span></div><button class="btn secondary" data-retry="${q.id}">Try again</button></li>`).join('')}</ul><p class="small-note">Retries are recorded separately; first-attempt scores stay the same.</p>${plan.questionCount?button(`Practise these mistakes · ${plan.actualMarks} marks`,'start-mistakes'):''}`:''}<p>${button('Choose topics','mistakes-topics','btn text-button')}</p></section>`;
+ app().innerHTML=`<section class="card progress-page"><h1>Review mistakes</h1><p>${qs.length?`${qs.length} questions to revisit from your selected lessons.`:'No questions to revisit from your selected lessons yet.'}</p>${resumeActions()}${qs.length?`<ul class="recent-mistakes">${qs.map(q=>`<li><div><strong>${esc(q.title)}</strong><span>${qRecord(q).first.revealed?'Answer revealed':`${qRecord(q).first.result?.score??0}/${q.maxMarks} first-attempt marks`}${q.interaction==='written-self-assessment'?' · self-assessed':''}</span></div><button class="btn secondary" data-retry="${q.id}">Try again</button></li>`).join('')}</ul><p class="small-note">Retries are recorded separately; first-attempt scores stay the same.</p>${plan.questionCount?button(`Practise these mistakes · ${plan.actualMarks} marks`,'start-mistakes'):''}`:''}<p>${button('Choose topics','mistakes-topics','btn text-button')}</p></section>`;
  $$('[data-retry]').forEach(b=>b.onclick=()=>openSingle(b.dataset.retry,'retry'));if($('#start-mistakes'))$('#start-mistakes').onclick=()=>startPlan(plan,'retry');$('#mistakes-topics').onclick=showSetup;bindResume();save();focusHeading();
 }
 function progressTotals(strand){
@@ -269,8 +286,8 @@ function progressTotals(strand){
 }
 function showProgress(){
  renderShell('progress');
- app().innerHTML=`<section class="card progress-page">${previewLabel()}<h1>Your progress</h1><p>First attempts are kept separately from retries and revealed answers.</p>${resumeActions()}<div class="progress-strands">${['recall','application'].map(strand=>{const t=progressTotals(strand);return `<section><h2>${strand==='recall'?'Recall':'Application'}</h2><p><strong>${t.max?`${t.direct+t.ecf}/${t.max} automatic marks`:'Not yet attempted'}</strong></p><p class="small-note">${t.attempted}/${t.total} questions attempted</p><p class="small-note">${t.direct} direct · ${t.ecf} method marks</p></section>`;}).join('')}</div>
- <h2>By lesson</h2><table class="data-table progress-table"><thead><tr><th scope="col">Lesson</th><th scope="col">Automatic marks</th><th scope="col">Attempted</th></tr></thead><tbody>${S.map.lessons.filter(l=>l.topic==='Waves').map(l=>{const qs=S.bank.questions.filter(q=>q.primaryLessonId===l.id&&q.interaction!=='written-self-assessment'),as=qs.map(q=>qRecord(q)?.first).filter(a=>a&&!a.revealed);return `<tr><th scope="row">${esc(l.title)}</th><td>${as.reduce((n,a)=>n+(a.result?.score||0),0)}/${as.reduce((n,a)=>n+a.maxMarks,0)}</td><td>${as.length}/${qs.length}</td></tr>`;}).join('')}</tbody></table>
+ app().innerHTML=`<section class="card progress-page"><h1>Your progress</h1><p>First attempts are kept separately from retries and revealed answers.</p>${resumeActions()}<div class="progress-strands">${['recall','application'].map(strand=>{const t=progressTotals(strand);return `<section><h2>${strand==='recall'?'Recall':'Application'}</h2><p><strong>${t.max?`${t.direct+t.ecf}/${t.max} automatic marks`:'Not yet attempted'}</strong></p><p class="small-note">${t.attempted}/${t.total} questions attempted</p><p class="small-note">${t.direct} direct · ${t.ecf} method marks</p></section>`;}).join('')}</div>
+ <h2>By topic</h2><table class="data-table progress-table"><thead><tr><th scope="col">Topic</th><th scope="col">Automatic marks</th><th scope="col">Attempted</th></tr></thead><tbody>${wavesTopics().map(l=>{const qs=S.bank.questions.filter(q=>l.ids.includes(q.primaryLessonId)&&q.interaction!=='written-self-assessment'),as=qs.map(q=>qRecord(q)?.first).filter(a=>a&&!a.revealed);return `<tr><th scope="row">${esc(l.title)}</th><td>${as.reduce((n,a)=>n+(a.result?.score||0),0)}/${as.reduce((n,a)=>n+a.maxMarks,0)}</td><td>${as.length}/${qs.length}</td></tr>`;}).join('')}</tbody></table>
  <details><summary>Written self-assessment</summary>${S.bank.questions.filter(q=>q.interaction==='written-self-assessment').map(q=>{const r=qRecord(q);return `<p>${esc(q.id+' · '+q.title)}: ${r?.first?.revealed?'answer revealed':r?.first?`${r.first.result?.selfAssessedMarks}/${q.maxMarks} self-assessed`:'not yet self-assessed'}</p>`;}).join('')}</details>
  <details><summary>Question-by-question progress</summary>${S.bank.questions.map(q=>{const r=qRecord(q);return `<p class="small">${esc(q.id+' · '+q.title)}: ${!r?.first?'not attempted':r.first.revealed?'answer revealed':`${r.first.result?.score??0}/${q.maxMarks} first attempt`}${r?.corrected?' · corrected on retry':''}</p>`;}).join('')}</details>
  ${S.progress.sessions.length?`<h2>Saved session reviews</h2><div class="grid">${S.progress.sessions.slice().reverse().map(s=>`<button class="btn secondary" data-session-id="${s.id}">${new Date(s.startedAt).toLocaleDateString('en-GB')} · ${s.actualMarks} marks · ${s.mode==='practice'?'practice':'question review'}</button>`).join('')}</div>`:''}
@@ -283,6 +300,7 @@ function showProgress(){
 function exportBackup(){const blob=new Blob([JSON.stringify({version:1,date:new Date().toISOString(),prefs:S.prefs,progress:S.progress,active:{current:S.session,parked:S.parked},originalStoredData:storage.raw()},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='aaq-physics-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function bindSessionMenu(){
  $('#menu-topics').onclick=showSetup;$('#menu-mistakes').onclick=showMistakes;$('#menu-progress').onclick=showProgress;$('#menu-finish').onclick=finishSession;
+ $('#session-sound-pref').onchange=e=>{S.prefs.sound=e.target.checked;updateEffects();save();};
  const menu=$('.session-menu');menu.onkeydown=event=>{if(event.key==='Escape'){menu.open=false;menu.querySelector('summary').focus();}};
 }
 const icon={topics:'<path d="M9 3h6M10 3v7l-5 9a1 1 0 0 0 1 2h12a1 1 0 0 0 1-2l-5-9V3M8 15h8"/>',mistakes:'<circle cx="12" cy="12" r="9"/><path d="m9 9 6 6m0-6-6 6"/>',finish:'<path d="M13 5H5v14h8M10 12h11m-4-4 4 4-4 4"/>'};
@@ -300,8 +318,16 @@ function measureBars(){
 function updateEffects(){window.AAQEffects?.setPreferences(S.prefs.celebrations,S.prefs.sound);}
 async function loadContent(){
  if(window.AAQ_EMBEDDED)return copy(window.AAQ_EMBEDDED);
- const read=async file=>{const r=await fetch(new URL(file,import.meta.url),{cache:'no-store'});if(!r.ok)throw Error(`Could not load ${file} (HTTP ${r.status}).`);return r.json();};
- const [bank,map]=await Promise.all([read('Pilot_Question_Bank.json'),read('Physics_Lesson_Map.json')]);return {bank,map};
+ await window.RevisionUpdates?.beforeBankLoad();
+ const build=window.AAQ_BUILD||{};
+ const read=async(file,hash)=>{
+  const url=new URL(file,import.meta.url);if(build.id)url.searchParams.set('v',build.id);
+  const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error(`Could not load ${file} (HTTP ${response.status}).`);
+  const text=await response.text();
+  if(hash&&window.crypto?.subtle){const digest=await window.crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));const actual=[...new Uint8Array(digest)].map(n=>n.toString(16).padStart(2,'0')).join('');if(actual!==hash){if(window.RevisionUpdates)return window.RevisionUpdates.blockForMismatch();throw Error('Page and question data are from different releases. Open a fresh copy.');}}
+  return JSON.parse(text);
+ };
+ const [bank,map]=await Promise.all([read('Pilot_Question_Bank.json',build.questionsSha256),read('Physics_Lesson_Map.json',build.mapSha256)]);return {bank,map};
 }
 function validateBank(bank,map){
  if(!Array.isArray(bank?.questions)||!bank.questions.length||!Array.isArray(map?.lessons))throw Error('The question bank or lesson map is incomplete.');
@@ -319,7 +345,7 @@ async function boot(){
  const active=storage.get(KEYS.active,{schema:1,current:null,parked:null,view:'setup'},a=>a?.schema===1&&validateSession(a.current)&&validateSession(a.parked));S.session=active.current;S.parked=active.parked;
  updateEffects();
  const assets=[...new Set(bank.questions.map(q=>q.asset).filter(Boolean))];
- await Promise.allSettled(assets.filter(a=>!a.startsWith('data:')).map(async a=>{try{const response=await fetch(new URL(a,import.meta.url));if(response.ok)S.assetCache[a]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(await response.text());}catch{}}));
+ await Promise.allSettled(assets.filter(a=>!a.startsWith('data:')).map(async a=>{try{const response=await fetch(new URL(a+(window.AAQ_BUILD?.id?'?v='+encodeURIComponent(window.AAQ_BUILD.id):''),import.meta.url),{cache:'no-store'});if(response.ok)S.assetCache[a]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(await response.text());}catch{}}));
  $$('.side-link').forEach(b=>b.onclick=()=>{if(b.dataset.nav==='practice')hasActive()?showQuestion():showSetup();else if(b.dataset.nav==='mistakes')showMistakes();else showProgress();});
  const preview=new URLSearchParams(location.search).get('preview');
  if(preview&&bank.questions.some(q=>q.id===preview)&&!(hasActive()&&S.session.questions.length===1&&current().id===preview)){openSingle(preview,'review');return;}
@@ -329,5 +355,5 @@ window.addEventListener('resize',measureBars);window.visualViewport?.addEventLis
 document.addEventListener('visibilitychange',()=>{if(document.hidden){window.AAQEffects?.clear();if(S.bank)save();}});
 document.addEventListener('focusin',event=>{if(!event.target.matches?.('input,select,textarea'))return;setTimeout(()=>event.target.isConnected&&event.target.scrollIntoView?.({block:'nearest',behavior:'instant'}),150);});
 await boot().catch(error=>{
- renderShell('setup');app().innerHTML=`<section class="card"><h1>The pilot could not load</h1><p>${esc(error.message)}</p><p>Upload all files from UPLOAD-TO-GITHUB into the repository together, including the JSON files and assets folder.</p>${location.protocol==='file:'?'<p>For a double-click preview, open OPEN-PILOT.html. Use index.html on GitHub Pages.</p>':''}${button('Try loading again','reload-pilot')}</section>`;$('#reload-pilot').onclick=()=>location.reload();
+ renderShell('setup');app().innerHTML=`<section class="card"><h1>The revision tool could not load</h1><p>${esc(error.message)}</p><p>Upload all files from UPLOAD-TO-GITHUB into the repository together, including the JSON files and assets folder.</p>${location.protocol==='file:'?'<p>For a double-click preview, open OPEN-PILOT.html. Use index.html on GitHub Pages.</p>':''}${button('Try loading again','reload-pilot')}</section>`;$('#reload-pilot').onclick=()=>location.reload();
 });

@@ -12,7 +12,8 @@
  function perfectSession(session,bank){return !!session.finished&&session.mode!=='preview'&&session.ids.length>0&&session.ids.every(id=>{const q=bank.questions.find(q=>q.id===id),a=session.attempts[id];return !!q&&!!a?.first&&!a.revealed&&a.result?.complete===true&&a.result.score===q.maxMark&&a.result.max===q.maxMark})}
  function category(result,previous){return result.score===result.max?(previous&&(previous.revealed||previous.first?.score<previous.first?.max||previous.correctAfterRetry)?'retry':'correct'):result.score>0?'partial':'incorrect'}
  function fullMarkSubmission(result,mode,{submitted=false,revealed=false}={}){return submitted&&!revealed&&mode!=='challenge'&&result.max>0&&result.complete===true&&result.score===result.max}
- function questionCelebration(result,mode,options){return fullMarkSubmission(result,mode,options)?result.max>=3?'confetti':'varied':null}
- function effectPicker(rng=Math.random){let bag=[],last;return ()=>{if(!bag.length){bag=['shooting-star','thumbs-up','growing-star'];for(let i=bag.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[bag[i],bag[j]]=[bag[j],bag[i]]}if(bag[bag.length-1]===last)[bag[0],bag[bag.length-1]]=[bag[bag.length-1],bag[0]]}return last=bag.pop()}}
+ function questionCelebration(result,mode,options){return fullMarkSubmission(result,mode,options)?result.max<=2?'restrained':result.max<=4?'spectacular':'trophy':null}
+ function effectPicker(rng=Math.random){let last;return (max=2)=>{const choices=max<=2?['comet','orbit']:max<=4?['starburst','ribbons']:['trophy'],available=choices.filter(x=>x!==last);return last=(available.length?available:choices)[Math.floor(rng()*(available.length||choices.length))]}}
+
  return {messages,messagePicker,perfectSession,category,fullMarkSubmission,questionCelebration,effectPicker};
 });

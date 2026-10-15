@@ -33,11 +33,9 @@
 #question-report-panel label{display:block;margin:16px 0 8px;font-weight:600}
 #question-report-panel textarea{display:block;width:100%;max-width:100%;box-sizing:border-box;resize:vertical;padding:12px;border:1px solid var(--rule);border-radius:4px;font:inherit;line-height:1.5;min-height:96px;background:var(--panel,#fff);color:var(--ink)}
 #report-preview{font-size:.9rem!important;min-height:210px!important}.report-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.report-actions .btn{min-height:44px}#report-status:empty{display:none}
-.pilot-label{font:600 .8rem/1.4 system-ui,sans-serif;color:var(--muted);letter-spacing:.025em;margin:0 0 12px}
 .lesson-row{display:flex;align-items:flex-start;gap:12px;padding:13px 2px;border-bottom:1px solid var(--rule);cursor:pointer;min-height:48px}
 .lesson-row:last-child{border-bottom:0}.lesson-row input{width:20px;height:20px;flex:none;margin:3px 0 0;accent-color:var(--accent)}
 .lesson-row span{flex:1}.lesson-row small{display:block;color:var(--muted);font-size:.8rem;line-height:1.4;margin-top:3px}
-.lesson-subgroup{margin:0 0 0 14px!important;border-bottom:0}.lesson-subgroup summary{font-weight:500}.lesson-subgroup .lesson-row{margin-left:12px}
 .topic-tools{display:flex;flex-wrap:wrap;gap:8px 18px;padding:8px 0 12px}.topic-tools button{padding:8px 0;min-height:44px}
 .planned-topic{padding:15px 2px;border-bottom:1px solid var(--rule);color:var(--muted)}.planned-topic span{font-size:.85rem;margin-left:10px}
 .session-plan{margin-top:18px;padding:14px 0;border-top:1px solid var(--rule)}.session-plan strong{font-size:1.2rem}.session-plan p{margin:4px 0}
@@ -75,4 +73,20 @@ dialog{width:min(94vw,1000px);max-height:90dvh;border:1px solid var(--rule);bord
 @media(max-width:599px){.answer-choice{padding:10px 6px}.answer-actions .btn{flex:1}.progress-strands{gap:14px}.question-screen .task-sentence{font-size:1rem}.question-screen h1{font-size:1.75rem}.data-table{font-size:.85rem}.data-table th,.data-table td{padding:9px 5px}.progress-table .mobile-hide{display:none}.session-menu{margin-top:16px}.next-action .btn{width:100%}}
 @media(min-width:900px){.lesson-row{padding:14px 2px}.question-screen .task-sentence{font-size:1.15rem}.question-chrome{padding-right:160px}.progress-strands{max-width:650px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}}
-@media print{.answer-actions,.next-action,.figure-actions,.pilot-label{display:none}.answer-choice{break-inside:avoid}.answer-part{break-inside:avoid}dialog{display:none!important}}
+@media print{.answer-actions,.next-action,.figure-actions{display:none}.answer-choice{break-inside:avoid}.answer-part{break-inside:avoid}dialog{display:none!important}}
+
+.prerequisite-note{padding:12px 0;border-top:1px solid var(--rule);color:var(--muted)}.prerequisite-note p{margin:0 0 6px}
+
+/* Matching restrained celebration tiers. */
+.aaq-compact .aaq-celebration-hero{width:clamp(140px,32vw,210px)}
+.aaq-compact .aaq-hero-glow{display:none}
+.aaq-compact .aaq-celebration-caption{font-size:clamp(1rem,3.6vw,1.4rem);padding:6px 12px;box-shadow:0 3px 0 #0b392a}
+.aaq-compact .aaq-orbit-star{width:clamp(25px,6vw,38px);margin:-15px 0 0 -15px}
+.aaq-compact.aaq-layer-css{animation-duration:2400ms}
+.aaq-compact .aaq-hero-css{animation-duration:2050ms;animation-delay:120ms}
+.aaq-compact .aaq-orbit-css{animation-duration:2100ms}
+
+.review-context{margin:16px 0}.review-context>summary{min-height:44px;padding:12px 0;cursor:pointer;font-weight:500}.review-context:not([open])>#task{display:none}.answer-review-disclosure #task{margin-top:14px}
+
+.release-footer{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap;font-size:.875rem}.release-footer .btn{min-height:44px;font-size:.875rem}.release-notice{position:fixed;z-index:1100;top:max(12px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(620px,calc(100% - 24px));max-height:80dvh;overflow:auto;padding:20px;background:#f0f6f1;color:#172d3a;border:2px solid #14563e;border-radius:8px;box-shadow:0 8px 30px #172d3a40}.release-notice h2,.release-gate h2{margin:0 0 10px;font-size:1.5rem}.release-notice p,.release-gate p{margin:8px 0;line-height:1.5}.release-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.release-actions .btn{min-height:48px}.release-message:empty{display:none}.release-gate{max-width:700px;margin:20px auto}.release-message{font-weight:600}.release-notice [hidden]{display:none!important}
+@media print{.release-notice,.release-footer{display:none!important}}
