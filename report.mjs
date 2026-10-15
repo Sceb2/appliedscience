@@ -1,5 +1,5 @@
 // Reports stay on the student's device until they choose to send an email.
-export const PILOT_VERSION='0.1.2';
+export const PILOT_VERSION='0.3.0';
 export function reportRecipient(value){return typeof value==='string'&&/^[^\s@<>,;?&#]+@[^\s@<>,;?&#]+\.[^\s@<>,;?&#]+$/.test(value.trim())?value.trim():'';}
 export function questionReport(q,entry,{issue='',bankVersion='',pageUrl='',email=''}={}){
  let link='Offline preview';

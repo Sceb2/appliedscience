@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "0.3.0",
   "qualification": "Pearson AAQ Applied Science Extended Certificate (first teaching 2025)",
   "unit": 3,
   "specification": {
@@ -42,7 +42,11 @@
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
         "W02",
-        "W16"
+        "W16",
+        "W25",
+        "W29",
+        "W30",
+        "W31"
       ]
     },
     {
@@ -57,7 +61,13 @@
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
         "W13",
-        "W14"
+        "W14",
+        "W32",
+        "W33",
+        "W34",
+        "W81",
+        "W82",
+        "W83"
       ]
     },
     {
@@ -71,7 +81,12 @@
       "scope": "Read displacement-distance and displacement-time graphs; distinguish wavelength from period.",
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
-        "W01"
+        "W01",
+        "W35",
+        "W36",
+        "W37",
+        "W38",
+        "W39"
       ]
     },
     {
@@ -87,7 +102,15 @@
       "pilotQuestionIds": [
         "W03",
         "W15",
-        "W24"
+        "W24",
+        "W40",
+        "W41",
+        "W42",
+        "W76",
+        "W77",
+        "W78",
+        "W79",
+        "W80"
       ]
     },
     {
@@ -101,8 +124,18 @@
       "scope": "Signed displacement, coherence, phase and path difference; superposition; whole and odd half wavelengths.",
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
+        "W04",
         "W17",
-        "W18"
+        "W18",
+        "W43",
+        "W44",
+        "W45",
+        "W46",
+        "W84",
+        "W85",
+        "W86",
+        "W87",
+        "W88"
       ]
     },
     {
@@ -117,7 +150,11 @@
       "scope": "Apply interference ideas to the teacher-selected double-slit model; transfer ideas to grating contexts. Gratings forming line spectra link to Emission Spectra.",
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
-        "W04"
+        "W47",
+        "W48",
+        "W49",
+        "W50",
+        "W89"
       ]
     },
     {
@@ -133,7 +170,11 @@
       "scope": "Electron transitions and photons; gratings separate wavelengths; identify gases from line positions.",
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
-        "W05"
+        "W05",
+        "W51",
+        "W52",
+        "W53",
+        "W54"
       ]
     },
     {
@@ -144,11 +185,18 @@
       "specRefs": [
         "A1.5"
       ],
-      "scope": "Incident/reflected-wave superposition, resonance, displacement nodes and antinodes.",
+      "scope": "Incident/reflected-wave superposition, resonance, displacement nodes and antinodes. Adjacent displacement nodes are half a wavelength apart.",
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
         "W19",
-        "W20"
+        "W20",
+        "W55",
+        "W56",
+        "W57",
+        "W90",
+        "W91",
+        "W92",
+        "W93"
       ]
     },
     {
@@ -164,7 +212,12 @@
       "suggestedLessonSlots": 2,
       "pilotQuestionIds": [
         "W06",
-        "W07"
+        "W07",
+        "W58",
+        "W59",
+        "W60",
+        "W61",
+        "W62"
       ]
     },
     {
@@ -180,7 +233,9 @@
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
         "W08",
-        "W28"
+        "W28",
+        "W63",
+        "W64"
       ]
     },
     {
@@ -196,7 +251,9 @@
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
         "W09",
-        "W21"
+        "W21",
+        "W65",
+        "W66"
       ]
     },
     {
@@ -211,7 +268,9 @@
       "scope": "Core/cladding boundaries, critical-angle comparison and repeated TIR; engineering, medicine and communication.",
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
-        "W27"
+        "W27",
+        "W67",
+        "W68"
       ]
     },
     {
@@ -225,7 +284,10 @@
       "scope": "Relative intensity and I = k/r²; rearrangement, units and stated ideal-model assumptions.",
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
-        "W11"
+        "W11",
+        "W69",
+        "W70",
+        "W71"
       ]
     },
     {
@@ -241,7 +303,17 @@
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
         "W23",
-        "W26"
+        "W26",
+        "W72",
+        "W94",
+        "W95",
+        "W96",
+        "W97",
+        "W98",
+        "W99",
+        "W100",
+        "W109",
+        "W110"
       ]
     },
     {
@@ -256,7 +328,8 @@
       "suggestedLessonSlots": 1,
       "pilotQuestionIds": [
         "W10",
-        "W22"
+        "W22",
+        "W73"
       ]
     },
     {
@@ -271,7 +344,16 @@
       "suggestedLessonSlots": 2,
       "pilotQuestionIds": [
         "W12",
-        "W25"
+        "W74",
+        "W75",
+        "W101",
+        "W102",
+        "W103",
+        "W104",
+        "W105",
+        "W106",
+        "W107",
+        "W108"
       ]
     },
     {

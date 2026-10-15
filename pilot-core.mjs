@@ -6,6 +6,8 @@ export function parseNumber(raw){
  if(typeof raw!=='string')return null;
  let s=raw.trim().replace(/\u2212/g,'-').replace(/\u00a0|\u202f/g,' ');
  if(!s)return null;
+ const superscriptDigits='⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻',normalDigits='0123456789+-';
+ s=s.replace(/10([⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+)/g,(_,exp)=>'10^'+[...exp].map(c=>normalDigits[superscriptDigits.indexOf(c)]).join(''));
  s=s.replace(/\s*[×x*]\s*10\s*\^\s*([+-]?\d+)$/i,'e$1');
  if(/[ ]/.test(s)){
   if(!/^[+-]?\d{1,3}( \d{3})+(?:[.,]\d+)?(?:e[+-]?\d+)?$/i.test(s))return null;
@@ -18,6 +20,18 @@ export function parseNumber(raw){
  }
  if(!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(s))return null;
  const n=Number(s);return Number.isFinite(n)?n:null;
+}
+export function formatNumber(value){
+ if(!Number.isFinite(value))return '';
+ if(value===0)return '0';
+ const n=Number(value.toPrecision(6)),a=Math.abs(n);
+ if(a>=1e6||a<.001){
+  const [coefficient,exponent]=n.toExponential(5).split('e');
+  const digits='⁰¹²³⁴⁵⁶⁷⁸⁹';
+  const power=String(Number(exponent)).replace(/-/g,'⁻').replace(/\d/g,d=>digits[Number(d)]);
+  return `${Number(coefficient)} × 10${power}`;
+ }
+ return String(n);
 }
 const near=(a,b,t)=>Math.abs(a-b)<=t+Number.EPSILON*Math.max(1,Math.abs(a),Math.abs(b))*8;
 function inDomain(value,domain={}){return Number.isFinite(value)&&(domain.minExclusive===undefined||value>domain.minExclusive)&&(domain.maxInclusive===undefined||value<=domain.maxInclusive);}
@@ -39,6 +53,7 @@ function expectedEcf(rule,inputs){
   case 'divide-constant':return c!==0?a/c:NaN;
   case 'multiply':return a*b;
   case 'asin-degrees':return Math.asin(a)*180/Math.PI;
+  case 'sqrt-constant-divided-by':return a>0?Math.sqrt(c/a):NaN;
   default:return NaN;
  }
 }

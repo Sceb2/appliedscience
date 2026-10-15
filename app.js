@@ -1,4 +1,4 @@
-import {selectSession,eligibility,seededRandom,markQuestion,beginSelfAssessment,recordSelfScore} from './pilot-core.mjs';
+import {selectSession,eligibility,seededRandom,markQuestion,beginSelfAssessment,recordSelfScore,formatNumber} from './pilot-core.mjs';
 import {KEYS,copy,createStore,questionKey,addAttempt,sessionStats,validateSession} from './state.mjs';
 import {questionReport,reportRecipient} from './report.mjs';
 
@@ -71,7 +71,7 @@ function showSetup(){
  <details ${disclosureAttrs('teacher-review')}><summary>Teacher question review</summary><p class="small-note">Open a single draft question to check its content and marking.</p><label for="review-question">Question</label><select class="review-select" id="review-question">${S.bank.questions.map(q=>`<option value="${q.id}">${q.id} · ${esc(q.title)}</option>`).join('')}</select>${button('Open question','open-review','btn secondary')}<div class="celebration-preview-controls"><h3>Celebration previews</h3><label for="preview-celebration">Effect</label><select class="review-select" id="preview-celebration"><option value="random">Random question celebration</option><option value="comet">Comet parade</option><option value="starburst">Starburst spectacular</option><option value="ribbons">Ribbon carnival</option><option value="orbit">Orbiting stars</option><option value="trophy">Trophy triumph</option><option value="session">Perfect-session finale</option></select>${button('Play celebration','play-celebration','btn secondary')}<p id="celebration-preview-status" class="small-note" role="status"></p></div></details></details>
  <div class="session-plan" id="session-plan" aria-live="polite"></div><div id="missing-lessons"></div>
  <div class="setup-actions action-dock">${resumeActions()}${button(hasActive()?'Start a new session':'Start practice','start-practice')}</div>
- <p class="small-note">28 sample questions · 14 recall and 14 application. Draft content for review.</p></section>`;
+ <p class="small-note">${S.bank.summary.questionCount} questions · ${S.bank.summary.recallQuestions} recall and ${S.bank.summary.applicationQuestions} application. Draft content for review.</p></section>`;
  bindDisclosures();
  $$('[data-lesson]').forEach(el=>el.onchange=()=>{S.prefs.lessons=$$('[data-lesson]:checked').map(x=>x.dataset.lesson);S.seed=Date.now()>>>0;updatePlan();save();});
  $('#select-all').onclick=()=>setLessons(S.map.lessons.filter(l=>l.topic==='Waves').map(l=>l.id));$('#select-none').onclick=()=>setLessons([]);
@@ -219,7 +219,7 @@ function showValidation(message){
  let el=$('#question-validation');if(!el){el=document.createElement('p');el.id='question-validation';el.className='validation-message';el.setAttribute('role','alert');$('#task').append(el);}el.textContent=message;
  $('#written-response')?.focus();
 }
-function correctPartText(p){return p.type==='choice'?p.options.find(o=>o.id===p.correctOptionId).text:`${p.answer.value} ${p.answer.unit}`.trim();}
+function correctPartText(p){return p.type==='choice'?p.options.find(o=>o.id===p.correctOptionId).text:`${formatNumber(p.answer.value)} ${p.answer.unit}`.trim();}
 function showFeedback(q,e){
  const revealed=e.submission?.revealed;
  if(e.phase==='self-assess'){
