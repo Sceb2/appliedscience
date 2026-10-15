@@ -1,5 +1,6 @@
 import {selectSession,eligibility,seededRandom,markQuestion,beginSelfAssessment,recordSelfScore} from './pilot-core.mjs';
 import {KEYS,copy,createStore,questionKey,addAttempt,sessionStats,validateSession} from './state.mjs';
+import {questionReport,reportRecipient} from './report.mjs';
 
 const $=selector=>document.querySelector(selector),$$=selector=>[...document.querySelectorAll(selector)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -7,7 +8,7 @@ const app=()=>$('#app'),uid=()=>globalThis.crypto?.randomUUID?.()||`${Date.now()
 const types=['selected-answer','scaffolded-calculation','answer-completion','written-self-assessment'];
 const labels={'selected-answer':'Selected answers','scaffolded-calculation':'Calculations','answer-completion':'Finish the answer','written-self-assessment':'Written self-assessment'};
 const defaults={schema:1,lessons:[],types:[...types],celebrations:true,sound:false,disclosures:{waves:true}};
-const S={bank:null,map:null,prefs:null,progress:null,session:null,parked:null,view:'setup',seed:Date.now()>>>0,plan:null,assetCache:{},dialogFocus:null,archiveView:null};
+const S={bank:null,map:null,prefs:null,progress:null,session:null,parked:null,view:'setup',seed:Date.now()>>>0,plan:null,assetCache:{},dialogFocus:null,archiveView:null,reportEmail:''};
 let native;try{native=window.localStorage;}catch{}
 const storage=createStore(native,message=>{if($('#storage-note'))$('#storage-note').textContent=message;});
 const titleFor=id=>S.map.lessons.find(l=>l.id===id)?.title||id;
@@ -67,7 +68,7 @@ function showSetup(){
  <label class="topic"><input type="checkbox" id="effects-pref" ${S.prefs.celebrations?'checked':''}><span>Celebration effects<span class="topic-code">Reduced-motion preferences are respected.</span></span></label>
  <label class="topic"><input type="checkbox" id="sound-pref" ${S.prefs.sound?'checked':''}><span>Party-blower sound<span class="topic-code">Perfect sessions only · off by default.</span></span></label>
  <p class="small-note">Sessions target 20 available marks and an equal number of recall and application questions. Your selected lessons determine what is available.</p>
- <details ${disclosureAttrs('teacher-review')}><summary>Teacher question review</summary><p class="small-note">Open a single draft question to check its content and marking.</p><label for="review-question">Question</label><select class="review-select" id="review-question">${S.bank.questions.map(q=>`<option value="${q.id}">${q.id} · ${esc(q.title)}</option>`).join('')}</select>${button('Open question','open-review','btn secondary')}</details></details>
+ <details ${disclosureAttrs('teacher-review')}><summary>Teacher question review</summary><p class="small-note">Open a single draft question to check its content and marking.</p><label for="review-question">Question</label><select class="review-select" id="review-question">${S.bank.questions.map(q=>`<option value="${q.id}">${q.id} · ${esc(q.title)}</option>`).join('')}</select>${button('Open question','open-review','btn secondary')}<div class="celebration-preview-controls"><h3>Celebration previews</h3><label for="preview-celebration">Effect</label><select class="review-select" id="preview-celebration"><option value="random">Random question celebration</option><option value="comet">Comet parade</option><option value="starburst">Starburst spectacular</option><option value="ribbons">Ribbon carnival</option><option value="orbit">Orbiting stars</option><option value="trophy">Trophy triumph</option><option value="session">Perfect-session finale</option></select>${button('Play celebration','play-celebration','btn secondary')}<p id="celebration-preview-status" class="small-note" role="status"></p></div></details></details>
  <div class="session-plan" id="session-plan" aria-live="polite"></div><div id="missing-lessons"></div>
  <div class="setup-actions action-dock">${resumeActions()}${button(hasActive()?'Start a new session':'Start practice','start-practice')}</div>
  <p class="small-note">28 sample questions · 14 recall and 14 application. Draft content for review.</p></section>`;
@@ -77,6 +78,10 @@ function showSetup(){
  $$('[data-type]').forEach(el=>el.onchange=()=>{S.prefs.types=$$('[data-type]:checked').map(x=>x.dataset.type);S.seed=Date.now()>>>0;updatePlan();save();});
  $('#effects-pref').onchange=e=>{S.prefs.celebrations=e.target.checked;updateEffects();save();};$('#sound-pref').onchange=e=>{S.prefs.sound=e.target.checked;updateEffects();save();};
  $('#open-review').onclick=()=>openSingle($('#review-question').value,'review');$('#start-practice').onclick=()=>startPlan(S.plan,'practice');
+ $('#play-celebration').onclick=()=>{
+  const played=window.AAQEffects?.preview?.($('#preview-celebration').value);
+  $('#celebration-preview-status').textContent=played?'Playing this celebration. Your progress is unchanged.':!S.prefs.celebrations?'Turn on Celebration effects above to play a preview.':'Your device’s reduced-motion setting keeps motion effects off.';
+ };
  bindResume();updatePlan();save();focusHeading();
 }
 function setLessons(ids){S.prefs.lessons=ids;S.seed=Date.now()>>>0;$$('[data-lesson]').forEach(x=>x.checked=ids.includes(x.dataset.lesson));updatePlan();save();}
@@ -135,6 +140,33 @@ function partMarkup(q,part,e){
  return `<fieldset class="answer-part" id="part-${pid}"><legend>${legend}</legend><div class="numeric-row"><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" id="numeric-${pid}" data-number="${pid}" value="${esc(value)}" aria-label="${esc(part.prompt)}" ${locked?'disabled':''}>${units.length>1?`<label for="unit-${pid}" class="sr-only">Unit for ${esc(part.prompt)}</label><select id="unit-${pid}" data-unit="${pid}" ${locked?'disabled':''}>${units.map(u=>`<option value="${esc(u)}" ${unit===u?'selected':''}>${esc(u||'No unit')}</option>`).join('')}</select>`:`<span>${esc(part.answer.unit)}</span>`}</div></fieldset>`;
 }
 function completionPreview(q,e){return `${esc(q.answerOpening)} ${q.parts.map((p,i)=>{const o=p.options.find(o=>o.id===e.responses[p.id]);return o?`<span class="filled-sentence">${esc(o.text)}</span>`:`<span class="sentence-gap">[Gap ${i+1}]</span>`;}).join(' ')}`;}
+function reportControls(){return `<div class="question-report-footer"><button type="button" class="btn secondary report-toggle" id="report-question" aria-expanded="false" aria-controls="question-report-panel">Report question</button><section id="question-report-panel" aria-label="Report this question" hidden></section></div>`;}
+function bindQuestionReport(q,e){
+ const trigger=$('#report-question'),panel=$('#question-report-panel');
+ const update=()=>{
+  const draft=questionReport(q,e,{issue:e.reportIssue||'',bankVersion:S.session.bankVersion,pageUrl:location.href,email:S.reportEmail});
+  $('#report-preview').value=draft.text;$('#report-email').href=draft.mailto;
+  $('#report-recipient').textContent=draft.recipient?`To: ${draft.recipient}`:'Add your teacher’s email address in the To field before sending.';
+  return draft;
+ };
+ trigger.onclick=()=>{
+  const opening=panel.hidden;panel.hidden=!opening;trigger.setAttribute('aria-expanded',String(opening));
+  if(!opening){trigger.focus();return;}
+  panel.innerHTML=`<h2>Report ${esc(q.id)}</h2><p id="report-explanation"><strong>Create draft</strong> opens your email app with the question details and your answer already filled in. Check the draft, add a screenshot if useful, then send it yourself. Nothing is sent automatically.</p><p class="small-note">If no email app opens, choose <strong>Copy draft</strong> and paste it into your school email.</p><label for="report-issue">What looks wrong? <span class="small-note">(optional)</span></label><textarea id="report-issue" rows="3" maxlength="600" placeholder="For example: my correct answer was marked wrong.">${esc(e.reportIssue||'')}</textarea><p id="report-recipient" class="small-note"></p><label for="report-preview">Email draft</label><textarea id="report-preview" rows="10" readonly aria-describedby="report-explanation"></textarea><div class="report-actions"><a class="btn" id="report-email">Create draft</a>${button('Copy draft','copy-report','btn secondary')}${button('Close report','close-report','btn text-button')}</div><p id="report-status" role="status"></p>`;
+  $('#report-issue').oninput=event=>{e.reportIssue=event.target.value;update();save();};
+  $('#report-email').onclick=()=>{update();$('#report-status').textContent='Your email app may open now. Review the draft and send it there. If nothing opens, use Copy draft.';};
+  $('#copy-report').onclick=async()=>{
+   const draft=update();
+   try{await window.navigator.clipboard.writeText(draft.text);if($('#report-status'))$('#report-status').textContent='Draft copied. Paste it into an email to your teacher, check it, then send it.';}
+   catch{const preview=$('#report-preview');if(preview){preview.focus();preview.select();$('#report-status').textContent='Copy the selected draft text, then paste it into an email to your teacher.';}}
+  };
+  $('#close-report').onclick=()=>{panel.hidden=true;trigger.setAttribute('aria-expanded','false');trigger.focus();};
+  update();$('#report-issue').focus();
+ };
+ // Keep an open draft up to date when an answer changes, without opening it.
+ $('#task').addEventListener('input',()=>{if(!panel.hidden)update();});
+ $('#task').addEventListener('change',()=>{if(!panel.hidden)update();});
+}
 function showQuestion(){
  if(!S.session)return showSetup();
  const q=current(),e=S.session.entries[q.id],stats=sessionStats(S.session);
@@ -144,8 +176,8 @@ function showQuestion(){
  ${q.dataTable?tableMarkup(q.dataTable):''}${q.asset?`<figure class="wave-figure"><img src="${esc(q.asset)}" alt="${esc(q.accessibleDescription)}"><div class="figure-actions">${button('Enlarge diagram','enlarge-diagram','btn text-button')}</div><details class="graph-data"><summary>Diagram description and data</summary><p>${esc(q.accessibleDescription)}</p></details></figure>`:''}
  <div id="task">${q.interaction==='written-self-assessment'?`<label class="writing-label" for="written-response">Your answer</label><textarea class="written-response" id="written-response" maxlength="${q.selfAssessment.maxCharacters}" ${e.phase!=='answering'?'readonly':''}>${esc(e.writtenText)}</textarea>`:`${q.unscaffoldedFinalAnswerRoute?`<fieldset class="answer-part route-toggle"><legend>Answer method</legend><label><input type="radio" name="answer-mode" value="scaffold" ${e.mode==='scaffold'?'checked':''} ${e.phase!=='answering'?'disabled':''}>Use calculation steps</label><label><input type="radio" name="answer-mode" value="final-answer" ${e.mode==='final-answer'?'checked':''} ${e.phase!=='answering'?'disabled':''}>Enter a final answer</label></fieldset>`:''}${q.answerOpening?`<div class="answer-opening"><p class="small-note">Complete the answer. The supplied opening earns no marks.</p><p class="completed-answer" id="completion-preview">${completionPreview(q,e)}</p></div>`:''}${renderedParts(q,e).map(p=>partMarkup(q,p,e)).join('')}`}</div>
  ${e.phase==='answering'?`<details class="hint-panel" id="hint-panel" ${e.hintUsed?'open':''}><summary>Optional hint</summary><p>${esc(q.hint)}</p></details><div id="submission-warning"></div><div class="answer-actions">${button('Reveal answer','reveal-answer','btn text-button')}${button(q.interaction==='written-self-assessment'?'Show marking points':'Check answer','check-answer')}</div>`:''}
- <section id="feedback" tabindex="-1" aria-label="Answer feedback"></section></article>`;
- bindQuestionInputs(q,e);bindSessionMenu();mountMobileControls();
+ <section id="feedback" tabindex="-1" aria-label="Answer feedback"></section>${reportControls()}</article>`;
+ bindQuestionInputs(q,e);bindSessionMenu();mountMobileControls();bindQuestionReport(q,e);
  if($('#enlarge-diagram'))$('#enlarge-diagram').onclick=()=>showDialog(q.title,`<p class="small-note">Scroll horizontally if needed. ${esc(q.accessibleDescription)}</p><div class="dialog-image-scroll"><img src="${esc(q.asset)}" alt="${esc(q.accessibleDescription)}"></div>`,null,$('#enlarge-diagram'));
  if(e.phase==='answering'){
   $('#check-answer').onclick=()=>submitQuestion();$('#reveal-answer').onclick=revealAnswer;
@@ -278,6 +310,8 @@ function validateBank(bank,map){
 }
 async function boot(){
  const {bank,map}=await loadContent();validateBank(bank,map);S.bank=bank;S.map=map;
+ S.reportEmail=reportRecipient(window.AAQ_REPORT_CONFIG?.email);
+ if(!window.AAQ_EMBEDDED&&!S.reportEmail){try{const r=await fetch(new URL('./report-config.json',import.meta.url),{cache:'no-store'});if(r.ok)S.reportEmail=reportRecipient((await r.json()).email);}catch{}}
  const rawPrefs=storage.get(KEYS.prefs,defaults,p=>p?.schema===1&&Array.isArray(p.lessons)&&Array.isArray(p.types));
  S.prefs={...copy(defaults),...rawPrefs,lessons:rawPrefs.lessons.filter(id=>map.lessons.some(l=>l.id===id&&l.topic==='Waves')),types:rawPrefs.types.filter(t=>types.includes(t)),disclosures:rawPrefs.disclosures&&typeof rawPrefs.disclosures==='object'?rawPrefs.disclosures:{}};
  S.progress=storage.get(KEYS.progress,{schema:1,records:{},sessions:[]},p=>p?.schema===1&&p.records&&typeof p.records==='object'&&!Array.isArray(p.records)&&Object.values(p.records).every(r=>r&&typeof r==='object'&&Array.isArray(r.attempts))&&Array.isArray(p.sessions));

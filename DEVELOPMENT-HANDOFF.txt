@@ -1,9 +1,11 @@
-AAQ PHYSICS WORKING PILOT 0.1.0 - 15 October 2026
+AAQ PHYSICS PILOT v0.1.2 — 15 October 2026
 
-The working browser interface is now implemented. index.html is the GitHub Pages entry point. There is no build step for the website. See GITHUB-UPLOAD.txt in the downloaded pilot package for publishing instructions.
+GitHub Pages entry point: index.html. No build step or external runtime dependencies. See GITHUB-UPLOAD.txt in the ZIP for teacher instructions.
 
-The bank remains at 28 draft questions: 14 recall and 14 application. Normal sessions use 20 available marks where attainable, with the closest 50/50 question-count balance. Teacher single-question reviews do not affect learner scores. W12 and W27 are automatic answer completions; W25 is the only written self-assessment test.
+Version 0.1.2 installs five elaborate question celebrations and a larger perfect-session finale. effects.js provides setPreferences, clear, question, session and preview. A five-item shuffled bag prevents consecutive repeats. Canvas 2D renders confetti, streamers and trails; SVG/CSS provide centrepieces and fallbacks. The canvas resolution is capped at device-pixel ratio 2. A single animation frame loop and finite cleanup timer belong to each active effect. Navigation, hidden pages, page exit, resize and changes to reduced-motion preferences cancel motion. CSS also hides effects under prefers-reduced-motion. Sound is opt-in for the session finale only.
 
-The UI baseline is the newer chemistry v1.4.2 package. All physics preferences, sessions and progress use separate AAQ storage keys. Question content is unchanged from the content pack.
+Teacher question review now includes an effect selector and Play celebration, without recording learner attempts. Actual question celebrations retain the full-mark, no-hint, non-teacher-review condition. Questions worth 3+ marks now use the same five-item rotation; every effect contains confetti.
 
-Core tests, simulated-DOM interface tests and self-contained preview checks passed. Browser-rendered and physical-phone visual QA remain to be performed. The DEVELOPMENT folder in the download contains reproducible tests and a preview builder; it does not need publishing.
+The report module/config and bottom-of-question draft workflow from v0.1.1 are retained. No reporting recipient has been supplied. No progress schema, storage key, marking rule, question-bank or lesson-map changes were made.
+
+The DEVELOPMENT tests use Happy DOM and instrumented canvas commands. They test functionality rather than rendered appearance. Rebuild OPEN-PILOT.html with python DEVELOPMENT/build_preview.py from the package root after any runtime edits.

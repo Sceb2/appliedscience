@@ -33,7 +33,7 @@
     "completion": "An opening answer sentence may be supplied. Only the selected missing points earn marks. Each gap has a clear purpose and all choices fit its grammar."
   },
   "ui": {
-    "baseline": "ocr-organic-revision-v1.4.2.zip, current version 4 checked 15 October 2026",
+    "baseline": "ocr-organic-revision-v1.4.1.zip, current version 3 checked 15 October 2026",
     "preserve": [
       "Dark navy desktop sidebar; Practice, Mistakes and Progress navigation.",
       "White workspace, serif headings and sans-serif instructions/controls.",
@@ -58,7 +58,7 @@
   },
   "release": {
     "contentStatus": "Draft for teacher review",
-    "referenceCore": "Browser interface and reference logic implemented in pilot 0.1.0. Core, simulated-DOM and offline preview checks pass; rendered browser/mobile QA remains.",
+    "referenceCore": "Pure selection, numeric/choice marking and self-score validation supplied and tested. It is a reference module, not a completed browser interface.",
     "studentGate": "Do not present unreviewed material as teacher-approved. A teacher preview mode can load draft questions."
   }
 }
