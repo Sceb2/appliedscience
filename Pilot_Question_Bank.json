@@ -1,0 +1,3060 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankVersion": "0.1.0",
+  "date": "2026-10-15",
+  "title": "AAQ Physics Waves pilot",
+  "qualification": "Pearson AAQ Applied Science Extended Certificate (first teaching 2025)",
+  "unit": 3,
+  "status": "Draft for teacher review",
+  "sourcePlanningRevision": "2.0",
+  "questions": [
+    {
+      "id": "W01",
+      "contentVersion": 1,
+      "title": "Read a wave graph",
+      "topic": "Waves",
+      "primaryLessonId": "WA03",
+      "requiredLessonIds": [
+        "WA02",
+        "WA03"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2"
+      ],
+      "commandWord": "Determine",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "Determine the amplitude and wavelength of the wave shown. Select one answer.",
+      "parts": [
+        {
+          "id": "pair",
+          "type": "choice",
+          "prompt": "Identify the amplitude and wavelength.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "pair-a",
+              "text": "Amplitude 6 cm; wavelength 40 cm",
+              "feedback": "6 cm is the peak-to-peak height. Amplitude starts at the centre line."
+            },
+            {
+              "id": "pair-b",
+              "text": "Amplitude 3 cm; wavelength 40 cm",
+              "feedback": "The height from the centre is 3 cm; adjacent crests are 40 cm apart."
+            },
+            {
+              "id": "pair-c",
+              "text": "Amplitude 3 cm; wavelength 20 cm",
+              "feedback": "20 cm is half a cycle. Measure from one crest to the next."
+            },
+            {
+              "id": "pair-d",
+              "text": "Amplitude 6 cm; wavelength 20 cm",
+              "feedback": "Both measurements use half/double-cycle distances incorrectly."
+            }
+          ],
+          "correctOptionId": "pair-b",
+          "shuffleOptions": true,
+          "correctFeedback": "The height from the centre is 3 cm; adjacent crests are 40 cm apart."
+        }
+      ],
+      "modelAnswer": "B. Amplitude = 3 cm; wavelength = 40 cm.",
+      "generalFeedback": [
+        "A uses peak-to-peak displacement for amplitude.",
+        "C uses crest-to-trough distance for wavelength.",
+        "D makes both mistakes.",
+        "Amplitude is measured from equilibrium to a crest. Wavelength is crest to the next crest."
+      ],
+      "hint": "Identify the equilibrium line. Then find two neighbouring crests.",
+      "sources": [
+        "J24 Q1(a); J17 Q10(a); SPEC A1.1"
+      ],
+      "asset": "assets/wave_distance.svg",
+      "accessibleDescription": "Displacement-distance graph. Vertical axis in cm from -3 to +3; horizontal axis in cm from 0 to 60. Crests occur at 10 and 50 cm, trough at 30 cm.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S03",
+        "S04",
+        "S07"
+      ],
+      "specRefs": [
+        "A1.1.1",
+        "A1.1.2"
+      ]
+    },
+    {
+      "id": "W02",
+      "contentVersion": 1,
+      "title": "Describe a longitudinal wave",
+      "topic": "Waves",
+      "primaryLessonId": "WA01",
+      "requiredLessonIds": [
+        "WA01"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "Describe",
+      "interaction": "selected-answer",
+      "maxMarks": 2,
+      "prompt": "Describe the longitudinal sound wave shown by completing the two statements.",
+      "parts": [
+        {
+          "id": "direction",
+          "type": "choice",
+          "prompt": "The particles oscillate ___ to the direction of energy transfer.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "direction-a",
+              "text": "perpendicular",
+              "feedback": "Perpendicular describes a transverse wave."
+            },
+            {
+              "id": "direction-b",
+              "text": "towards only",
+              "feedback": "The particles move backwards and forwards, not only towards the receiver."
+            },
+            {
+              "id": "direction-c",
+              "text": "parallel",
+              "feedback": "Parallel means along the same line as the energy transfer."
+            },
+            {
+              "id": "direction-d",
+              "text": "without moving",
+              "feedback": "The particles oscillate; they are not stationary."
+            }
+          ],
+          "correctOptionId": "direction-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Parallel means along the same line as the energy transfer."
+        },
+        {
+          "id": "regions",
+          "type": "choice",
+          "prompt": "The wave contains compressions and ___.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "regions-a",
+              "text": "reflections",
+              "feedback": "Reflection is a wave changing direction at a boundary."
+            },
+            {
+              "id": "regions-b",
+              "text": "nodes",
+              "feedback": "Nodes belong to stationary-wave patterns."
+            },
+            {
+              "id": "regions-c",
+              "text": "refractions",
+              "feedback": "Refraction is a change associated with entering a different medium."
+            },
+            {
+              "id": "regions-d",
+              "text": "rarefactions",
+              "feedback": "Rarefactions are the more spread-out regions."
+            }
+          ],
+          "correctOptionId": "regions-d",
+          "shuffleOptions": true,
+          "correctFeedback": "Rarefactions are the more spread-out regions."
+        }
+      ],
+      "modelAnswer": "Gap 1: parallel. Gap 2: rarefactions.",
+      "generalFeedback": [
+        "Perpendicular describes transverse oscillations.",
+        "Particles move back and forth around their positions; they do not all travel to the receiver.",
+        "Rarefactions are regions where the air particles are more spread out. Refraction is a different phenomenon."
+      ],
+      "hint": "Consider how particles move relative to the direction the sound travels.",
+      "sources": [
+        "J23 Q2(a); J24 Q2(a); SPEC A1.2"
+      ],
+      "asset": "assets/longitudinal.svg",
+      "accessibleDescription": "Air-particle diagram with repeated closely spaced and widely spaced regions; an arrow shows energy transfer to the right.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S11",
+        "S12"
+      ],
+      "specRefs": [
+        "A1.2"
+      ]
+    },
+    {
+      "id": "W03",
+      "contentVersion": 1,
+      "title": "Calculate an ultrasound wavelength",
+      "topic": "Waves",
+      "primaryLessonId": "WA04",
+      "requiredLessonIds": [
+        "WA02",
+        "WA04"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2"
+      ],
+      "commandWord": "Calculate",
+      "interaction": "scaffolded-calculation",
+      "maxMarks": 4,
+      "prompt": "An ultrasonic distance sensor produces a wave of frequency 85 kHz. Its speed in air is 340 m/s. Calculate the wavelength in millimetres. Use v = fλ.",
+      "parts": [
+        {
+          "id": "frequency",
+          "type": "numeric",
+          "prompt": "Calculate the frequency in Hz.",
+          "marks": 1,
+          "answer": {
+            "value": 85000,
+            "unit": "Hz",
+            "absoluteTolerance": 0.5,
+            "allowedUnits": {
+              "Hz": 1,
+              "kHz": 1000
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "kilo means 1000: multiply 85 by 1000.",
+          "domain": {
+            "minExclusive": 0
+          }
+        },
+        {
+          "id": "rearrange",
+          "type": "choice",
+          "prompt": "Select the correct rearrangement.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "rearrange-a",
+              "text": "λ = v/f",
+              "feedback": "Divide speed by frequency to find wavelength."
+            },
+            {
+              "id": "rearrange-b",
+              "text": "λ = f/v",
+              "feedback": "This gives the reciprocal of the required ratio."
+            },
+            {
+              "id": "rearrange-c",
+              "text": "λ = vf",
+              "feedback": "Multiplication does not isolate wavelength."
+            },
+            {
+              "id": "rearrange-d",
+              "text": "λ = v + f",
+              "feedback": "Speed and frequency cannot be added to obtain a length."
+            }
+          ],
+          "correctOptionId": "rearrange-a",
+          "shuffleOptions": true,
+          "correctFeedback": "Divide speed by frequency to find wavelength."
+        },
+        {
+          "id": "wavelength-m",
+          "type": "numeric",
+          "prompt": "Calculate the wavelength in metres.",
+          "marks": 1,
+          "answer": {
+            "value": 0.004,
+            "unit": "m",
+            "absoluteTolerance": 4e-05,
+            "allowedUnits": {
+              "m": 1,
+              "mm": 0.001,
+              "cm": 0.01
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Divide 340 by the frequency in Hz.",
+          "domain": {
+            "minExclusive": 0
+          },
+          "ecf": {
+            "operation": "constant-divided-by",
+            "inputs": [
+              "frequency"
+            ],
+            "constant": 340,
+            "requiresCorrectParts": [
+              "rearrange"
+            ]
+          }
+        },
+        {
+          "id": "wavelength-mm",
+          "type": "numeric",
+          "prompt": "Convert the wavelength to millimetres.",
+          "marks": 1,
+          "answer": {
+            "value": 4,
+            "unit": "mm",
+            "absoluteTolerance": 0.04,
+            "allowedUnits": {
+              "mm": 1,
+              "m": 1000,
+              "cm": 10
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Multiply metres by 1000.",
+          "domain": {
+            "minExclusive": 0
+          },
+          "ecf": {
+            "operation": "multiply-constant",
+            "inputs": [
+              "wavelength-m"
+            ],
+            "constant": 1000
+          }
+        }
+      ],
+      "modelAnswer": "85 kHz = 85 000 Hz. λ = v/f = 340/85 000 = 0.0040 m = 4.0 mm.",
+      "generalFeedback": [
+        "Using 85 as the frequency gives a wavelength 1000 times too large.",
+        "To change metres into millimetres, multiply by 1000.",
+        "If your number is correct but uses another unit, convert it rather than rejecting a physically equivalent answer."
+      ],
+      "hint": "kilo means 1000. Rearrange the equation before substituting.",
+      "sources": [
+        "N24 Q1(b); J17 Q10(c); SPEC A1.4"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S05",
+        "S24",
+        "S25"
+      ],
+      "specRefs": [
+        "A1.4"
+      ],
+      "unscaffoldedFinalAnswerRoute": {
+        "enabled": true,
+        "partId": "wavelength-mm",
+        "maxMarks": 4,
+        "requiresExplicitMode": "final-answer",
+        "policy": "A correct final value in an allowed equivalent unit earns full practice credit in final-answer mode. Otherwise offer the scaffold before submission; do not auto-award a full route after errors in a checked scaffold.",
+        "label": "Enter a final answer instead"
+      }
+    },
+    {
+      "id": "W04",
+      "contentVersion": 2,
+      "title": "Explain double-slit interference",
+      "topic": "Waves",
+      "primaryLessonId": "WA06",
+      "requiredLessonIds": [
+        "WA02",
+        "WA05",
+        "WA06"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2",
+        "AO3"
+      ],
+      "commandWord": "Predict",
+      "interaction": "selected-answer",
+      "maxMarks": 3,
+      "prompt": "Two narrow slits are illuminated by coherent monochromatic light of wavelength 500 nm. The waves leave the slits in phase and have equal amplitudes at the screen points considered. At P, the two paths differ by 1000 nm. At Q, they differ by 750 nm. Use the path differences to predict the fringes.",
+      "parts": [
+        {
+          "id": "path-p",
+          "type": "choice",
+          "prompt": "Determine the path difference at P in wavelengths.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "path-p-a",
+              "text": "0.5λ",
+              "feedback": "1000/500 is 2, not one half."
+            },
+            {
+              "id": "path-p-b",
+              "text": "1λ",
+              "feedback": "1000 nm contains two wavelengths of 500 nm."
+            },
+            {
+              "id": "path-p-c",
+              "text": "2λ",
+              "feedback": "1000/500 = 2 wavelengths."
+            },
+            {
+              "id": "path-p-d",
+              "text": "3λ",
+              "feedback": "Divide by 500 nm to count the wavelengths."
+            }
+          ],
+          "correctOptionId": "path-p-c",
+          "shuffleOptions": true,
+          "correctFeedback": "1000/500 = 2 wavelengths."
+        },
+        {
+          "id": "fringe-p",
+          "type": "choice",
+          "prompt": "Predict the interference at P.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "fringe-p-a",
+              "text": "Constructive superposition; dark fringe",
+              "feedback": "Constructive superposition reinforces the waves, so the fringe is bright."
+            },
+            {
+              "id": "fringe-p-b",
+              "text": "Constructive superposition; bright fringe",
+              "feedback": "A bright fringe forms when the waves reinforce."
+            },
+            {
+              "id": "fringe-p-c",
+              "text": "Destructive superposition; dark fringe",
+              "feedback": "A dark fringe forms when equal, opposite displacements cancel."
+            },
+            {
+              "id": "fringe-p-d",
+              "text": "Destructive superposition; bright fringe",
+              "feedback": "Destructive superposition gives a dark fringe, not a bright one."
+            }
+          ],
+          "correctOptionId": "fringe-p-b",
+          "shuffleOptions": true,
+          "correctFeedback": "A bright fringe forms when the waves reinforce."
+        },
+        {
+          "id": "fringe-q",
+          "type": "choice",
+          "prompt": "Predict the interference at Q.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "fringe-q-a",
+              "text": "Constructive superposition; dark fringe",
+              "feedback": "Constructive superposition reinforces the waves, so the fringe is bright."
+            },
+            {
+              "id": "fringe-q-b",
+              "text": "Constructive superposition; bright fringe",
+              "feedback": "A bright fringe forms when the waves reinforce."
+            },
+            {
+              "id": "fringe-q-c",
+              "text": "Destructive superposition; dark fringe",
+              "feedback": "A dark fringe forms when equal, opposite displacements cancel."
+            },
+            {
+              "id": "fringe-q-d",
+              "text": "Destructive superposition; bright fringe",
+              "feedback": "Destructive superposition gives a dark fringe, not a bright one."
+            }
+          ],
+          "correctOptionId": "fringe-q-c",
+          "shuffleOptions": true,
+          "correctFeedback": "A dark fringe forms when equal, opposite displacements cancel."
+        }
+      ],
+      "modelAnswer": "(a) C: 1000/500 = 2λ. (b) B: a whole-number path difference makes the waves arrive in phase, giving constructive superposition and a bright fringe. (c) C: 750/500 = 1.5λ, an odd number of half-wavelengths. The waves arrive in antiphase; equal amplitudes cancel, giving a dark fringe.",
+      "generalFeedback": [
+        "Divide path difference by wavelength: 1000 nm is two wavelengths.",
+        "Whole-number wavelength differences give in-phase arrival. Displacements add, producing a bright fringe.",
+        "Odd half-wavelength differences give antiphase arrival. Equal, opposite displacements cancel, producing a dark fringe."
+      ],
+      "hint": "Divide each path difference by 500 nm. Decide whether it is a whole number or an odd number of halves.",
+      "sources": [
+        "SPEC A1.3; N24 Q5(b); J23 Q1(b). Double-slit representation selected in teacher feedback."
+      ],
+      "asset": "assets/double_slit.svg",
+      "accessibleDescription": "Schematic with two narrow slits S1 and S2 and a screen on the right. Both paths to P and both paths to Q are shown. P has path difference 1000 nm; Q has path difference 750 nm; wavelength is 500 nm. Geometry is not to scale.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "specRefs": [
+        "A1.3"
+      ]
+    },
+    {
+      "id": "W05",
+      "contentVersion": 1,
+      "title": "Identify gases from emission spectra",
+      "topic": "Waves",
+      "primaryLessonId": "WA07",
+      "requiredLessonIds": [
+        "WA07"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO3",
+        "AO1"
+      ],
+      "commandWord": "Identify",
+      "interaction": "selected-answer",
+      "maxMarks": 3,
+      "prompt": "The diagram shows reference emission spectra for gases P, Q and R, and the spectrum of a mixture. All spectra use the same wavelength scale.",
+      "parts": [
+        {
+          "id": "gases",
+          "type": "choice",
+          "prompt": "Identify the gases in the mixture.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "gases-a",
+              "text": "P and R",
+              "feedback": "P and R account for every mixture line."
+            },
+            {
+              "id": "gases-b",
+              "text": "P and Q",
+              "feedback": "Q has lines at 450 and 560 nm that are absent from the mixture."
+            },
+            {
+              "id": "gases-c",
+              "text": "Q and R",
+              "feedback": "Q adds lines that are absent, and this pair misses a P line."
+            },
+            {
+              "id": "gases-d",
+              "text": "P only",
+              "feedback": "The mixture also contains the line at 610 nm from R."
+            }
+          ],
+          "correctOptionId": "gases-a",
+          "shuffleOptions": true,
+          "correctFeedback": "P and R account for every mixture line."
+        },
+        {
+          "id": "reason",
+          "type": "choice",
+          "prompt": "Identify the reason supporting the gas identification.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "reason-a",
+              "text": "The gases have similar names.",
+              "feedback": "Gas names do not predict their emission lines."
+            },
+            {
+              "id": "reason-b",
+              "text": "Their combined line positions match every mixture line.",
+              "feedback": "Match all mixture lines and check for unexplained lines."
+            },
+            {
+              "id": "reason-c",
+              "text": "These gases have the greatest number of electrons.",
+              "feedback": "The number of electrons alone does not identify this spectrum."
+            },
+            {
+              "id": "reason-d",
+              "text": "All gases emit identical wavelengths.",
+              "feedback": "Different gases have characteristic sets of emission lines."
+            }
+          ],
+          "correctOptionId": "reason-b",
+          "shuffleOptions": true,
+          "requiresCorrectParts": [
+            "gases"
+          ],
+          "correctFeedback": "Match all mixture lines and check for unexplained lines."
+        },
+        {
+          "id": "transition",
+          "type": "choice",
+          "prompt": "Identify the change that produces an emitted photon.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "transition-a",
+              "text": "An electron moves to a higher energy level.",
+              "feedback": "Moving upwards requires energy absorption."
+            },
+            {
+              "id": "transition-b",
+              "text": "The nucleus loses a proton.",
+              "feedback": "This is not the electron transition producing the line."
+            },
+            {
+              "id": "transition-c",
+              "text": "An electron remains at the same energy level.",
+              "feedback": "A transition is needed for this photon emission."
+            },
+            {
+              "id": "transition-d",
+              "text": "An electron moves to a lower energy level.",
+              "feedback": "An electron releases energy as a photon when it moves down."
+            }
+          ],
+          "correctOptionId": "transition-d",
+          "shuffleOptions": true,
+          "correctFeedback": "An electron releases energy as a photon when it moves down."
+        }
+      ],
+      "modelAnswer": "(a) A, P and R. (b) B. (c) D.",
+      "generalFeedback": [
+        "The mixture contains lines at 420, 500, 610 and 680 nm. P and R together supply exactly those positions.",
+        "Q has lines at 450 and 560 nm, which are absent from the mixture.",
+        "An electron emits energy as a photon when it moves down to a lower energy level; excitation moves it up."
+      ],
+      "hint": "Compare line positions rather than colours or the total number of lines alone.",
+      "sources": [
+        "J24 Q3(a),(b); J22 Q2(b); J19 Q2(b)"
+      ],
+      "asset": "assets/spectra.svg",
+      "accessibleDescription": "Shared scale 400-700 nm. P lines: 420 and 500 nm. Q lines: 450 and 560 nm. R lines: 610 and 680 nm. Mixture: 420, 500, 610 and 680 nm.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S21",
+        "S23"
+      ],
+      "specRefs": [
+        "A1.3.1",
+        "A1.3.3"
+      ]
+    },
+    {
+      "id": "W06",
+      "contentVersion": 1,
+      "title": "Read a standing-wave pattern in a pipe",
+      "topic": "Waves",
+      "primaryLessonId": "WA09",
+      "requiredLessonIds": [
+        "WA02",
+        "WA08",
+        "WA09"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2"
+      ],
+      "commandWord": "Determine",
+      "interaction": "selected-answer",
+      "maxMarks": 2,
+      "prompt": "An ideal pipe is open on the left and closed on the right. The diagram represents air-displacement amplitude along the pipe. It is a pattern envelope, not the path followed by air particles.",
+      "parts": [
+        {
+          "id": "length",
+          "type": "choice",
+          "prompt": "Determine the length-wavelength relationship.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "length-a",
+              "text": "L = λ/4",
+              "feedback": "The drawing contains three quarter-wavelength sections."
+            },
+            {
+              "id": "length-b",
+              "text": "L = λ/2",
+              "feedback": "One half-wavelength would have the same type of displacement condition at both ends."
+            },
+            {
+              "id": "length-c",
+              "text": "L = λ",
+              "feedback": "The drawing shows three quarters of a wavelength."
+            },
+            {
+              "id": "length-d",
+              "text": "L = 3λ/4",
+              "feedback": "Three quarter-wavelength sections fit inside the pipe."
+            }
+          ],
+          "correctOptionId": "length-d",
+          "shuffleOptions": true,
+          "correctFeedback": "Three quarter-wavelength sections fit inside the pipe."
+        },
+        {
+          "id": "open-end",
+          "type": "choice",
+          "prompt": "Identify the displacement condition at the open end.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "open-end-a",
+              "text": "Displacement node",
+              "feedback": "A closed end has the displacement node."
+            },
+            {
+              "id": "open-end-b",
+              "text": "Displacement antinode",
+              "feedback": "Air displacement is greatest at the open end."
+            }
+          ],
+          "correctOptionId": "open-end-b",
+          "shuffleOptions": true,
+          "correctFeedback": "Air displacement is greatest at the open end."
+        }
+      ],
+      "modelAnswer": "(a) L = 3λ/4. (b) A displacement antinode.",
+      "generalFeedback": [
+        "The pattern contains three quarter-wavelength sections, so λ = 4L/3.",
+        "The air can oscillate most at an open end. At the closed end its displacement is zero.",
+        "For a pressure representation, node and antinode positions are reversed."
+      ],
+      "hint": "Count the quarter-wavelength sections between a node and the next antinode.",
+      "sources": [
+        "SAM Q3(b)(i); N23 Q1(a); PHYS2"
+      ],
+      "asset": "assets/closed_pipe.svg",
+      "accessibleDescription": "Pipe open left and closed right. Envelope has displacement antinodes at x = 0 and 2L/3, and displacement nodes at x = L/3 and L.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S03",
+        "S27",
+        "S30"
+      ],
+      "specRefs": [
+        "A1.5",
+        "A1.5.1"
+      ]
+    },
+    {
+      "id": "W07",
+      "contentVersion": 1,
+      "title": "Calculate string tension and pitch",
+      "topic": "Waves",
+      "primaryLessonId": "WA09",
+      "requiredLessonIds": [
+        "WA02",
+        "WA04",
+        "WA08",
+        "WA09"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2"
+      ],
+      "commandWord": "Calculate",
+      "interaction": "scaffolded-calculation",
+      "maxMarks": 4,
+      "prompt": "A string has wave speed 150 m/s and mass per unit length μ = 0.0020 kg/m. It is fixed at both ends, 0.50 m apart, and vibrates in its fundamental mode. Calculate its tension and fundamental frequency. Use v = √(T/μ) and v = fλ.",
+      "parts": [
+        {
+          "id": "tension-equation",
+          "type": "choice",
+          "prompt": "Select the rearrangement for tension.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "tension-equation-a",
+              "text": "T = v²μ",
+              "feedback": "Square the speed, then multiply by mass per unit length."
+            },
+            {
+              "id": "tension-equation-b",
+              "text": "T = vμ",
+              "feedback": "The speed must be squared."
+            },
+            {
+              "id": "tension-equation-c",
+              "text": "T = v²/μ",
+              "feedback": "Multiply by μ after squaring."
+            },
+            {
+              "id": "tension-equation-d",
+              "text": "T = μ/v²",
+              "feedback": "This rearrangement reverses the required relationship."
+            }
+          ],
+          "correctOptionId": "tension-equation-a",
+          "shuffleOptions": true,
+          "correctFeedback": "Square the speed, then multiply by mass per unit length."
+        },
+        {
+          "id": "tension",
+          "type": "numeric",
+          "prompt": "Calculate the tension.",
+          "marks": 1,
+          "answer": {
+            "value": 45,
+            "unit": "N",
+            "absoluteTolerance": 0.5,
+            "allowedUnits": {
+              "N": 1
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "T = 150² × 0.0020 = 45 N.",
+          "domain": {
+            "minExclusive": 0
+          }
+        },
+        {
+          "id": "wavelength",
+          "type": "numeric",
+          "prompt": "Determine the fundamental wavelength.",
+          "marks": 1,
+          "answer": {
+            "value": 1,
+            "unit": "m",
+            "absoluteTolerance": 0.01,
+            "allowedUnits": {
+              "m": 1,
+              "cm": 0.01
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "The length is half a wavelength, so double 0.50 m.",
+          "domain": {
+            "minExclusive": 0
+          }
+        },
+        {
+          "id": "frequency",
+          "type": "numeric",
+          "prompt": "Calculate the fundamental frequency.",
+          "marks": 1,
+          "answer": {
+            "value": 150,
+            "unit": "Hz",
+            "absoluteTolerance": 1,
+            "allowedUnits": {
+              "Hz": 1,
+              "kHz": 1000
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Divide 150 m/s by the wavelength in metres.",
+          "domain": {
+            "minExclusive": 0
+          },
+          "ecf": {
+            "operation": "constant-divided-by",
+            "inputs": [
+              "wavelength"
+            ],
+            "constant": 150
+          }
+        }
+      ],
+      "modelAnswer": "T = v²μ = 150² × 0.0020 = 45 N. The string contains half a wavelength, so λ = 2 × 0.50 = 1.0 m. f = v/λ = 150/1.0 = 150 Hz.",
+      "generalFeedback": [
+        "T = vμ forgets to square the speed.",
+        "μ is mass per metre of string, not the total mass.",
+        "In the fundamental mode, L is half a wavelength, not a full wavelength."
+      ],
+      "hint": "Square both sides of the tension equation. For the second calculation, identify the fraction of a wavelength between the fixed ends.",
+      "sources": [
+        "J23 Q3(b),(c); SAM Q3(c)(i),(ii)"
+      ],
+      "asset": "assets/string_fundamental.svg",
+      "accessibleDescription": "String fixed at two ends 0.50 m apart. Fundamental-mode envelope has a node at each end and one antinode at the centre.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S02",
+        "S03",
+        "S05",
+        "S24",
+        "S27",
+        "S29",
+        "S32"
+      ],
+      "specRefs": [
+        "A1.4",
+        "A1.5.1",
+        "A1.5.2"
+      ]
+    },
+    {
+      "id": "W08",
+      "contentVersion": 1,
+      "title": "Choose the refracted ray",
+      "topic": "Waves",
+      "primaryLessonId": "WA10",
+      "requiredLessonIds": [
+        "WA10"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2"
+      ],
+      "commandWord": "Identify",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "Light travels from air into glass at the angle shown. Identify the diagram showing the principal refracted ray.",
+      "parts": [
+        {
+          "id": "ray",
+          "type": "choice",
+          "prompt": "Identify the principal refracted ray.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "ray-a",
+              "text": "Diagram A",
+              "feedback": "The transmitted ray bends towards the normal in glass."
+            },
+            {
+              "id": "ray-b",
+              "text": "Diagram B",
+              "feedback": "This bends away from the normal instead."
+            },
+            {
+              "id": "ray-c",
+              "text": "Diagram C",
+              "feedback": "This is a reflected ray in air."
+            },
+            {
+              "id": "ray-d",
+              "text": "Diagram D",
+              "feedback": "The ray should change direction at this oblique boundary."
+            }
+          ],
+          "correctOptionId": "ray-a",
+          "shuffleOptions": true,
+          "correctFeedback": "The transmitted ray bends towards the normal in glass."
+        }
+      ],
+      "modelAnswer": "A. The transmitted ray enters glass and bends towards the normal.",
+      "generalFeedback": [
+        "C shows a reflected ray in the air.",
+        "B bends away from the normal as though light were entering a lower-index medium.",
+        "D shows no change of direction despite oblique incidence into glass.",
+        "Light travels more slowly in glass; refraction angles are measured from the normal."
+      ],
+      "hint": "Locate the normal and identify which side is glass.",
+      "sources": [
+        "LIVE26 Q4(a); N23 Q3(a); J24 Q4(b)"
+      ],
+      "asset": "assets/refraction_options.svg",
+      "accessibleDescription": "Four diagrams: air above and glass below a horizontal boundary, vertical dashed normal, incident ray down-right from air. A enters glass closer to the normal. B enters glass farther from the normal. C reflects up-right in air. D continues straight.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S33"
+      ],
+      "specRefs": [
+        "A2.1"
+      ]
+    },
+    {
+      "id": "W09",
+      "contentVersion": 1,
+      "title": "Calculate a critical angle",
+      "topic": "Waves",
+      "primaryLessonId": "WA11",
+      "requiredLessonIds": [
+        "WA10",
+        "WA11"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2"
+      ],
+      "commandWord": "Calculate",
+      "interaction": "scaffolded-calculation",
+      "maxMarks": 3,
+      "prompt": "The refractive index of glass is 1.60. Calculate the critical angle at a glass-air boundary. Use sin C = 1/n. Give the angle in degrees.",
+      "parts": [
+        {
+          "id": "index",
+          "type": "numeric",
+          "prompt": "State the refractive index to substitute.",
+          "marks": 1,
+          "answer": {
+            "value": 1.6,
+            "unit": "",
+            "absoluteTolerance": 0.0001,
+            "allowedUnits": {
+              "": 1
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "The refractive index supplied is 1.60.",
+          "domain": {
+            "minExclusive": 0
+          }
+        },
+        {
+          "id": "sine",
+          "type": "numeric",
+          "prompt": "Calculate sin C.",
+          "marks": 1,
+          "answer": {
+            "value": 0.625,
+            "unit": "",
+            "absoluteTolerance": 0.005,
+            "allowedUnits": {
+              "": 1
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Calculate 1/1.60.",
+          "domain": {
+            "minExclusive": 0
+          },
+          "ecf": {
+            "operation": "constant-divided-by",
+            "inputs": [
+              "index"
+            ],
+            "constant": 1,
+            "inputDomain": {
+              "minExclusive": 1
+            }
+          }
+        },
+        {
+          "id": "angle",
+          "type": "numeric",
+          "prompt": "Calculate C in degrees.",
+          "marks": 1,
+          "answer": {
+            "value": 38.682187,
+            "unit": "degrees",
+            "absoluteTolerance": 0.32,
+            "allowedUnits": {
+              "degrees": 1,
+              "°": 1
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Use inverse sine in degree mode.",
+          "domain": {
+            "minExclusive": 0
+          },
+          "ecf": {
+            "operation": "asin-degrees",
+            "inputs": [
+              "sine"
+            ],
+            "inputDomain": {
+              "minExclusive": 0,
+              "maxInclusive": 1
+            }
+          }
+        }
+      ],
+      "modelAnswer": "sin C = 1/1.60 = 0.625. C = sin⁻¹(0.625) = 38.682...°, so C = 38.7°.",
+      "generalFeedback": [
+        "0.625 is a sine value, not an angle in degrees.",
+        "Use inverse sine, not sine, for the final step.",
+        "A result around 0.675 is the angle in radians; switch to degree mode."
+      ],
+      "hint": "Calculate 1/n first. Then ask your calculator which angle has that sine.",
+      "sources": [
+        "LIVE26 Q4(b)(ii); N23 Q3(b); J19 Q4(a)"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S37"
+      ],
+      "specRefs": [
+        "A2.1.3"
+      ],
+      "unscaffoldedFinalAnswerRoute": {
+        "enabled": true,
+        "partId": "angle",
+        "maxMarks": 3,
+        "requiresExplicitMode": "final-answer",
+        "policy": "A correct final value in an allowed equivalent unit earns full practice credit in final-answer mode. Otherwise offer the scaffold before submission; do not auto-award a full route after errors in a checked scaffold.",
+        "label": "Enter a final answer instead"
+      }
+    },
+    {
+      "id": "W10",
+      "contentVersion": 1,
+      "title": "Recognise and regenerate a binary signal",
+      "topic": "Waves",
+      "primaryLessonId": "WA15",
+      "requiredLessonIds": [
+        "WA15"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO1",
+        "AO2"
+      ],
+      "commandWord": "Identify",
+      "interaction": "selected-answer",
+      "maxMarks": 2,
+      "prompt": "An optical link transmits binary digital information using two agreed signal levels. Choose the matching graph and explain why the signal can be regenerated when noise has not made the levels indistinguishable.",
+      "parts": [
+        {
+          "id": "graph",
+          "type": "choice",
+          "prompt": "Identify the binary digital signal.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "graph-a",
+              "text": "Graph A",
+              "feedback": "A varies continuously."
+            },
+            {
+              "id": "graph-b",
+              "text": "Graph B",
+              "feedback": "B has more than the specified two levels."
+            },
+            {
+              "id": "graph-c",
+              "text": "Graph C",
+              "feedback": "C varies continuously."
+            },
+            {
+              "id": "graph-d",
+              "text": "Graph D",
+              "feedback": "D has two discrete signal levels."
+            }
+          ],
+          "correctOptionId": "graph-d",
+          "shuffleOptions": true,
+          "correctFeedback": "D has two discrete signal levels."
+        },
+        {
+          "id": "regenerate",
+          "type": "choice",
+          "prompt": "Explain how the receiver can regenerate the signal.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "regenerate-a",
+              "text": "Regeneration increases the speed of light.",
+              "feedback": "The propagation speed is not increased."
+            },
+            {
+              "id": "regenerate-b",
+              "text": "The receiver recognises the levels and rebuilds clean pulses.",
+              "feedback": "Recognisable levels allow clean pulses to be rebuilt."
+            },
+            {
+              "id": "regenerate-c",
+              "text": "A digital signal cannot be affected by noise.",
+              "feedback": "Noise can affect a digital signal too."
+            },
+            {
+              "id": "regenerate-d",
+              "text": "Regeneration converts all signals into analogue waves.",
+              "feedback": "The clean output remains a digital representation."
+            }
+          ],
+          "correctOptionId": "regenerate-b",
+          "shuffleOptions": true,
+          "correctFeedback": "Recognisable levels allow clean pulses to be rebuilt."
+        }
+      ],
+      "modelAnswer": "(a) D. (b) B.",
+      "generalFeedback": [
+        "A and C vary continuously; B has several levels rather than the two specified here.",
+        "Digital links can suffer noise and attenuation. Regeneration works while the intended levels remain distinguishable.",
+        "Regeneration restores the signal representation; it does not increase light speed."
+      ],
+      "hint": "Look for two stable levels. Then consider whether the receiver can distinguish them.",
+      "sources": [
+        "J17 Q11(a),(c); N24 Q4(c); N23 Q2(a)"
+      ],
+      "asset": "assets/signal_options.svg",
+      "accessibleDescription": "Four voltage-time graphs: A smooth sinusoid; B staircase with four distinct levels; C irregular continuously varying trace; D pulses switching between two levels.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S41",
+        "S42"
+      ],
+      "specRefs": [
+        "A2.3"
+      ]
+    },
+    {
+      "id": "W11",
+      "contentVersion": 1,
+      "title": "Apply the inverse-square law",
+      "topic": "Waves",
+      "primaryLessonId": "WA13",
+      "requiredLessonIds": [
+        "WA13"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2"
+      ],
+      "commandWord": "Calculate",
+      "interaction": "scaffolded-calculation",
+      "maxMarks": 3,
+      "prompt": "In an ideal model, a transmitter spreads its energy uniformly in all directions. Signal intensity is 0.072 W/m² at 3.0 m. Assume no absorption or obstacles. Calculate the intensity at 9.0 m. Use I = k/r².",
+      "parts": [
+        {
+          "id": "k",
+          "type": "numeric",
+          "prompt": "Calculate k from the first position.",
+          "marks": 1,
+          "answer": {
+            "value": 0.648,
+            "unit": "W",
+            "absoluteTolerance": 0.001,
+            "allowedUnits": {
+              "W": 1
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Multiply 0.072 by 3.0².",
+          "domain": {
+            "minExclusive": 0
+          }
+        },
+        {
+          "id": "substitution",
+          "type": "choice",
+          "prompt": "Select the substitution at 9.0 m.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "substitution-a",
+              "text": "I = k/9",
+              "feedback": "Square the distance before dividing."
+            },
+            {
+              "id": "substitution-b",
+              "text": "I = 9k",
+              "feedback": "Increasing distance should reduce intensity."
+            },
+            {
+              "id": "substitution-c",
+              "text": "I = k/81",
+              "feedback": "9.0² = 81, so divide k by 81."
+            },
+            {
+              "id": "substitution-d",
+              "text": "I = 81k",
+              "feedback": "This reverses the inverse-square relationship."
+            }
+          ],
+          "correctOptionId": "substitution-c",
+          "shuffleOptions": true,
+          "correctFeedback": "9.0² = 81, so divide k by 81."
+        },
+        {
+          "id": "intensity",
+          "type": "numeric",
+          "prompt": "Calculate the intensity at 9.0 m.",
+          "marks": 1,
+          "answer": {
+            "value": 0.008,
+            "unit": "W/m²",
+            "absoluteTolerance": 0.0001,
+            "allowedUnits": {
+              "W/m²": 1,
+              "mW/m²": 0.001
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Divide k by 81.",
+          "domain": {
+            "minExclusive": 0
+          },
+          "ecf": {
+            "operation": "divide-constant",
+            "inputs": [
+              "k"
+            ],
+            "constant": 81,
+            "requiresCorrectParts": [
+              "substitution"
+            ]
+          }
+        }
+      ],
+      "modelAnswer": "k = 0.072 × 3.0² = 0.648 W. I = 0.648/9.0² = 0.648/81 = 0.0080 W/m². Tripling the distance reduces intensity by a factor of 9.",
+      "generalFeedback": [
+        "Dividing by 9 instead of 81 misses the square on distance.",
+        "Intensity falls with distance under the stated model.",
+        "The ratio is (old distance/new distance)², so intensity becomes one ninth of its original value."
+      ],
+      "hint": "Find k from the first position. Square the second distance before dividing.",
+      "sources": [
+        "J17 Q12(b); J19 Q3(b); N24 Q2(b)"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "skillIds": [
+        "S44",
+        "S45"
+      ],
+      "specRefs": [
+        "A3.2"
+      ],
+      "unscaffoldedFinalAnswerRoute": {
+        "enabled": true,
+        "partId": "intensity",
+        "maxMarks": 3,
+        "requiresExplicitMode": "final-answer",
+        "policy": "A correct final value in an allowed equivalent unit earns full practice credit in final-answer mode. Otherwise offer the scaffold before submission; do not auto-award a full route after errors in a checked scaffold.",
+        "label": "Enter a final answer instead"
+      }
+    },
+    {
+      "id": "W12",
+      "contentVersion": 2,
+      "title": "Compare communication methods using evidence",
+      "topic": "Waves",
+      "primaryLessonId": "WA16",
+      "requiredLessonIds": [
+        "WA16"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO3",
+        "AO2"
+      ],
+      "commandWord": "Compare",
+      "interaction": "answer-completion",
+      "maxMarks": 4,
+      "prompt": "A technician sends instructions to a display 4 m away. People regularly pass between the transmitter and receiver. The table shows successful transmissions out of 10. Compare the methods, explain the effect of the obstruction and suggest the more suitable method for this room. Complete the answer by selecting one sentence for each gap.",
+      "parts": [
+        {
+          "id": "comparison",
+          "type": "choice",
+          "prompt": "Gap 1: Compare the obstructed results.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "comparison-a",
+              "text": "With the screen, infrared succeeded in 2/10 trials and Bluetooth in 9/10 trials.",
+              "feedback": "Yes: this comparison uses both successful-transmission values."
+            },
+            {
+              "id": "comparison-b",
+              "text": "With the screen, infrared succeeded in 9/10 trials and Bluetooth in 2/10 trials.",
+              "feedback": "Those two results have been swapped."
+            },
+            {
+              "id": "comparison-c",
+              "text": "With the screen, both methods still succeeded in all 10 of the trials.",
+              "feedback": "10/10 applies to the unobstructed test, not this row."
+            },
+            {
+              "id": "comparison-d",
+              "text": "With the screen, infrared succeeded in 8/10 trials and Bluetooth in 1/10 trials.",
+              "feedback": "Those are the numbers of failed trials. The table gives successes."
+            }
+          ],
+          "correctOptionId": "comparison-a",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: this comparison uses both successful-transmission values."
+        },
+        {
+          "id": "infrared",
+          "type": "choice",
+          "prompt": "Gap 2: Explain the infrared result.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "infrared-a",
+              "text": "Infrared needs no clear path, so the screen should not affect reception.",
+              "feedback": "The obstructed results show why a clear path matters here."
+            },
+            {
+              "id": "infrared-b",
+              "text": "Infrared needs a clear path, and the screen blocked much of its signal.",
+              "feedback": "Yes: a blocked path explains the large reduction in successful reception."
+            },
+            {
+              "id": "infrared-c",
+              "text": "Infrared cannot travel 4 m, even when there is no screen in the path.",
+              "feedback": "The 10/10 unobstructed result shows that 4 m was within range."
+            },
+            {
+              "id": "infrared-d",
+              "text": "Infrared has a lower frequency after the screen, so the receiver stops working.",
+              "feedback": "Frequency does not change simply because light enters a stationary material."
+            }
+          ],
+          "correctOptionId": "infrared-b",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: a blocked path explains the large reduction in successful reception."
+        },
+        {
+          "id": "bluetooth",
+          "type": "choice",
+          "prompt": "Gap 3: Explain the Bluetooth result.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "bluetooth-a",
+              "text": "Bluetooth uses infrared waves that are unaffected by this screen.",
+              "feedback": "Bluetooth uses radio waves, not infrared."
+            },
+            {
+              "id": "bluetooth-b",
+              "text": "Bluetooth travels faster than infrared, reaching the receiver before an obstruction matters.",
+              "feedback": "Both are electromagnetic waves; a higher speed does not explain these results."
+            },
+            {
+              "id": "bluetooth-c",
+              "text": "Bluetooth gains energy in the plastic screen, increasing the strength of the signal.",
+              "feedback": "The screen does not add energy to strengthen the signal."
+            },
+            {
+              "id": "bluetooth-d",
+              "text": "Bluetooth uses radio waves that passed through this screen well enough for reception.",
+              "feedback": "Yes: the radio signal remained usable through this particular material."
+            }
+          ],
+          "correctOptionId": "bluetooth-d",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: the radio signal remained usable through this particular material."
+        },
+        {
+          "id": "recommendation",
+          "type": "choice",
+          "prompt": "Gap 4: Suggest a method and justify it for this room.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "recommendation-a",
+              "text": "Use infrared because both methods were equally successful when the path was clear.",
+              "feedback": "This room has frequent obstructions, so the obstructed results matter too."
+            },
+            {
+              "id": "recommendation-b",
+              "text": "Use Bluetooth because its signal will pass through every material in the room.",
+              "feedback": "The test supports a choice for this obstruction; it does not prove passage through every material."
+            },
+            {
+              "id": "recommendation-c",
+              "text": "Use Bluetooth because interruptions are likely and it worked better with an obstruction.",
+              "feedback": "Yes: this links the test evidence to people regularly crossing the path."
+            },
+            {
+              "id": "recommendation-d",
+              "text": "Use infrared because fewer successful transmissions mean less unwanted interference.",
+              "feedback": "Fewer successful transmissions mean poorer reliability for the intended task."
+            }
+          ],
+          "correctOptionId": "recommendation-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: this links the test evidence to people regularly crossing the path."
+        }
+      ],
+      "modelAnswer": "Both methods transmitted successfully in all 10 trials without an obstruction. With the screen, infrared succeeded in 2/10 trials and Bluetooth in 9/10 trials. Infrared needs a clear path, and the screen blocked much of its signal. Bluetooth uses radio waves that passed through this screen well enough for reception. Use Bluetooth because interruptions are likely and it worked better with an obstruction.",
+      "generalFeedback": [
+        "The supplied opening earns no marks. Each selected missing sentence earns one independent practice mark.",
+        "Compare both methods, explain each result and relate the recommendation to this room."
+      ],
+      "hint": "Compare the two rows of results. Then explain the difference and relate your recommendation to the room.",
+      "sources": [
+        "SPEC A3.3.1; adapted original W12 practice context. This is a scaffolded four-point practice task, not a claim about an official four-mark allocation."
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
+      "familyId": "communication-obstruction",
+      "dataTable": {
+        "headers": [
+          "Condition",
+          "Infrared",
+          "Bluetooth"
+        ],
+        "rows": [
+          [
+            "No obstruction",
+            "10/10",
+            "10/10"
+          ],
+          [
+            "Plastic screen",
+            "2/10",
+            "9/10"
+          ]
+        ]
+      },
+      "answerOpening": "Both methods transmitted successfully in all 10 trials without an obstruction.",
+      "openingEarnsMarks": false,
+      "skillIds": [
+        "S49"
+      ],
+      "specRefs": [
+        "A3.3.1"
+      ]
+    },
+    {
+      "id": "W13",
+      "contentVersion": 1,
+      "title": "Recall frequency and periodic time",
+      "topic": "Waves",
+      "primaryLessonId": "WA02",
+      "requiredLessonIds": [
+        "WA02"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 2,
+      "prompt": "State what is meant by frequency and periodic time. Select one definition for each.",
+      "parts": [
+        {
+          "id": "frequency",
+          "type": "choice",
+          "prompt": "State what is meant by frequency.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "frequency-a",
+              "text": "The time for one oscillation",
+              "feedback": "This is periodic time."
+            },
+            {
+              "id": "frequency-b",
+              "text": "The maximum displacement",
+              "feedback": "This is amplitude."
+            },
+            {
+              "id": "frequency-c",
+              "text": "The number of complete oscillations per second",
+              "feedback": "Yes: frequency counts complete cycles each second."
+            },
+            {
+              "id": "frequency-d",
+              "text": "The distance travelled in one second",
+              "feedback": "This describes wave speed."
+            }
+          ],
+          "correctOptionId": "frequency-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: frequency counts complete cycles each second."
+        },
+        {
+          "id": "period",
+          "type": "choice",
+          "prompt": "State what is meant by periodic time.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "period-a",
+              "text": "The number of oscillations per second",
+              "feedback": "This is frequency."
+            },
+            {
+              "id": "period-b",
+              "text": "The time for one complete oscillation",
+              "feedback": "Yes: period is the time for one full cycle."
+            },
+            {
+              "id": "period-c",
+              "text": "The separation of neighbouring crests",
+              "feedback": "This is a wavelength."
+            },
+            {
+              "id": "period-d",
+              "text": "The maximum displacement from equilibrium",
+              "feedback": "This is amplitude."
+            }
+          ],
+          "correctOptionId": "period-b",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: period is the time for one full cycle."
+        }
+      ],
+      "modelAnswer": "(a) C. (b) B.",
+      "generalFeedback": [
+        "Frequency counts complete oscillations per second, measured in hertz.",
+        "Periodic time measures seconds for one cycle. The two quantities are reciprocals: f = 1/T."
+      ],
+      "hint": "One quantity counts cycles; the other measures the time for one cycle.",
+      "sources": [
+        "SPEC A1.1.1"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S01",
+        "S02"
+      ],
+      "specRefs": [
+        "A1.1.1"
+      ]
+    },
+    {
+      "id": "W14",
+      "contentVersion": 1,
+      "title": "Recall amplitude and wavelength",
+      "topic": "Waves",
+      "primaryLessonId": "WA02",
+      "requiredLessonIds": [
+        "WA02"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 2,
+      "prompt": "State what is meant by amplitude and wavelength. Select one definition for each.",
+      "parts": [
+        {
+          "id": "amplitude",
+          "type": "choice",
+          "prompt": "State what is meant by amplitude.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "amplitude-a",
+              "text": "Maximum displacement from equilibrium",
+              "feedback": "Yes: measure the greatest displacement from the centre line."
+            },
+            {
+              "id": "amplitude-b",
+              "text": "Crest-to-trough distance along the wave",
+              "feedback": "This distance along a sinusoidal wave is half a wavelength."
+            },
+            {
+              "id": "amplitude-c",
+              "text": "Total highest-to-lowest displacement",
+              "feedback": "Peak-to-peak displacement is twice the amplitude."
+            },
+            {
+              "id": "amplitude-d",
+              "text": "Time for one complete cycle",
+              "feedback": "This is periodic time."
+            }
+          ],
+          "correctOptionId": "amplitude-a",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: measure the greatest displacement from the centre line."
+        },
+        {
+          "id": "wavelength",
+          "type": "choice",
+          "prompt": "State what is meant by wavelength.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "wavelength-a",
+              "text": "Vertical distance from equilibrium to a crest",
+              "feedback": "This describes amplitude."
+            },
+            {
+              "id": "wavelength-b",
+              "text": "Distance between adjacent points in phase",
+              "feedback": "Yes: adjacent crests are one example."
+            },
+            {
+              "id": "wavelength-c",
+              "text": "Number of crests passing per second",
+              "feedback": "This describes frequency."
+            },
+            {
+              "id": "wavelength-d",
+              "text": "Time between successive crests passing a point",
+              "feedback": "This describes periodic time."
+            }
+          ],
+          "correctOptionId": "wavelength-b",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: adjacent crests are one example."
+        }
+      ],
+      "modelAnswer": "(a) A. (b) B.",
+      "generalFeedback": [
+        "Amplitude starts at the equilibrium position; peak-to-peak displacement is twice the amplitude.",
+        "Wavelength is a distance along the direction of propagation between adjacent points with the same phase."
+      ],
+      "hint": "Distinguish a displacement from a distance along the wave.",
+      "sources": [
+        "SPEC A1.1.1"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S03",
+        "S04"
+      ],
+      "specRefs": [
+        "A1.1.1"
+      ]
+    },
+    {
+      "id": "W15",
+      "contentVersion": 1,
+      "title": "Recall the wave equation",
+      "topic": "Waves",
+      "primaryLessonId": "WA04",
+      "requiredLessonIds": [
+        "WA04"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State the equation relating wave speed v, frequency f and wavelength λ. Select one answer.",
+      "parts": [
+        {
+          "id": "equation",
+          "type": "choice",
+          "prompt": "Select the wave equation.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "equation-a",
+              "text": "v = f/λ",
+              "feedback": "Wave speed is the product of frequency and wavelength."
+            },
+            {
+              "id": "equation-b",
+              "text": "v = λ/f",
+              "feedback": "This is not the wave-speed relationship."
+            },
+            {
+              "id": "equation-c",
+              "text": "v = f + λ",
+              "feedback": "Frequency and wavelength are not added."
+            },
+            {
+              "id": "equation-d",
+              "text": "v = fλ",
+              "feedback": "Yes: wave speed equals frequency × wavelength."
+            }
+          ],
+          "correctOptionId": "equation-d",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: wave speed equals frequency × wavelength."
+        }
+      ],
+      "modelAnswer": "D. v = fλ.",
+      "generalFeedback": [
+        "Wave speed equals frequency multiplied by wavelength. This question asks you to recall the relationship, not to substitute numbers."
+      ],
+      "hint": "Think of the distance covered per cycle and the number of cycles each second.",
+      "sources": [
+        "SPEC A1.4"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S24"
+      ],
+      "specRefs": [
+        "A1.4"
+      ]
+    },
+    {
+      "id": "W16",
+      "contentVersion": 1,
+      "title": "Recall a transverse-wave definition",
+      "topic": "Waves",
+      "primaryLessonId": "WA01",
+      "requiredLessonIds": [
+        "WA01"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State what is meant by a transverse wave. Select one answer.",
+      "parts": [
+        {
+          "id": "definition",
+          "type": "choice",
+          "prompt": "Select the definition of a transverse wave.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "definition-a",
+              "text": "Oscillations parallel to energy transfer",
+              "feedback": "Parallel describes a longitudinal wave."
+            },
+            {
+              "id": "definition-b",
+              "text": "Particles travel continuously with the wave",
+              "feedback": "The oscillation is local; this does not define a transverse wave."
+            },
+            {
+              "id": "definition-c",
+              "text": "Oscillations perpendicular to energy transfer",
+              "feedback": "Yes: the two directions are at right angles."
+            },
+            {
+              "id": "definition-d",
+              "text": "There are no oscillations",
+              "feedback": "A transverse wave involves oscillations."
+            }
+          ],
+          "correctOptionId": "definition-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: the two directions are at right angles."
+        }
+      ],
+      "modelAnswer": "C. Oscillations are perpendicular to the direction of energy transfer.",
+      "generalFeedback": [
+        "Perpendicular means at right angles. Parallel oscillations describe a longitudinal wave.",
+        "Up and down is incomplete because the relationship to energy transfer must be stated."
+      ],
+      "hint": "Recall the relationship between the two directions.",
+      "sources": [
+        "SPEC A1.2"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S10"
+      ],
+      "specRefs": [
+        "A1.2"
+      ]
+    },
+    {
+      "id": "W17",
+      "contentVersion": 1,
+      "title": "Recall coherence",
+      "topic": "Waves",
+      "primaryLessonId": "WA05",
+      "requiredLessonIds": [
+        "WA05"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State the two properties that define coherent waves. Select one answer.",
+      "parts": [
+        {
+          "id": "coherent",
+          "type": "choice",
+          "prompt": "Select the two properties of coherent waves.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "coherent-a",
+              "text": "Same amplitude and speed only",
+              "feedback": "Equal amplitudes do not establish a stable phase relationship."
+            },
+            {
+              "id": "coherent-b",
+              "text": "Same frequency and a constant phase difference",
+              "feedback": "Yes: coherence means the phase relationship stays fixed."
+            },
+            {
+              "id": "coherent-c",
+              "text": "Different frequencies and always in phase",
+              "feedback": "Different frequencies cause the phase relationship to change."
+            },
+            {
+              "id": "coherent-d",
+              "text": "Same frequency and a continually changing phase difference",
+              "feedback": "The phase difference must stay constant."
+            }
+          ],
+          "correctOptionId": "coherent-b",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: coherence means the phase relationship stays fixed."
+        }
+      ],
+      "modelAnswer": "B. Same frequency and a constant phase difference.",
+      "generalFeedback": [
+        "Coherent waves have a stable phase relationship. They do not have to be in phase: a constant non-zero phase difference is allowed.",
+        "Equal amplitudes alone do not establish coherence."
+      ],
+      "hint": "Recall one frequency property and one phase property.",
+      "sources": [
+        "SPEC A1.3"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S15"
+      ],
+      "specRefs": [
+        "A1.3"
+      ]
+    },
+    {
+      "id": "W18",
+      "contentVersion": 1,
+      "title": "Recall the principle of superposition",
+      "topic": "Waves",
+      "primaryLessonId": "WA05",
+      "requiredLessonIds": [
+        "WA05"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State the principle of superposition. Select one answer.",
+      "parts": [
+        {
+          "id": "principle",
+          "type": "choice",
+          "prompt": "Select the principle of superposition.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "principle-a",
+              "text": "The wave speeds are added.",
+              "feedback": "Add displacements, not speeds."
+            },
+            {
+              "id": "principle-b",
+              "text": "The larger wave removes the smaller wave.",
+              "feedback": "The waves overlap; the larger one does not remove the other."
+            },
+            {
+              "id": "principle-c",
+              "text": "The resultant displacement is the sum of individual displacements.",
+              "feedback": "Yes: include the signs of the displacements."
+            },
+            {
+              "id": "principle-d",
+              "text": "The frequencies are always added.",
+              "feedback": "Add displacements, not frequencies."
+            }
+          ],
+          "correctOptionId": "principle-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: include the signs of the displacements."
+        }
+      ],
+      "modelAnswer": "C. The resultant displacement is the sum of the individual displacements.",
+      "generalFeedback": [
+        "Add displacements with their signs at the same point and time. Opposite signs can cancel; matching signs can reinforce.",
+        "Superposition adds displacements, not frequencies or wave speeds."
+      ],
+      "hint": "Which wave quantity is added at a point?",
+      "sources": [
+        "SPEC A1.3"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S18"
+      ],
+      "specRefs": [
+        "A1.3"
+      ]
+    },
+    {
+      "id": "W19",
+      "contentVersion": 1,
+      "title": "Recall a displacement node",
+      "topic": "Waves",
+      "primaryLessonId": "WA08",
+      "requiredLessonIds": [
+        "WA08"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State what is meant by a displacement node in a stationary wave. Select one answer.",
+      "parts": [
+        {
+          "id": "node",
+          "type": "choice",
+          "prompt": "Select the definition of a displacement node.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "node-a",
+              "text": "Displacement is always zero.",
+              "feedback": "Yes: a node stays at zero displacement throughout the cycle."
+            },
+            {
+              "id": "node-b",
+              "text": "Oscillation amplitude is greatest.",
+              "feedback": "This is an antinode."
+            },
+            {
+              "id": "node-c",
+              "text": "The point is at a crest at every instant.",
+              "feedback": "A fixed crest is not a displacement node."
+            },
+            {
+              "id": "node-d",
+              "text": "The point crosses equilibrium at one instant.",
+              "feedback": "Other oscillating points also pass through equilibrium."
+            }
+          ],
+          "correctOptionId": "node-a",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: a node stays at zero displacement throughout the cycle."
+        }
+      ],
+      "modelAnswer": "A. A point where displacement is always zero.",
+      "generalFeedback": [
+        "A node remains at zero displacement. Other points may pass through equilibrium during a cycle, but they still oscillate.",
+        "Maximum oscillation amplitude occurs at an antinode."
+      ],
+      "hint": "Distinguish always zero from zero at one instant.",
+      "sources": [
+        "SPEC A1.5"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S27"
+      ],
+      "specRefs": [
+        "A1.5"
+      ]
+    },
+    {
+      "id": "W20",
+      "contentVersion": 1,
+      "title": "Recall resonance",
+      "topic": "Waves",
+      "primaryLessonId": "WA08",
+      "requiredLessonIds": [
+        "WA08"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State the condition for resonance in a driven oscillating system. Select one answer.",
+      "parts": [
+        {
+          "id": "resonance",
+          "type": "choice",
+          "prompt": "Select the condition for resonance.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "resonance-a",
+              "text": "Driving frequency is zero.",
+              "feedback": "The driving frequency must match a natural frequency."
+            },
+            {
+              "id": "resonance-b",
+              "text": "Every oscillation is completely damped.",
+              "feedback": "Complete damping does not define resonance."
+            },
+            {
+              "id": "resonance-c",
+              "text": "The driver has the greatest possible mass.",
+              "feedback": "The driver’s mass alone does not define resonance."
+            },
+            {
+              "id": "resonance-d",
+              "text": "Driving frequency matches a natural frequency.",
+              "feedback": "Yes: the matched frequency allows a large response."
+            }
+          ],
+          "correctOptionId": "resonance-d",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: the matched frequency allows a large response."
+        }
+      ],
+      "modelAnswer": "D. The driving frequency matches a natural frequency.",
+      "generalFeedback": [
+        "Resonance can produce a large oscillation amplitude because the driver transfers energy effectively at a natural frequency."
+      ],
+      "hint": "Recall the relationship between driving and natural frequencies.",
+      "sources": [
+        "SPEC A1.5; A1.5.1"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S28"
+      ],
+      "specRefs": [
+        "A1.5",
+        "A1.5.1"
+      ]
+    },
+    {
+      "id": "W21",
+      "contentVersion": 1,
+      "title": "Recall the two conditions for TIR",
+      "topic": "Waves",
+      "primaryLessonId": "WA11",
+      "requiredLessonIds": [
+        "WA11"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 2,
+      "prompt": "State both conditions required for total internal reflection. Select one answer for each part.",
+      "parts": [
+        {
+          "id": "boundary",
+          "type": "choice",
+          "prompt": "State the required direction through the boundary.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "boundary-a",
+              "text": "From lower to higher refractive index",
+              "feedback": "TIR requires the opposite direction."
+            },
+            {
+              "id": "boundary-b",
+              "text": "From higher to lower refractive index",
+              "feedback": "Yes: light approaches from the higher-index medium."
+            },
+            {
+              "id": "boundary-c",
+              "text": "Between identical refractive indices",
+              "feedback": "TIR needs a lower-index medium on the far side."
+            },
+            {
+              "id": "boundary-d",
+              "text": "Any direction regardless of refractive index",
+              "feedback": "The refractive-index direction is essential."
+            }
+          ],
+          "correctOptionId": "boundary-b",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: light approaches from the higher-index medium."
+        },
+        {
+          "id": "angle",
+          "type": "choice",
+          "prompt": "State the required angle of incidence.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "angle-a",
+              "text": "Equal to zero",
+              "feedback": "Normal incidence does not give TIR."
+            },
+            {
+              "id": "angle-b",
+              "text": "Less than the critical angle",
+              "feedback": "Below the critical angle a transmitted ray can emerge."
+            },
+            {
+              "id": "angle-c",
+              "text": "Equal to the critical angle",
+              "feedback": "At the critical angle the refracted ray runs along the boundary."
+            },
+            {
+              "id": "angle-d",
+              "text": "Greater than the critical angle",
+              "feedback": "Yes: the incidence angle must exceed the critical angle."
+            }
+          ],
+          "correctOptionId": "angle-d",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: the incidence angle must exceed the critical angle."
+        }
+      ],
+      "modelAnswer": "(a) B. (b) D.",
+      "generalFeedback": [
+        "Both conditions are needed. More optically dense means a higher refractive index in this context.",
+        "At the critical angle, the refracted ray travels along the boundary. TIR requires an angle greater than this."
+      ],
+      "hint": "Recall a condition about the two media and a condition about the angle.",
+      "sources": [
+        "SPEC A2.1.2"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S36"
+      ],
+      "specRefs": [
+        "A2.1.2"
+      ]
+    },
+    {
+      "id": "W22",
+      "contentVersion": 1,
+      "title": "Recall analogue and digital signals",
+      "topic": "Waves",
+      "primaryLessonId": "WA15",
+      "requiredLessonIds": [
+        "WA15"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 2,
+      "prompt": "State how analogue and digital information are represented. Select one answer for each.",
+      "parts": [
+        {
+          "id": "analogue",
+          "type": "choice",
+          "prompt": "State how an analogue signal is represented.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "analogue-a",
+              "text": "Continuously varying values",
+              "feedback": "Yes: analogue values vary continuously over a range."
+            },
+            {
+              "id": "analogue-b",
+              "text": "Only two possible values",
+              "feedback": "Two levels can represent binary digital information."
+            },
+            {
+              "id": "analogue-c",
+              "text": "It cannot carry information.",
+              "feedback": "Analogue signals can carry information."
+            },
+            {
+              "id": "analogue-d",
+              "text": "It cannot be affected by noise.",
+              "feedback": "Analogue signals can be affected by noise."
+            }
+          ],
+          "correctOptionId": "analogue-a",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: analogue values vary continuously over a range."
+        },
+        {
+          "id": "digital",
+          "type": "choice",
+          "prompt": "State how digital information is represented.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "digital-a",
+              "text": "Every possible continuous value",
+              "feedback": "This describes a continuous analogue representation."
+            },
+            {
+              "id": "digital-b",
+              "text": "Only sound waves",
+              "feedback": "Digital information is not restricted to sound."
+            },
+            {
+              "id": "digital-c",
+              "text": "Discrete values or symbols",
+              "feedback": "Yes: digital representations use discrete values or symbols."
+            },
+            {
+              "id": "digital-d",
+              "text": "A signal that never changes",
+              "feedback": "Changes can carry the information."
+            }
+          ],
+          "correctOptionId": "digital-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: digital representations use discrete values or symbols."
+        }
+      ],
+      "modelAnswer": "(a) A. (b) C.",
+      "generalFeedback": [
+        "Analogue signals vary continuously. Digital representations use discrete values or symbols.",
+        "Binary is a common digital representation, using two values. This does not mean all digital systems have only two physical signal levels."
+      ],
+      "hint": "Recall the distinction between continuous and discrete.",
+      "sources": [
+        "SPEC A2.3"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S41"
+      ],
+      "specRefs": [
+        "A2.3"
+      ]
+    },
+    {
+      "id": "W23",
+      "contentVersion": 1,
+      "title": "Recall electromagnetic-wave speed",
+      "topic": "Waves",
+      "primaryLessonId": "WA14",
+      "requiredLessonIds": [
+        "WA14"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State the relationship between the speeds of electromagnetic waves in a vacuum. Select one answer.",
+      "parts": [
+        {
+          "id": "speed",
+          "type": "choice",
+          "prompt": "Select the correct speed statement.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "speed-a",
+              "text": "Higher-frequency waves travel faster.",
+              "feedback": "Vacuum speed is the same for different electromagnetic frequencies."
+            },
+            {
+              "id": "speed-b",
+              "text": "All electromagnetic waves have the same wavelength.",
+              "feedback": "Wavelength differs between frequencies."
+            },
+            {
+              "id": "speed-c",
+              "text": "All electromagnetic waves travel at the speed of light in a vacuum.",
+              "feedback": "Yes: they share the same vacuum speed."
+            },
+            {
+              "id": "speed-d",
+              "text": "All electromagnetic waves travel at the speed of light in any material.",
+              "feedback": "Speed in a material depends on the material and can depend on frequency."
+            }
+          ],
+          "correctOptionId": "speed-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: they share the same vacuum speed."
+        }
+      ],
+      "modelAnswer": "D. All electromagnetic waves travel at the speed of light in a vacuum.",
+      "generalFeedback": [
+        "Their vacuum speed is the same, approximately 3.0 × 10⁸ m/s. Their frequencies and wavelengths can differ.",
+        "At equal speed, a larger frequency corresponds to a shorter wavelength."
+      ],
+      "hint": "Different spectrum regions share one property in a vacuum.",
+      "sources": [
+        "SPEC A3.1"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original AO1 recall question authored following teacher feedback.",
+      "skillIds": [
+        "S43"
+      ],
+      "specRefs": [
+        "A3.1"
+      ]
+    },
+    {
+      "id": "W24",
+      "contentVersion": 1,
+      "title": "Use two different wave graphs",
+      "topic": "Waves",
+      "primaryLessonId": "WA04",
+      "requiredLessonIds": [
+        "WA02",
+        "WA03",
+        "WA04"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2",
+        "AO3"
+      ],
+      "commandWord": "Calculate",
+      "interaction": "scaffolded-calculation",
+      "maxMarks": 4,
+      "prompt": "Graphs A and B represent the same travelling wave. A is a snapshot of displacement against distance; B shows displacement against time at one fixed point. Use both graphs to calculate the wave speed. Use f = 1/T and v = fλ.",
+      "parts": [
+        {
+          "id": "period",
+          "type": "numeric",
+          "prompt": "Determine the periodic time from graph B.",
+          "marks": 1,
+          "answer": {
+            "value": 0.4,
+            "unit": "s",
+            "absoluteTolerance": 0.01,
+            "allowedUnits": {
+              "s": 1,
+              "ms": 0.001
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Measure a crest-to-crest interval on the time axis.",
+          "domain": {
+            "minExclusive": 0
+          }
+        },
+        {
+          "id": "frequency",
+          "type": "numeric",
+          "prompt": "Calculate the frequency.",
+          "marks": 1,
+          "answer": {
+            "value": 2.5,
+            "unit": "Hz",
+            "absoluteTolerance": 0.1,
+            "allowedUnits": {
+              "Hz": 1,
+              "kHz": 1000
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Use the reciprocal of the period.",
+          "domain": {
+            "minExclusive": 0
+          },
+          "ecf": {
+            "operation": "constant-divided-by",
+            "inputs": [
+              "period"
+            ],
+            "constant": 1
+          }
+        },
+        {
+          "id": "wavelength",
+          "type": "numeric",
+          "prompt": "Determine the wavelength in metres from graph A.",
+          "marks": 1,
+          "answer": {
+            "value": 0.2,
+            "unit": "m",
+            "absoluteTolerance": 0.01,
+            "allowedUnits": {
+              "m": 1,
+              "cm": 0.01
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "20 cm = 0.20 m.",
+          "domain": {
+            "minExclusive": 0
+          }
+        },
+        {
+          "id": "speed",
+          "type": "numeric",
+          "prompt": "Calculate the wave speed.",
+          "marks": 1,
+          "answer": {
+            "value": 0.5,
+            "unit": "m/s",
+            "absoluteTolerance": 0.02,
+            "allowedUnits": {
+              "m/s": 1,
+              "cm/s": 0.01
+            }
+          },
+          "correctFeedback": "Your value is correct.",
+          "incorrectFeedback": "Multiply frequency by wavelength in metres.",
+          "domain": {
+            "minExclusive": 0
+          },
+          "ecf": {
+            "operation": "multiply",
+            "inputs": [
+              "frequency",
+              "wavelength"
+            ]
+          }
+        }
+      ],
+      "modelAnswer": "Graph B gives T = 0.40 s. f = 1/0.40 = 2.5 Hz. Graph A gives λ = 20 cm = 0.20 m. v = 2.5 × 0.20 = 0.50 m/s.",
+      "generalFeedback": [
+        "Read the horizontal axis first: graph A gives a distance and graph B gives a time.",
+        "A crest-to-crest gap is one wavelength on graph A and one period on graph B.",
+        "Divide centimetres by 100 to obtain metres."
+      ],
+      "hint": "Find a matching point on one cycle and the next. Check whether the axis is distance or time.",
+      "sources": [
+        "SPEC A1.1.2; A1.4; J17 Q10; J23 Q1(a); J24 Q1(a)."
+      ],
+      "asset": "assets/two_wave_graphs.svg",
+      "accessibleDescription": "Graph A: displacement in cm against distance from 0 to 30 cm, crests at 5 and 25 cm. Graph B: displacement in cm against time from 0 to 0.6 s, crests at 0.10 and 0.50 s. Each has amplitude 2 cm.",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question, numerical data and diagrams.",
+      "skillIds": [
+        "S08",
+        "S09",
+        "S24",
+        "S25"
+      ],
+      "specRefs": [
+        "A1.1.2",
+        "A1.4"
+      ],
+      "unscaffoldedFinalAnswerRoute": {
+        "enabled": true,
+        "partId": "speed",
+        "maxMarks": 4,
+        "requiresExplicitMode": "final-answer",
+        "policy": "A correct final value in an allowed equivalent unit earns full practice credit in final-answer mode. Otherwise offer the scaffold before submission; do not auto-award a full route after errors in a checked scaffold.",
+        "label": "Enter a final answer instead"
+      }
+    },
+    {
+      "id": "W25",
+      "contentVersion": 1,
+      "title": "Compare methods: written self-assessment test",
+      "topic": "Waves",
+      "primaryLessonId": "WA16",
+      "requiredLessonIds": [
+        "WA16"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2",
+        "AO3"
+      ],
+      "commandWord": "Compare",
+      "interaction": "written-self-assessment",
+      "maxMarks": 4,
+      "prompt": "A museum guide sends information to a nearby display. Visitors frequently walk between the devices. The table shows successful transmissions out of 12. Compare the methods, explain the effect of the obstruction and suggest the more suitable method for the museum. Write your answer before revealing the marking points.",
+      "parts": [],
+      "modelAnswer": "Both methods worked in all 12 trials with a clear path. With an obstruction, infrared succeeded in 3/12 trials and Bluetooth in 11/12. The obstruction blocks much of the infrared signal, which needs a clear line of sight. Bluetooth uses radio waves that could pass through this obstruction well enough for reception. Bluetooth is the better choice here because visitors frequently interrupt the path and the obstructed results show greater reliability.",
+      "generalFeedback": [
+        "Use both methods and the data in your comparison.",
+        "Explain why the signals behave differently, then relate your choice to this museum.",
+        "Enter the score you award yourself after checking the four points."
+      ],
+      "hint": "Read the information and link each point to the question.",
+      "sources": [
+        "SPEC A3.3.1; original pilot practice question."
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question, context, numerical data and response options.",
+      "familyId": "communication-obstruction",
+      "dataTable": {
+        "headers": [
+          "Condition",
+          "Infrared",
+          "Bluetooth"
+        ],
+        "rows": [
+          [
+            "Clear path",
+            "12/12",
+            "12/12"
+          ],
+          [
+            "Obstructed path",
+            "3/12",
+            "11/12"
+          ]
+        ]
+      },
+      "selfAssessment": {
+        "maxMarks": 4,
+        "scoreInput": {
+          "label": "Your self-assessed score",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "rubric": [
+          {
+            "id": "comparison",
+            "marks": 1,
+            "text": "Compare both results with the obstruction: infrared 3/12 and Bluetooth 11/12 (or equivalent percentages)."
+          },
+          {
+            "id": "infrared",
+            "marks": 1,
+            "text": "Explain that the obstruction blocks much of the infrared signal / interrupts the clear line of sight."
+          },
+          {
+            "id": "bluetooth",
+            "marks": 1,
+            "text": "Explain that Bluetooth uses radio waves able to pass through this particular obstruction sufficiently well."
+          },
+          {
+            "id": "recommendation",
+            "marks": 1,
+            "text": "Recommend Bluetooth and link the recommendation to visitors frequently passing between the devices; do not claim that it passes through every material."
+          }
+        ],
+        "workflow": [
+          "write",
+          "submit-and-lock-first-attempt",
+          "reveal-marking-points",
+          "enter-score-at-end-of-question",
+          "save-separately"
+        ],
+        "maxCharacters": 10000
+      },
+      "testOnly": true,
+      "skillIds": [
+        "S49"
+      ],
+      "specRefs": [
+        "A3.3.1"
+      ]
+    },
+    {
+      "id": "W26",
+      "contentVersion": 1,
+      "title": "Order electromagnetic waves",
+      "topic": "Waves",
+      "primaryLessonId": "WA14",
+      "requiredLessonIds": [
+        "WA14"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State the order of the electromagnetic regions from lowest to highest frequency. Select one answer.",
+      "parts": [
+        {
+          "id": "order",
+          "type": "choice",
+          "prompt": "Select the increasing-frequency order.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "order-a",
+              "text": "Gamma rays, X-rays, ultraviolet, visible, infrared, microwaves, radio",
+              "feedback": "That is decreasing frequency."
+            },
+            {
+              "id": "order-b",
+              "text": "Radio, microwaves, infrared, visible, ultraviolet, X-rays, gamma rays",
+              "feedback": "Yes: frequency increases from radio to gamma rays."
+            },
+            {
+              "id": "order-c",
+              "text": "Radio, infrared, microwaves, ultraviolet, visible, X-rays, gamma rays",
+              "feedback": "Microwaves precede infrared; visible precedes ultraviolet."
+            },
+            {
+              "id": "order-d",
+              "text": "Radio, microwaves, ultraviolet, visible, infrared, gamma rays, X-rays",
+              "feedback": "Infrared precedes visible and ultraviolet; X-rays precede gamma rays."
+            }
+          ],
+          "correctOptionId": "order-b",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: frequency increases from radio to gamma rays."
+        }
+      ],
+      "modelAnswer": "Radio → microwaves → infrared → visible → ultraviolet → X-rays → gamma rays.",
+      "generalFeedback": [
+        "Remember the broad ordering; boundaries between regions are conventional and may overlap."
+      ],
+      "hint": "Recall the broad order from radio waves to gamma rays.",
+      "sources": [
+        "SPEC A3.3"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question, context, numerical data and response options.",
+      "skillIds": [
+        "S46"
+      ],
+      "specRefs": [
+        "A3.3"
+      ]
+    },
+    {
+      "id": "W27",
+      "contentVersion": 1,
+      "title": "Explain transmission in an optical fibre",
+      "topic": "Waves",
+      "primaryLessonId": "WA12",
+      "requiredLessonIds": [
+        "WA10",
+        "WA11",
+        "WA12"
+      ],
+      "strand": "application",
+      "assessmentObjectives": [
+        "AO2",
+        "AO3"
+      ],
+      "commandWord": "Explain",
+      "interaction": "answer-completion",
+      "maxMarks": 3,
+      "prompt": "An optical fibre has core refractive index 1.50 and cladding refractive index 1.40. The critical angle at this boundary is 69°. A ray reaches the boundary from inside the core at an incidence angle of 75°. Explain how the light remains in the core. Complete the answer by selecting one sentence for each gap.",
+      "parts": [
+        {
+          "id": "indices",
+          "type": "choice",
+          "prompt": "Gap 1: Compare the refractive indices.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "indices-a",
+              "text": "The core has a lower refractive index than the cladding.",
+              "feedback": "1.50 is greater than 1.40; the direction is reversed."
+            },
+            {
+              "id": "indices-b",
+              "text": "The core and cladding have equal refractive indices.",
+              "feedback": "The supplied indices are different."
+            },
+            {
+              "id": "indices-c",
+              "text": "The core has a greater refractive index than the cladding.",
+              "feedback": "Yes: light approaches the boundary from the higher-index material."
+            },
+            {
+              "id": "indices-d",
+              "text": "Light travels faster in the core than in the cladding.",
+              "feedback": "A greater refractive index means a lower light speed."
+            }
+          ],
+          "correctOptionId": "indices-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: light approaches the boundary from the higher-index material."
+        },
+        {
+          "id": "angle",
+          "type": "choice",
+          "prompt": "Gap 2: Relate the incidence angle to the critical angle.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "angle-a",
+              "text": "The incidence angle is greater than the critical angle at this boundary.",
+              "feedback": "Yes: 75° exceeds the supplied critical angle of 69°."
+            },
+            {
+              "id": "angle-b",
+              "text": "The incidence angle must equal the critical angle at this boundary.",
+              "feedback": "Equality would give a refracted ray along the boundary."
+            },
+            {
+              "id": "angle-c",
+              "text": "The incidence angle is less than the critical angle at this boundary.",
+              "feedback": "75° is greater than 69°, not less."
+            },
+            {
+              "id": "angle-d",
+              "text": "Any non-zero incidence angle is sufficient at this boundary.",
+              "feedback": "The angle must exceed the critical angle, not merely exceed zero."
+            }
+          ],
+          "correctOptionId": "angle-a",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: 75° exceeds the supplied critical angle of 69°."
+        },
+        {
+          "id": "process",
+          "type": "choice",
+          "prompt": "Gap 3: Explain how the light remains in the core.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "process-a",
+              "text": "Light refracts into the cladding and then reflects from the outer surface.",
+              "feedback": "The required reflection is at the core-cladding boundary."
+            },
+            {
+              "id": "process-b",
+              "text": "Light is absorbed by the core and re-emitted at each boundary.",
+              "feedback": "Absorption and re-emission are not the TIR mechanism."
+            },
+            {
+              "id": "process-c",
+              "text": "Light is totally internally reflected back into the core at successive boundaries.",
+              "feedback": "Yes: repeated TIR keeps the ray in the core."
+            },
+            {
+              "id": "process-d",
+              "text": "Light is reflected because it approaches the boundary from the lower-index material.",
+              "feedback": "The light approaches from the higher-index core."
+            }
+          ],
+          "correctOptionId": "process-c",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: repeated TIR keeps the ray in the core."
+        }
+      ],
+      "modelAnswer": "The ray reaches the core-cladding boundary from inside the core. The core has a greater refractive index than the cladding. The incidence angle is greater than the critical angle at this boundary. Light is totally internally reflected back into the core at successive boundaries.",
+      "generalFeedback": [
+        "Both TIR conditions are needed: higher-to-lower refractive index and incidence above the critical angle.",
+        "The supplied opening sentence earns no marks. Each missing explanation point is marked independently."
+      ],
+      "hint": "Read the information and link each point to the question.",
+      "sources": [
+        "SPEC A2.1.2; A2.1.4; A2.2. Authored three-point practice task."
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question, context, numerical data and response options.",
+      "answerOpening": "The ray reaches the core-cladding boundary from inside the core.",
+      "openingEarnsMarks": false,
+      "skillIds": [
+        "S36",
+        "S39"
+      ],
+      "specRefs": [
+        "A2.1.2",
+        "A2.1.4",
+        "A2.2"
+      ]
+    },
+    {
+      "id": "W28",
+      "contentVersion": 1,
+      "title": "Recall refraction",
+      "topic": "Waves",
+      "primaryLessonId": "WA10",
+      "requiredLessonIds": [
+        "WA10"
+      ],
+      "strand": "recall",
+      "assessmentObjectives": [
+        "AO1"
+      ],
+      "commandWord": "State",
+      "interaction": "selected-answer",
+      "maxMarks": 1,
+      "prompt": "State what is meant by refraction. Select one answer.",
+      "parts": [
+        {
+          "id": "definition",
+          "type": "choice",
+          "prompt": "Select the meaning of refraction.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "definition-a",
+              "text": "A change in direction when a wave changes speed on crossing a boundary at an angle.",
+              "feedback": "Yes: speed change at an oblique boundary can change direction."
+            },
+            {
+              "id": "definition-b",
+              "text": "A wave returning into the original medium after meeting a boundary.",
+              "feedback": "This describes reflection."
+            },
+            {
+              "id": "definition-c",
+              "text": "Waves spreading when they pass through an aperture or past an edge.",
+              "feedback": "This describes diffraction."
+            },
+            {
+              "id": "definition-d",
+              "text": "A wave losing energy as it travels through a material.",
+              "feedback": "This describes attenuation, not refraction."
+            }
+          ],
+          "correctOptionId": "definition-a",
+          "shuffleOptions": true,
+          "correctFeedback": "Yes: speed change at an oblique boundary can change direction."
+        }
+      ],
+      "modelAnswer": "A change in direction associated with a change in wave speed at an oblique boundary.",
+      "generalFeedback": [
+        "At normal incidence the speed can change without a change in direction."
+      ],
+      "hint": "Distinguish crossing a boundary from returning from it.",
+      "sources": [
+        "SPEC A2.1"
+      ],
+      "asset": null,
+      "accessibleDescription": "",
+      "reviewStatus": "draft-for-teacher-review",
+      "enabled": true,
+      "provenance": "Original question, context, numerical data and response options.",
+      "skillIds": [
+        "S33"
+      ],
+      "specRefs": [
+        "A2.1"
+      ]
+    }
+  ],
+  "summary": {
+    "questionCount": 28,
+    "recallQuestions": 14,
+    "applicationQuestions": 14,
+    "practiceMarks": 60,
+    "writtenSelfAssessmentQuestions": 1,
+    "answerCompletionQuestions": 2
+  },
+  "sourceRegister": [
+    {
+      "id": "SPEC",
+      "title": "AAQ Applied Science Extended Certificate, Issue 7, May 2026",
+      "location": "Unit 3, printed pp. 51-53; Appendix 5 formulae sheet",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/btec-aaqs/applied-science/2025/specification-and-sample-assessments/btec-national-in-applied-science-specification.pdf",
+      "use": "Defines scope. Skill statements below are authored assessment outcomes, not Pearson quotations."
+    },
+    {
+      "id": "SAM",
+      "title": "AAQ Unit 3 SAM, Issue 1, July 2024",
+      "location": "Q3-Q4 and matching mark scheme; supplied attachment",
+      "url": "Supplied: New BTEC Physics SAMs Unit 3.pdf",
+      "use": "Standing waves, strings and optical-fibre assessment patterns."
+    },
+    {
+      "id": "LIVE26",
+      "title": "AAQ Unit 3, May/June 2026 paper and mark scheme",
+      "location": "Q3-Q4; supplied attachments",
+      "url": "Supplied: p85980a-2606-60318t-stieitv-u3-qp-2cd9.pdf; 60318t-unit-3-rms-20260812.pdf",
+      "use": "Current question demand, terminology, calculation steps, tolerance and ECF."
+    },
+    {
+      "id": "ER26",
+      "title": "AAQ Unit 3 Principal Examiner report, June 2026",
+      "location": "Printed pp. 10-15; Q3-Q4",
+      "url": "Supplied: 60318t-unit-3-pef-20260812.pdf",
+      "use": "Prioritise precise terminology, contextual explanations, gratings and inverse sine."
+    },
+    {
+      "id": "J17",
+      "title": "Previous specification Unit 1, June 2017",
+      "location": "Section C, Q10-Q13",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/external-assessment/P51722A_BTEC_Applied_Science_L3_Unit1_31617H_Jun17%204th%20proof.pdf",
+      "mark_url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/external-assessment/31617h-unit1-rms-20170817.pdf",
+      "use": "Wave graphs, analogue/digital, inverse square and communication comparisons."
+    },
+    {
+      "id": "J18",
+      "title": "Previous specification Unit 1 Physics, June 2018",
+      "location": "Q1-Q4",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/external-assessment/31617H1P_unit1_Que_201806141.pdf",
+      "mark_url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/external-assessment/31617H1P_unit1_rms_20180815.pdf",
+      "use": "Wave motion, critical angle, coherence and grating explanations."
+    },
+    {
+      "id": "J19",
+      "title": "Previous specification Unit 1 Physics, January 2019",
+      "location": "Q1-Q5",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/31617H1P_Unit1_que_Physics_20190130.pdf",
+      "mark_url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/31617HP_unit1_rms_20190313.pdf",
+      "use": "Spectral identification, inverse square and cladding."
+    },
+    {
+      "id": "J22",
+      "title": "Previous specification Unit 1 Physics, June 2022",
+      "location": "Q1-Q4",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/p67523a-btec-applied-science-31617h-1p-unit-1.pdf",
+      "mark_url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/31617h1p-unit1-rms-20220817.pdf",
+      "use": "Wave graph reading, spectra, refraction and signals."
+    },
+    {
+      "id": "N23",
+      "title": "Previous specification Unit 1 Physics, January 2023",
+      "location": "Q1-Q5",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/applied-science-unit-1p-january-2023.pdf",
+      "mark_url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/31617h1p-unit1-rms-20230322.pdf",
+      "use": "Pipes, critical-angle comparisons, communication and emission spectra."
+    },
+    {
+      "id": "J23",
+      "title": "Previous specification Unit 1 Physics, June 2023",
+      "location": "Q1-Q5",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/p74496-btec-l3-applied-science-31617h-unit-1p-june-2023.pdf",
+      "mark_url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/31617h1p-unit1-rms-20230816.pdf",
+      "use": "Oscillation graphs, superposition, string tension and endoscope application."
+    },
+    {
+      "id": "N24",
+      "title": "Previous specification Unit 1 Physics, January 2024",
+      "location": "Q1-Q5",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/p77257-btec-l3-applied-science-31617h-unit-1p-jan-2024.pdf",
+      "mark_url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/31617h1p-unit1-rms-20240320.pdf",
+      "use": "Signal sampling/regeneration, inverse square, cladding and interference."
+    },
+    {
+      "id": "J24",
+      "title": "Previous specification Unit 1 Physics, June 2024",
+      "location": "Q1-Q5",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/p77258-btec-l3-applied-science-31617h-unit-1p.pdf",
+      "mark_url": "https://qualifications.pearson.com/content/dam/pdf/BTEC-Nationals/Applied-Science/2016/External-assessments/31617h1p-unit-1-rms-20240814.pdf",
+      "use": "Graph features, electron transitions, refracted rays and communications."
+    },
+    {
+      "id": "PHYS1",
+      "title": "OpenStax University Physics 3, Total internal reflection",
+      "location": "Section 1.4",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/1-4-total-internal-reflection",
+      "use": "Scientific check on boundaries and lower-index cladding."
+    },
+    {
+      "id": "PHYS2",
+      "title": "OpenStax University Physics 1, Standing sound waves",
+      "location": "Section 17.4",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/17-4-normal-modes-of-a-standing-sound-wave",
+      "use": "Scientific check on air-displacement nodes and antinodes."
+    }
+  ]
+}

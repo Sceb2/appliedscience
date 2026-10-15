@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg role="img" aria-labelledby="title desc" width="620" height="310" preserveAspectRatio="xMinYMin meet" viewBox="0 0 620 310" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title id="title">Recognise and regenerate a binary signal</title><desc id="desc">Four voltage-time graphs: A smooth sinusoid; B staircase with four distinct levels; C irregular continuously varying trace; D pulses switching between two levels.</desc>
+	
+	
+	<clipPath id="clip">
+		<rect x="0" y="0" width="620" height="310"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-310)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="15" y="282" style="font-family: Arial;font-weight:bold; font-size: 19px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,564) scale(1,-1)">A</text>
+			<path d="M 56,195 L 288,195 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="288 195, 280.6315 198.1153, 280.6315 191.8847" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<path d="M 56,195 L 56,277 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="56 277, 52.88465 269.6315, 59.11535 269.6315" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<text x="62" y="276" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,552) scale(1,-1)">Signal level</text>
+			<text x="255.74169921875" y="174" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,348) scale(1,-1)">Time</text>
+			<polyline points="56 229, 58.27 232.6298, 60.54 236.1983, 62.81 239.6453, 65.08 242.9126, 67.35 245.9452, 69.62 248.6918, 71.89 251.1061, 74.16 253.1473, 76.43 254.781, 78.7 255.9796, 80.97 256.7229, 83.24 256.9984, 85.51 256.8013, 87.78 256.1351, 90.05 255.0109, 92.32 253.4477, 94.59 251.472, 96.86 249.117, 99.13 246.4225, 101.4 243.434, 103.67 240.2019, 105.94 236.7808, 108.21 233.2284, 110.48 229.6045, 112.75 225.9705, 115.02 222.3877, 117.29 218.9164, 119.56 215.6152, 121.83 212.54, 124.1 209.7425, 126.37 207.2701, 128.64 205.1643, 130.91 203.4609, 133.18 202.1884, 135.45 201.3684, 137.72 201.0147, 139.99 201.1333, 142.26 201.7222, 144.53 202.7714, 146.8 204.2633, 149.07 206.1726, 151.34 208.4672, 153.61 211.1083, 155.88 214.0513, 158.15 217.2466, 160.42 220.6403, 162.69 224.175, 164.96 227.7912, 167.23 231.4278, 169.5 235.0234, 171.77 238.5173, 174.04 241.8506, 176.31 244.9671, 178.58 247.8141, 180.85 250.3436, 183.12 252.5129, 185.39 254.2854, 187.66 255.6311, 189.93 256.5274, 192.2 256.9592, 194.47 256.9191, 196.74 256.4079, 199.01 255.4341, 201.28 254.0142, 203.55 252.1722, 205.82 249.9391, 208.09 247.3526, 210.36 244.4564, 212.63 241.2994, 214.9 237.9348, 217.17 234.4194, 219.44 230.8125, 221.71 227.1751, 223.98 223.5684, 226.25 220.0535, 228.52 216.6895, 230.79 213.5332, 233.06 210.638, 235.33 208.0527, 237.6 205.8209, 239.87 203.9802, 242.14 202.5618, 244.41 201.5896, 246.68 201.0799, 248.95 201.0415, 251.22 201.4748, 253.49 202.3727, 255.76 203.72, 258.03 205.4939, 260.3 207.6645, 262.57 210.1951, 264.84 213.0431, 267.11 216.1604, 269.38 219.4944, 271.65 222.9888, 273.92 226.5846, 276.19 230.2212, 278.46 233.8372, 280.73 237.3716, 283 240.7647" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<text x="325" y="282" style="font-family: Arial;font-weight:bold; font-size: 19px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,564) scale(1,-1)">B</text>
+			<path d="M 366,195 L 598,195 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="598 195, 590.6315 198.1153, 590.6315 191.8847" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<path d="M 366,195 L 366,277 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="366 277, 362.8847 269.6315, 369.1153 269.6315" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<text x="372" y="276" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,552) scale(1,-1)">Signal level</text>
+			<text x="565.74169921875" y="174" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,348) scale(1,-1)">Time</text>
+			<polyline points="366 205, 394.375 205, 394.375 225, 422.75 225, 422.75 245, 451.125 245, 451.125 265, 479.5 265, 479.5 245, 507.875 245, 507.875 225, 536.25 225, 536.25 205, 564.625 205, 564.625 225, 593 225" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<text x="15" y="132" style="font-family: Arial;font-weight:bold; font-size: 19px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,264) scale(1,-1)">C</text>
+			<path d="M 56,45 L 288,45 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="288 45, 280.6315 48.11535, 280.6315 41.88465" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<path d="M 56,45 L 56,127 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="56 127, 52.88465 119.6315, 59.11535 119.6315" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<text x="62" y="126" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,252) scale(1,-1)">Signal level</text>
+			<text x="255.74169921875" y="24" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,48) scale(1,-1)">Time</text>
+			<polyline points="56 53, 74.91667 70, 93.83333 61, 112.75 94, 131.6667 83, 150.5833 102, 169.5 76, 188.4167 87, 207.3333 107, 226.25 78, 245.1667 62, 264.0833 84, 283 97" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<text x="325" y="132" style="font-family: Arial;font-weight:bold; font-size: 19px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,264) scale(1,-1)">D</text>
+			<path d="M 366,45 L 598,45 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="598 45, 590.6315 48.11535, 590.6315 41.88465" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<path d="M 366,45 L 366,127 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="366 127, 362.8847 119.6315, 369.1153 119.6315" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<text x="372" y="126" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,252) scale(1,-1)">Signal level</text>
+			<text x="565.74169921875" y="24" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,48) scale(1,-1)">Time</text>
+			<polyline points="366 55, 394.375 55, 394.375 110, 422.75 110, 422.75 110, 451.125 110, 451.125 55, 479.5 55, 479.5 110, 507.875 110, 507.875 55, 536.25 55, 536.25 55, 564.625 55, 564.625 110, 593 110" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

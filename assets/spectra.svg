@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg role="img" aria-labelledby="title desc" width="620" height="240" preserveAspectRatio="xMinYMin meet" viewBox="0 0 620 240" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title id="title">Identify gases from emission spectra</title><desc id="desc">Shared scale 400-700 nm. P lines: 420 and 500 nm. Q lines: 450 and 560 nm. R lines: 610 and 680 nm. Mixture: 420, 500, 610 and 680 nm.</desc>
+	
+	
+	<clipPath id="clip">
+		<rect x="0" y="0" width="620" height="240"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-240)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="16" y="190" style="font-family: Arial;font-weight:bold; font-size: 15px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,380) scale(1,-1)">P</text>
+			<path d="M 102,195 L 585,195 Z" style="stroke: rgb(80%,83%,86%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 134,180 L 134,210 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 262,180 L 262,210 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="16" y="145" style="font-family: Arial;font-weight:bold; font-size: 15px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,290) scale(1,-1)">Q</text>
+			<path d="M 102,150 L 585,150 Z" style="stroke: rgb(80%,83%,86%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 182,135 L 182,165 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 358,135 L 358,165 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="16" y="100" style="font-family: Arial;font-weight:bold; font-size: 15px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,200) scale(1,-1)">R</text>
+			<path d="M 102,105 L 585,105 Z" style="stroke: rgb(80%,83%,86%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 438,90 L 438,120 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 550,90 L 550,120 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="16" y="55" style="font-family: Arial;font-weight:bold; font-size: 15px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,110) scale(1,-1)">Mixture</text>
+			<path d="M 102,60 L 585,60 Z" style="stroke: rgb(80%,83%,86%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 134,45 L 134,75 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 262,45 L 262,75 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 438,45 L 438,75 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 550,45 L 550,75 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 102,27 L 585,27 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 102,22 L 102,32 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="90.5478515625" y="7" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,14) scale(1,-1)">400</text>
+			<path d="M 182,22 L 182,32 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="170.5478515625" y="7" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,14) scale(1,-1)">450</text>
+			<path d="M 262,22 L 262,32 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="250.5478515625" y="7" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,14) scale(1,-1)">500</text>
+			<path d="M 342,22 L 342,32 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="330.5478515625" y="7" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,14) scale(1,-1)">550</text>
+			<path d="M 422,22 L 422,32 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="410.5478515625" y="7" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,14) scale(1,-1)">600</text>
+			<path d="M 502,22 L 502,32 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="490.5478515625" y="7" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,14) scale(1,-1)">650</text>
+			<path d="M 582,22 L 582,32 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="570.5478515625" y="7" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,14) scale(1,-1)">700</text>
+			<text x="324.0849609375" y="224" style="font-family: Arial; font-size: 14px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,448) scale(1,-1)">Wavelength (nm)</text>
+		</g>
+	</g>
+</svg>

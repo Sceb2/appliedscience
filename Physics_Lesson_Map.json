@@ -1,0 +1,699 @@
+{
+  "version": "1.0.0",
+  "qualification": "Pearson AAQ Applied Science Extended Certificate (first teaching 2025)",
+  "unit": 3,
+  "specification": {
+    "issue": 7,
+    "date": "May 2026",
+    "url": "https://qualifications.pearson.com/content/dam/pdf/btec-aaqs/applied-science/2025/specification-and-sample-assessments/btec-national-in-applied-science-specification.pdf",
+    "pages": "Printed 52-56; command terms 58-59"
+  },
+  "lessonAssumption": "Approximately 50-60 minutes per slot; planning estimates, not official allocations. Revision sections follow taught content; this is not a new teaching course.",
+  "topics": [
+    {
+      "id": "Waves",
+      "label": "Waves",
+      "contentState": "pilot-sample",
+      "selectableInPilot": true
+    },
+    {
+      "id": "Forces",
+      "label": "Forces",
+      "contentState": "planned",
+      "selectableInPilot": false
+    },
+    {
+      "id": "Electricity",
+      "label": "Electricity",
+      "contentState": "planned",
+      "selectableInPilot": false
+    }
+  ],
+  "lessons": [
+    {
+      "id": "WA01",
+      "topic": "Waves",
+      "group": "Types of Waves",
+      "title": "Types of Waves",
+      "specRefs": [
+        "A1.2"
+      ],
+      "scope": "Transverse and longitudinal oscillations; energy transfer; compressions and rarefactions.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W02",
+        "W16"
+      ]
+    },
+    {
+      "id": "WA02",
+      "topic": "Waves",
+      "group": "Wave Properties",
+      "title": "Wave Properties",
+      "specRefs": [
+        "A1.1.1"
+      ],
+      "scope": "Amplitude, wavelength, frequency, periodic time, oscillation and wave speed; definitions and units.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W13",
+        "W14"
+      ]
+    },
+    {
+      "id": "WA03",
+      "topic": "Waves",
+      "group": "Graphing Waves",
+      "title": "Graphing Waves",
+      "specRefs": [
+        "A1.1.2"
+      ],
+      "scope": "Read displacement-distance and displacement-time graphs; distinguish wavelength from period.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W01"
+      ]
+    },
+    {
+      "id": "WA04",
+      "topic": "Waves",
+      "group": "Wave Speed",
+      "title": "Wave Speed",
+      "specRefs": [
+        "A1.4"
+      ],
+      "scope": "Use and rearrange v = fλ; use f = 1/T; convert wavelength and frequency units.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W03",
+        "W15",
+        "W24"
+      ]
+    },
+    {
+      "id": "WA05",
+      "topic": "Waves",
+      "group": "Phase Difference",
+      "title": "Phase Difference",
+      "specRefs": [
+        "A1.3"
+      ],
+      "scope": "Signed displacement, coherence, phase and path difference; superposition; whole and odd half wavelengths.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W17",
+        "W18"
+      ]
+    },
+    {
+      "id": "WA06",
+      "topic": "Waves",
+      "group": "Diffraction",
+      "title": "Diffraction",
+      "specRefs": [
+        "A1.3",
+        "A1.3.2"
+      ],
+      "scope": "Apply interference ideas to the teacher-selected double-slit model; transfer ideas to grating contexts. Gratings forming line spectra link to Emission Spectra.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W04"
+      ]
+    },
+    {
+      "id": "WA07",
+      "topic": "Waves",
+      "group": "Emission Spectra",
+      "title": "Emission Spectra",
+      "specRefs": [
+        "A1.3.1",
+        "A1.3.2",
+        "A1.3.3"
+      ],
+      "scope": "Electron transitions and photons; gratings separate wavelengths; identify gases from line positions.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W05"
+      ]
+    },
+    {
+      "id": "WA08",
+      "topic": "Waves",
+      "group": "Standing Waves",
+      "title": "Standing Waves",
+      "specRefs": [
+        "A1.5"
+      ],
+      "scope": "Incident/reflected-wave superposition, resonance, displacement nodes and antinodes.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W19",
+        "W20"
+      ]
+    },
+    {
+      "id": "WA09",
+      "topic": "Waves",
+      "group": "Harmonics",
+      "title": "Harmonics",
+      "specRefs": [
+        "A1.5.1",
+        "A1.5.2"
+      ],
+      "scope": "Strings and open/closed pipes; harmonic patterns, pitch and v = √(T/μ); μ = mass/length.",
+      "suggestedLessonSlots": 2,
+      "pilotQuestionIds": [
+        "W06",
+        "W07"
+      ]
+    },
+    {
+      "id": "WA10",
+      "topic": "Waves",
+      "group": "Total Internal Reflection",
+      "title": "Refraction",
+      "specRefs": [
+        "A2.1",
+        "A2.1.1"
+      ],
+      "scope": "Ray direction, normal, speed and refractive index; n = c/v and air-to-material sine ratios.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W08",
+        "W28"
+      ]
+    },
+    {
+      "id": "WA11",
+      "topic": "Waves",
+      "group": "Total Internal Reflection",
+      "title": "Critical Angle and TIR",
+      "specRefs": [
+        "A2.1.2",
+        "A2.1.3"
+      ],
+      "scope": "Both conditions for TIR; angle measured from normal; critical-angle calculations at glass-air boundaries.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W09",
+        "W21"
+      ]
+    },
+    {
+      "id": "WA12",
+      "topic": "Waves",
+      "group": "Total Internal Reflection",
+      "title": "Optical Fibres and Cladding",
+      "specRefs": [
+        "A2.1.4",
+        "A2.2"
+      ],
+      "scope": "Core/cladding boundaries, critical-angle comparison and repeated TIR; engineering, medicine and communication.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W27"
+      ]
+    },
+    {
+      "id": "WA13",
+      "topic": "Waves",
+      "group": "Inverse Square Law",
+      "title": "Inverse Square Law",
+      "specRefs": [
+        "A3.2"
+      ],
+      "scope": "Relative intensity and I = k/r²; rearrangement, units and stated ideal-model assumptions.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W11"
+      ]
+    },
+    {
+      "id": "WA14",
+      "topic": "Waves",
+      "group": "Uses of Waves",
+      "title": "Electromagnetic Spectrum",
+      "specRefs": [
+        "A3.1",
+        "A3.3"
+      ],
+      "scope": "Region ordering, overlapping ranges, frequency-wavelength relationship and equal vacuum speed.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W23",
+        "W26"
+      ]
+    },
+    {
+      "id": "WA15",
+      "topic": "Waves",
+      "group": "Uses of Waves",
+      "title": "Analogue and Digital Signals",
+      "specRefs": [
+        "A2.3"
+      ],
+      "scope": "Continuous and discrete representations; binary waveforms and regeneration. Sampling depth remains an authored scope judgement.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": [
+        "W10",
+        "W22"
+      ]
+    },
+    {
+      "id": "WA16",
+      "topic": "Waves",
+      "group": "Uses of Waves",
+      "title": "Communication Applications",
+      "specRefs": [
+        "A3.3.1"
+      ],
+      "scope": "Satellite links and GPS, mobile phones, Bluetooth, infrared and Wi-Fi; use evidence to justify choices.",
+      "suggestedLessonSlots": 2,
+      "pilotQuestionIds": [
+        "W12",
+        "W25"
+      ]
+    },
+    {
+      "id": "FO01",
+      "topic": "Forces",
+      "group": "Motion Quantities and Units",
+      "title": "Motion Quantities and Units",
+      "specRefs": [
+        "B1.1",
+        "B1.3.1",
+        "B1.3.2"
+      ],
+      "scope": "SI symbols and units; speed conversions; scalar/vector distinctions; distance, displacement, speed and velocity.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO02",
+      "topic": "Forces",
+      "group": "Speed and Average Speed",
+      "title": "Speed and Average Speed",
+      "specRefs": [
+        "B1.2"
+      ],
+      "scope": "Distance/time calculations; total distance divided by total time; journeys with several stages.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO03",
+      "topic": "Forces",
+      "group": "Displacement-Time Graphs",
+      "title": "Displacement-Time Graphs",
+      "specRefs": [
+        "B1.3.3"
+      ],
+      "scope": "Interpret motion and calculate signed velocity from gradients.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO04",
+      "topic": "Forces",
+      "group": "Velocity-Time Graphs and Acceleration",
+      "title": "Velocity-Time Graphs and Acceleration",
+      "specRefs": [
+        "B1.3.4",
+        "B1.3.6"
+      ],
+      "scope": "Interpret velocity-time traces; acceleration from gradient; a = (v-u)/t.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO05",
+      "topic": "Forces",
+      "group": "Distance and Displacement from Graphs",
+      "title": "Distance and Displacement from Graphs",
+      "specRefs": [
+        "B1.3.5"
+      ],
+      "scope": "Areas of rectangles/triangles; distinguish signed displacement from total distance when velocity changes sign.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO06",
+      "topic": "Forces",
+      "group": "Motion Equations: Velocity and Average Velocity",
+      "title": "Motion Equations: Velocity and Average Velocity",
+      "specRefs": [
+        "B1.3.8"
+      ],
+      "scope": "Constant acceleration; select and rearrange v = u + at and s = (u+v)t/2.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO07",
+      "topic": "Forces",
+      "group": "Motion Equations: Displacement",
+      "title": "Motion Equations: Displacement",
+      "specRefs": [
+        "B1.3.8"
+      ],
+      "scope": "Select and rearrange s = ut + ½at² and v² = u² + 2as; units and signs.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO08",
+      "topic": "Forces",
+      "group": "Measuring Acceleration and Accelerometers",
+      "title": "Measuring Acceleration and Accelerometers",
+      "specRefs": [
+        "B1.3.7",
+        "B1.4"
+      ],
+      "scope": "Trolley down a slope; measurements, graph evidence and uncertainty; fitness devices, phones and blood-pressure monitors.",
+      "suggestedLessonSlots": 2,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO09",
+      "topic": "Forces",
+      "group": "Resultant Forces and Newton’s First Law",
+      "title": "Resultant Forces and Newton’s First Law",
+      "specRefs": [
+        "B2.1",
+        "B2.7"
+      ],
+      "scope": "Force diagrams; balanced forces and constant velocity; a non-zero resultant changes velocity.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO10",
+      "topic": "Forces",
+      "group": "Mass, Weight and Inertia",
+      "title": "Mass, Weight and Inertia",
+      "specRefs": [
+        "B2.2"
+      ],
+      "scope": "Distinguish mass and weight; inertia; gravitational field strength and W = mg.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO11",
+      "topic": "Forces",
+      "group": "Friction and Its Measurement",
+      "title": "Friction and Its Measurement",
+      "specRefs": [
+        "B2.3",
+        "B2.3.1",
+        "B2.3.2"
+      ],
+      "scope": "F = μN; normal reaction; static threshold and constant-velocity kinetic-friction methods. N = mg only in the stated horizontal case.",
+      "suggestedLessonSlots": 2,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO12",
+      "topic": "Forces",
+      "group": "Newton’s Second Law",
+      "title": "Newton’s Second Law",
+      "specRefs": [
+        "B2.5",
+        "B2.5.1"
+      ],
+      "scope": "F = ma with resultant force; how mass and acceleration affect the required force.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO13",
+      "topic": "Forces",
+      "group": "Momentum",
+      "title": "Momentum",
+      "specRefs": [
+        "B2.4"
+      ],
+      "scope": "p = mv; units, direction and comparisons of mass/speed.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO14",
+      "topic": "Forces",
+      "group": "Force and Change in Momentum",
+      "title": "Force and Change in Momentum",
+      "specRefs": [
+        "B2.5"
+      ],
+      "scope": "F = (mv-mu)/t; stopping time, direction and average impact force.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO15",
+      "topic": "Forces",
+      "group": "Safety and Impact Protection",
+      "title": "Safety and Impact Protection",
+      "specRefs": [
+        "B2.5.2",
+        "B2.5.3"
+      ],
+      "scope": "Transport comparisons; air bags, seat belts, helmets, passenger cells and crumple zones; linked explanations.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO16",
+      "topic": "Forces",
+      "group": "Newton’s Third Law",
+      "title": "Newton’s Third Law",
+      "specRefs": [
+        "B2.6"
+      ],
+      "scope": "Interaction pairs act on different bodies; distinguish pairs from balanced forces on one body.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "FO17",
+      "topic": "Forces",
+      "group": "Drag and Terminal Velocity",
+      "title": "Drag and Terminal Velocity",
+      "specRefs": [
+        "B2.7.1"
+      ],
+      "scope": "Changing resistive forces and resultant force; road vehicles, parachutes and objects falling through liquids.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL01",
+      "topic": "Electricity",
+      "group": "Circuit Symbols, Quantities and Units",
+      "title": "Circuit Symbols, Quantities and Units",
+      "specRefs": [
+        "C1.1",
+        "C1.2",
+        "C1.2.1"
+      ],
+      "scope": "Symbols and meanings of current, potential difference, energy, power and resistance; A, V, J, W and Ω.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL02",
+      "topic": "Electricity",
+      "group": "Connecting Circuits and Meters",
+      "title": "Connecting Circuits and Meters",
+      "specRefs": [
+        "C1.3",
+        "C1.3.1"
+      ],
+      "scope": "Cells, supplies, lamps, resistors, variable resistors and switches; ammeters in series and voltmeters in parallel.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL03",
+      "topic": "Electricity",
+      "group": "Resistance and V = IR",
+      "title": "Resistance and V = IR",
+      "specRefs": [
+        "C1.3.2",
+        "C2.1.2"
+      ],
+      "scope": "Ohmmeter use on isolated, unpowered components; calculate and rearrange V = IR.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL04",
+      "topic": "Electricity",
+      "group": "Filament Lamps and Diodes",
+      "title": "Filament Lamps and Diodes",
+      "specRefs": [
+        "C1.4"
+      ],
+      "scope": "Use lamps and diodes in circuit contexts; interpret supplied current/potential-difference evidence.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL05",
+      "topic": "Electricity",
+      "group": "Thermistors and LDRs",
+      "title": "Thermistors and LDRs",
+      "specRefs": [
+        "C1.4"
+      ],
+      "scope": "Temperature/light-dependent resistance; specify thermistor behaviour in the question; use in sensor circuits.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL06",
+      "topic": "Electricity",
+      "group": "Photodiodes and LEDs",
+      "title": "Photodiodes and LEDs",
+      "specRefs": [
+        "C1.4"
+      ],
+      "scope": "Distinguish detecting light from emitting light; use component behaviour in simple circuits.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL07",
+      "topic": "Electricity",
+      "group": "Electrical Power",
+      "title": "Electrical Power",
+      "specRefs": [
+        "C2.1.1",
+        "C2.1.3"
+      ],
+      "scope": "P = IV and P = E/t; equation selection, rearrangement and units.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL08",
+      "topic": "Electricity",
+      "group": "Electrical Energy",
+      "title": "Electrical Energy",
+      "specRefs": [
+        "C2.1.4"
+      ],
+      "scope": "E = VIt; calculate energy transferred and convert time units.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL09",
+      "topic": "Electricity",
+      "group": "Domestic Energy Use",
+      "title": "Domestic Energy Use",
+      "specRefs": [
+        "C3.1",
+        "C3.3"
+      ],
+      "scope": "Compare appliances; energy in kWh = power in kW × time in h. Cost calculations need supplied tariffs.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL10",
+      "topic": "Electricity",
+      "group": "Fuses and Operating Current",
+      "title": "Fuses and Operating Current",
+      "specRefs": [
+        "C3.2"
+      ],
+      "scope": "Use current/power evidence and supplied fuse ratings to select and justify a suitable fuse.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL11",
+      "topic": "Electricity",
+      "group": "Energy Units and Temperature Scales",
+      "title": "Energy Units and Temperature Scales",
+      "specRefs": [
+        "C4.1",
+        "C4.2"
+      ],
+      "scope": "J, kJ and MJ; Celsius/Kelvin conversion; temperature changes in K and °C have equal numerical size.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL12",
+      "topic": "Electricity",
+      "group": "Temperature Change and Change of State",
+      "title": "Temperature Change and Change of State",
+      "specRefs": [
+        "C4.3"
+      ],
+      "scope": "Distinguish heating within a phase from melting/boiling; interpret heating/cooling evidence.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL13",
+      "topic": "Electricity",
+      "group": "Specific Heat Capacity Calculations",
+      "title": "Specific Heat Capacity Calculations",
+      "specRefs": [
+        "C4.4.2",
+        "C4.4.3"
+      ],
+      "scope": "ΔQ = mcΔT; rearrangements and J kg⁻¹ K⁻¹.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL14",
+      "topic": "Electricity",
+      "group": "Measuring Specific Heat Capacity",
+      "title": "Measuring Specific Heat Capacity",
+      "specRefs": [
+        "C4.4.1"
+      ],
+      "scope": "Solids and liquids; electrical heating, measurements, energy losses and evaluation.",
+      "suggestedLessonSlots": 2,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL15",
+      "topic": "Electricity",
+      "group": "Specific Latent Heat Calculations",
+      "title": "Specific Latent Heat Calculations",
+      "specRefs": [
+        "C5.2"
+      ],
+      "scope": "ΔQ = mL; fusion and vaporisation; mass changes and J kg⁻¹.",
+      "suggestedLessonSlots": 1,
+      "pilotQuestionIds": []
+    },
+    {
+      "id": "EL16",
+      "topic": "Electricity",
+      "group": "Measuring Specific Latent Heat",
+      "title": "Measuring Specific Latent Heat",
+      "specRefs": [
+        "C5.1"
+      ],
+      "scope": "Fusion and vaporisation methods; measurements, energy losses and evaluation.",
+      "suggestedLessonSlots": 2,
+      "pilotQuestionIds": []
+    }
+  ],
+  "scopeNotes": [
+    "The 12 teacher-supplied Waves headings are retained as groups. TIR has three lesson choices and Uses of Waves has three.",
+    "Waves: 16 selectable lesson sections, approximately 18 lesson slots. Forces: 17 sections, approximately 19 slots. Electricity: 16 sections, approximately 18 slots. Allow additional review and assessment time.",
+    "Diffraction is the existing teacher heading. Core practice uses double-slit superposition/path difference as requested. A1.3 grating contexts and A1.3.2 line spectra remain recorded; do not add a compulsory white-light rainbow task.",
+    "No grating-spacing or double-slit fringe-spacing equation is required by this pilot.",
+    "Forces and Electricity are mapped for expansion; their future sections must not start empty sessions.",
+    "General series/parallel resistor laws, projectile motion and impulse-area calculations are not added as separate required topics without further scope evidence."
+  ]
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg role="img" aria-labelledby="title desc" width="620" height="335" preserveAspectRatio="xMinYMin meet" viewBox="0 0 620 335" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title id="title">Choose the refracted ray</title><desc id="desc">Four diagrams: air above and glass below a horizontal boundary, vertical dashed normal, incident ray down-right from air. A enters glass closer to the normal. B enters glass farther from the normal. C reflects up-right in air. D continues straight.</desc>
+	
+	
+	<clipPath id="clip">
+		<rect x="0" y="0" width="620" height="335"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-335)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="15" y="320" style="font-family: Arial;font-weight:bold; font-size: 19px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,640) scale(1,-1)">A</text>
+			<rect x="40" y="184" width="254" height="58" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,94%,95%); fill-rule: evenodd;"/>
+			<path d="M 40,242 L 294,242 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 152,191 L 152,307 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 4;"/>
+			<text x="43" y="273" style="font-family: Arial; font-size: 13px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,546) scale(1,-1)">Air</text>
+			<text x="43" y="213" style="font-family: Arial; font-size: 13px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,426) scale(1,-1)">Glass</text>
+			<text x="159" y="300" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,600) scale(1,-1)">Normal</text>
+			<path d="M 92,299 L 152,242 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="152 242, 148.8035 249.3337, 144.5122 244.8164" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+			<path d="M 152,242 L 180,193 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="180 193, 179.0491 200.9433, 173.6393 197.852" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+			<text x="325" y="320" style="font-family: Arial;font-weight:bold; font-size: 19px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,640) scale(1,-1)">B</text>
+			<rect x="350" y="184" width="254" height="58" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,94%,95%); fill-rule: evenodd;"/>
+			<path d="M 350,242 L 604,242 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 462,191 L 462,307 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 4;"/>
+			<text x="353" y="273" style="font-family: Arial; font-size: 13px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,546) scale(1,-1)">Air</text>
+			<text x="353" y="213" style="font-family: Arial; font-size: 13px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,426) scale(1,-1)">Glass</text>
+			<text x="469" y="300" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,600) scale(1,-1)">Normal</text>
+			<path d="M 402,299 L 462,242 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="462 242, 458.8035 249.3337, 454.5122 244.8164" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+			<path d="M 462,242 L 550,208 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="550 208, 544.2495 213.5616, 542.0039 207.7496" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+			<text x="15" y="155" style="font-family: Arial;font-weight:bold; font-size: 19px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,310) scale(1,-1)">C</text>
+			<rect x="40" y="19" width="254" height="58" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,94%,95%); fill-rule: evenodd;"/>
+			<path d="M 40,77 L 294,77 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 152,26 L 152,142 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 4;"/>
+			<text x="43" y="108" style="font-family: Arial; font-size: 13px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,216) scale(1,-1)">Air</text>
+			<text x="43" y="48" style="font-family: Arial; font-size: 13px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,96) scale(1,-1)">Glass</text>
+			<text x="159" y="135" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,270) scale(1,-1)">Normal</text>
+			<path d="M 92,134 L 152,77 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="152 77, 148.8035 84.33367, 144.5122 79.81642" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+			<path d="M 152,77 L 213,132 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="213 132, 205.4414 129.3795, 209.6137 124.7521" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+			<text x="325" y="155" style="font-family: Arial;font-weight:bold; font-size: 19px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,310) scale(1,-1)">D</text>
+			<rect x="350" y="19" width="254" height="58" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,94%,95%); fill-rule: evenodd;"/>
+			<path d="M 350,77 L 604,77 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 462,26 L 462,142 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 4;"/>
+			<text x="353" y="108" style="font-family: Arial; font-size: 13px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,216) scale(1,-1)">Air</text>
+			<text x="353" y="48" style="font-family: Arial; font-size: 13px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,96) scale(1,-1)">Glass</text>
+			<text x="469" y="135" style="font-family: Arial; font-size: 11px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,270) scale(1,-1)">Normal</text>
+			<path d="M 402,134 L 462,77 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="462 77, 458.8035 84.33367, 454.5122 79.81642" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+			<path d="M 462,77 L 514,28 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="514 28, 510.7738 35.32063, 506.5008 30.786" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

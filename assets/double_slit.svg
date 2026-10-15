@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg role="img" aria-labelledby="title desc" width="620" height="225" preserveAspectRatio="xMinYMin meet" viewBox="0 0 620 225" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title id="title">Explain double-slit interference</title><desc id="desc">Schematic with two narrow slits S1 and S2 and a screen on the right. Both paths to P and both paths to Q are shown. P has path difference 1000 nm; Q has path difference 750 nm; wavelength is 500 nm. Geometry is not to scale.</desc>
+	
+	
+	<clipPath id="clip">
+		<rect x="0" y="0" width="620" height="225"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-225)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 108,30 L 108,82 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 108,98 L 108,132 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 108,148 L 108,193 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 28,140 L 100,140 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="100 140, 92.63151 143.1153, 92.63151 136.8847" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<path d="M 28,90 L 100,90 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="100 90, 92.63151 93.11535, 92.63151 86.88465" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1; fill: rgb(40%,45%,50%); fill-rule: evenodd;"/>
+			<text x="68" y="150" style="font-family: Arial; font-size: 15px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,300) scale(1,-1)">S1</text>
+			<text x="68" y="100" style="font-family: Arial; font-size: 15px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,200) scale(1,-1)">S2</text>
+			<path d="M 440,25 L 440,197 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 110,140 L 440,175 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<path d="M 110,140 L 440,125 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 5, 4;"/>
+			<path d="M 110,90 L 440,175 Z" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<path d="M 110,90 L 440,125 Z" style="stroke: rgb(40%,45%,50%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 5, 4;"/>
+			<circle cx="440" cy="175" r="4" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,16%,25%); fill-rule: evenodd;"/>
+			<circle cx="440" cy="125" r="4" style="stroke: rgb(9%,16%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="454" y="171" style="font-family: Arial;font-weight:bold; font-size: 16px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,342) scale(1,-1)">P</text>
+			<text x="454" y="121" style="font-family: Arial;font-weight:bold; font-size: 16px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,242) scale(1,-1)">Q</text>
+			<text x="487" y="181" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,362) scale(1,-1)">Path difference:</text>
+			<text x="487" y="163" style="font-family: Arial; font-size: 14px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,326) scale(1,-1)">1000 nm</text>
+			<text x="487" y="131" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,262) scale(1,-1)">Path difference:</text>
+			<text x="487" y="113" style="font-family: Arial; font-size: 14px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,226) scale(1,-1)">750 nm</text>
+			<text x="18" y="208" style="font-family: Arial; font-size: 15px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,416) scale(1,-1)">λ = 500 nm</text>
+			<text x="93.275390625" y="194" style="font-family: Arial; font-size: 14px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,388) scale(1,-1)">Slits</text>
+			<text x="415.7802734375" y="208" style="font-family: Arial; font-size: 14px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,416) scale(1,-1)">Screen</text>
+			<text x="106.2431640625" y="6" style="font-family: Arial; font-size: 12px;fill: rgb(9%,16%,25%); stroke:none;" transform="translate(0,12) scale(1,-1)">Schematic, not to scale. Solid paths reach P; dashed paths reach Q.</text>
+		</g>
+	</g>
+</svg>

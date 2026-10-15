@@ -1,0 +1,29 @@
+PASS 28 questions, 14 recall / 14 application, exactly one written test
+PASS All 27 auto-marked questions award full credit for authored answers
+PASS Every authored distractor is rejected in its part and supplies feedback
+PASS ECF: wrong frequency followed through two conversion stages earns labelled method marks
+PASS ECF requires the correct selected rearrangement
+PASS ECF: blank or impossible values cannot seed method credit
+PASS A correct downstream answer earns direct credit despite an earlier error
+PASS Independent string calculations remain independent
+PASS Graph conversion error carried forward is explicit
+PASS Conditional spectrum reason cannot earn credit with wrong gas pair
+PASS Valid numerical representations and equivalent units
+PASS Malformed or non-finite entries do not parse as correct numbers
+PASS Final-answer route accepts correct equivalent value without guessing partial working
+PASS Written response requires writing, then one bounded integer self-score
+PASS Draft gate and AND-prerequisites prevent unreviewed or untaught questions
+PASS 100 seeded sessions reach 20 marks and 50% recall when all Waves lessons selected
+PASS Narrow selections provide a clearly identified shorter session without new topics
+PASS Selection optimises marks then recall by count, checked against brute force
+PASS Stateful sessions can preserve option IDs despite a changed display order
+
+19 test groups passed. Reference logic only; no browser UI has been implemented or browser-tested in this content pack.
+
+JSON Schema 2020-12 validation: PASS
+Semantic checks (IDs, lesson references, assets, answer keys, unit factors, ECF order, mark totals): PASS
+Content balance: 14 recall / 14 application questions, 60 practice marks, exactly one written test: PASS
+Lesson map: 12 Waves headings, 16 Waves lessons, 17 Forces lessons, 16 Electricity lessons: PASS
+Teacher brief: nine pages rendered and visually reviewed, no table splits or clipping: PASS
+UI baseline inspected: v1.4.1 source, including current navy mobile bar and green/pink controls.
+Browser UI implementation and browser/classroom QA: next stage; not performed in this content pack.

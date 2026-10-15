@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "targetMarks": 20,
+  "recallTargetByQuestionCount": 0.5,
+  "selectionPriority": [
+    "All required lessons selected; enabled questions only; correct review mode.",
+    "Whole questions, no duplicate IDs or two variants from the same family.",
+    "Reach exactly 20 marks when possible; otherwise use the largest attainable total below 20 and announce it before starting. Never split a question to fill the budget.",
+    "Among sets at that total, minimise the absolute difference between recall fraction and 0.5.",
+    "Prefer less-seen questions as a tie-break, then seeded random order."
+  ],
+  "shortPoolMessage": "Only {marks} marks are available from these lessons. Start this shorter session or select more lessons.",
+  "balanceMessage": "{recallCount} recall and {applicationCount} application questions.",
+  "timeClaim": "Marks standardise workload approximately, not elapsed time. Do not promise an exact duration or run a compulsory timer.",
+  "eligibility": {
+    "mode": "all-required-lessons",
+    "autoSelectPrerequisites": false,
+    "blockedQuestionAction": "List missing lesson titles; let the student select them explicitly.",
+    "futureTopicAction": "Forces and Electricity shown only as planned, with no selectable question pool."
+  },
+  "marking": {
+    "submission": "Check the whole question once; warn about empty parts and allow an intentional partial submission.",
+    "choice": "One selected option per part. Mark by stable option ID, never its displayed letter. Record shuffled order with the draft.",
+    "numeric": "Accept finite decimal, grouped thousands, decimal comma, and scientific-notation equivalents within authored tolerance. Units shown or explicitly selected; convert only units allowed by that part. No eval.",
+    "ecf": "Evaluate only authored later-step rules after an upstream attempted numeric error. Blank, non-finite, impossible or invalid-domain values cannot seed ECF. A correct response earns direct credit first. Each mark is awarded once.",
+    "ecfFeedback": "Show Direct marks and Method marks (error carried forward), plus the original error and the later correct operation on the student’s value.",
+    "write": "One open response test. Student writes first, reveals bullet marking points, then enters a whole-number score from 0 to the maximum in a labelled box. No automatic prose grading.",
+    "scoreSeparation": "Keep direct, ECF and self-assessed marks separate in records and summaries. Hints, reveal and retries are separate events; retain first submission."
+  },
+  "language": {
+    "question": "Use appropriate Pearson command words and exam-like sentences: State, Identify, Calculate, Determine, Compare, Explain, Suggest. Do not label a task Evaluate if it asks only for a description.",
+    "feedback": "Use short, natural student-facing English. Give the correction, then explain the selected misconception. Avoid simply saying incorrect.",
+    "completion": "An opening answer sentence may be supplied. Only the selected missing points earn marks. Each gap has a clear purpose and all choices fit its grammar."
+  },
+  "ui": {
+    "baseline": "ocr-organic-revision-v1.4.1.zip, current version 3 checked 15 October 2026",
+    "preserve": [
+      "Dark navy desktop sidebar; Practice, Mistakes and Progress navigation.",
+      "White workspace, serif headings and sans-serif instructions/controls.",
+      "Green actions and dark pink/red Finish session control.",
+      "Dark mobile session bar and existing setup/session distinction.",
+      "Prominent complete task instructions; generous diagrams with accessible enlarge control.",
+      "Optional celebrations, sound preference and reduced-motion support."
+    ],
+    "necessaryChanges": [
+      "Group selectable lessons under Waves, Forces and Electricity. Keep selected checkboxes when closing a group.",
+      "Show actual marks in setup/session summary; retain question position as secondary navigation.",
+      "Add calculation boxes, completion controls and a single self-score field to existing answer area.",
+      "Display ECF method credit with text, not colour alone.",
+      "Show missing prerequisites and shorter-pool totals adjacent to Start."
+    ],
+    "askBefore": [
+      "Changing navigation destinations, palette, page hierarchy or normal session workflow.",
+      "Replacing current phone controls with a new interaction pattern.",
+      "Adding accounts, cloud progress, compulsory timers or teacher dashboards."
+    ],
+    "storage": "Use AAQ-specific progress/preference/session keys, separate from the OCR app. Stable question IDs plus contentVersion; changing marking semantics creates a new compatible version or migration. Never clear unrelated localStorage."
+  },
+  "release": {
+    "contentStatus": "Draft for teacher review",
+    "referenceCore": "Pure selection, numeric/choice marking and self-score validation supplied and tested. It is a reference module, not a completed browser interface.",
+    "studentGate": "Do not present unreviewed material as teacher-approved. A teacher preview mode can load draft questions."
+  }
+}

@@ -1,0 +1,115 @@
+ANSWER-COMPLETION DISTRACTOR REVIEW
+15 October 2026
+
+Scope: W12 has four missing points; W27 has three. Each supplied opening earns no marks. Each gap has four grammatically compatible sentence choices and one correct option. Mark each missing point independently.
+
+Author review criteria: one clear scientific purpose per gap; plausible misconception-based errors; no joke alternatives; comparable complete-sentence form; no answer based on grammar; contextual rather than absolute claims where evidence is limited; specific corrective feedback; shuffle display order using stable IDs.
+
+W12 - Compare communication methods using evidence
+Command word: Compare
+Opening: Both methods transmitted successfully in all 10 trials without an obstruction.
+
+Gap 1: Compare the obstructed results.
+CORRECT A | comparison-a
+With the screen, infrared succeeded in 2/10 trials and Bluetooth in 9/10 trials.
+Feedback: Yes: this comparison uses both successful-transmission values.
+DISTRACTOR B | comparison-b
+With the screen, infrared succeeded in 9/10 trials and Bluetooth in 2/10 trials.
+Feedback: Those two results have been swapped.
+DISTRACTOR C | comparison-c
+With the screen, both methods still succeeded in all 10 of the trials.
+Feedback: 10/10 applies to the unobstructed test, not this row.
+DISTRACTOR D | comparison-d
+With the screen, infrared succeeded in 8/10 trials and Bluetooth in 1/10 trials.
+Feedback: Those are the numbers of failed trials. The table gives successes.
+
+Gap 2: Explain the infrared result.
+DISTRACTOR A | infrared-a
+Infrared needs no clear path, so the screen should not affect reception.
+Feedback: The obstructed results show why a clear path matters here.
+CORRECT B | infrared-b
+Infrared needs a clear path, and the screen blocked much of its signal.
+Feedback: Yes: a blocked path explains the large reduction in successful reception.
+DISTRACTOR C | infrared-c
+Infrared cannot travel 4 m, even when there is no screen in the path.
+Feedback: The 10/10 unobstructed result shows that 4 m was within range.
+DISTRACTOR D | infrared-d
+Infrared has a lower frequency after the screen, so the receiver stops working.
+Feedback: Frequency does not change simply because light enters a stationary material.
+
+Gap 3: Explain the Bluetooth result.
+DISTRACTOR A | bluetooth-a
+Bluetooth uses infrared waves that are unaffected by this screen.
+Feedback: Bluetooth uses radio waves, not infrared.
+DISTRACTOR B | bluetooth-b
+Bluetooth travels faster than infrared, reaching the receiver before an obstruction matters.
+Feedback: Both are electromagnetic waves; a higher speed does not explain these results.
+DISTRACTOR C | bluetooth-c
+Bluetooth gains energy in the plastic screen, increasing the strength of the signal.
+Feedback: The screen does not add energy to strengthen the signal.
+CORRECT D | bluetooth-d
+Bluetooth uses radio waves that passed through this screen well enough for reception.
+Feedback: Yes: the radio signal remained usable through this particular material.
+
+Gap 4: Suggest a method and justify it for this room.
+DISTRACTOR A | recommendation-a
+Use infrared because both methods were equally successful when the path was clear.
+Feedback: This room has frequent obstructions, so the obstructed results matter too.
+DISTRACTOR B | recommendation-b
+Use Bluetooth because its signal will pass through every material in the room.
+Feedback: The test supports a choice for this obstruction; it does not prove passage through every material.
+CORRECT C | recommendation-c
+Use Bluetooth because interruptions are likely and it worked better with an obstruction.
+Feedback: Yes: this links the test evidence to people regularly crossing the path.
+DISTRACTOR D | recommendation-d
+Use infrared because fewer successful transmissions mean less unwanted interference.
+Feedback: Fewer successful transmissions mean poorer reliability for the intended task.
+
+W27 - Explain transmission in an optical fibre
+Command word: Explain
+Opening: The ray reaches the core-cladding boundary from inside the core.
+
+Gap 1: Compare the refractive indices.
+DISTRACTOR A | indices-a
+The core has a lower refractive index than the cladding.
+Feedback: 1.50 is greater than 1.40; the direction is reversed.
+DISTRACTOR B | indices-b
+The core and cladding have equal refractive indices.
+Feedback: The supplied indices are different.
+CORRECT C | indices-c
+The core has a greater refractive index than the cladding.
+Feedback: Yes: light approaches the boundary from the higher-index material.
+DISTRACTOR D | indices-d
+Light travels faster in the core than in the cladding.
+Feedback: A greater refractive index means a lower light speed.
+
+Gap 2: Relate the incidence angle to the critical angle.
+CORRECT A | angle-a
+The incidence angle is greater than the critical angle at this boundary.
+Feedback: Yes: 75° exceeds the supplied critical angle of 69°.
+DISTRACTOR B | angle-b
+The incidence angle must equal the critical angle at this boundary.
+Feedback: Equality would give a refracted ray along the boundary.
+DISTRACTOR C | angle-c
+The incidence angle is less than the critical angle at this boundary.
+Feedback: 75° is greater than 69°, not less.
+DISTRACTOR D | angle-d
+Any non-zero incidence angle is sufficient at this boundary.
+Feedback: The angle must exceed the critical angle, not merely exceed zero.
+
+Gap 3: Explain how the light remains in the core.
+DISTRACTOR A | process-a
+Light refracts into the cladding and then reflects from the outer surface.
+Feedback: The required reflection is at the core-cladding boundary.
+DISTRACTOR B | process-b
+Light is absorbed by the core and re-emitted at each boundary.
+Feedback: Absorption and re-emission are not the TIR mechanism.
+CORRECT C | process-c
+Light is totally internally reflected back into the core at successive boundaries.
+Feedback: Yes: repeated TIR keeps the ray in the core.
+DISTRACTOR D | process-d
+Light is reflected because it approaches the boundary from the lower-index material.
+Feedback: The light approaches from the higher-index core.
+
+REVIEW LIMIT
+This is an author audit, not evidence of classroom-tested distractor performance. During the pilot, record the distribution of option choices and read student explanations when an apparently strong distractor is selected frequently. Revise ambiguous options or non-functioning distractors. A completed selected paragraph is supported practice and must not be labelled an independently written extended answer.
