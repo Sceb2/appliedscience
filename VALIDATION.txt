@@ -1,3 +1,9 @@
+AAQ PHYSICS WORKING PILOT 0.1.0 - VALIDATION
+15 October 2026
+
+UI reference: OCR organic revision v1.4.2. Runtime question-bank bytes match repository content-pack commit 4ca3ca5758b6dce4ef46122eb2e41dc9ac1d8c2b.
+
+CORE LOGIC
 PASS 28 questions, 14 recall / 14 application, exactly one written test
 PASS All 27 auto-marked questions award full credit for authored answers
 PASS Every authored distractor is rejected in its part and supplies feedback
@@ -18,12 +24,46 @@ PASS Narrow selections provide a clearly identified shorter session without new 
 PASS Selection optimises marks then recall by count, checked against brute force
 PASS Stateful sessions can preserve option IDs despite a changed display order
 
-19 test groups passed. Reference logic only; no browser UI has been implemented or browser-tested in this content pack.
+19 test groups passed. Core selection and marking verified. Interface checks run separately.
 
-JSON Schema 2020-12 validation: PASS
-Semantic checks (IDs, lesson references, assets, answer keys, unit factors, ECF order, mark totals): PASS
-Content balance: 14 recall / 14 application questions, 60 practice marks, exactly one written test: PASS
-Lesson map: 12 Waves headings, 16 Waves lessons, 17 Forces lessons, 16 Electricity lessons: PASS
-Teacher brief: nine pages rendered and visually reviewed, no table splits or clipping: PASS
-UI baseline inspected: v1.4.1 source, including current navy mobile bar and green/pink controls.
-Browser UI implementation and browser/classroom QA: next stage; not performed in this content pack.
+
+SIMULATED DOM
+PASS Setup starts with no untaught topics selected, 20-mark plan appears after Select all
+PASS A complete generated practice session marks, advances, archives and reports first attempts
+PASS Narrow topic pools are shorter, with no implicit prerequisites
+PASS W04 renders the double-slit diagram and enlargement has a labelled dialog
+PASS W03 exposes two labelled ECF credits and saves independent direct/method totals
+PASS Draft numbers and selected units survive topic navigation and a reload
+PASS Blank submission warns without marking, then deliberate partial submission is graded once
+PASS Answer completion updates its paragraph and persists shuffled option IDs on resume
+PASS Written self-assessment has one preserved answer, bounded score, and separate reporting
+PASS Retry keeps first-attempt score and resolves the mistake
+PASS Reveals earn zero and an unfinished written question can be continued after Finish
+PASS Teacher single-question reviews do not write learner scores
+PASS Final-answer route awards full credit and stays separate from scaffold marks
+PASS Blocked storage still permits a full question attempt with a useful message
+PASS Corrupt saved progress is retained while an in-memory visit can continue
+PASS Student writing is escaped in session review
+PASS A direct teacher-preview URL restores the same unfinished answer on reload
+PASS Malformed saved session objects are ignored safely without overwriting the original
+
+18 simulated-DOM interface test groups passed. This is not a rendered browser or mobile visual test.
+
+
+SELF-CONTAINED PREVIEW
+PASS Self-contained preview boots, loads all assets and marks a question without fetching files.
+PASS Preserved effects respect reduced motion and sound is off by default.
+
+
+PACKAGING CHECKS
+PASS index.html is at the top level of UPLOAD-TO-GITHUB.
+PASS Every linked local script and stylesheet exists.
+PASS Every referenced question diagram and the preserved audio file exist.
+PASS JSON data parses; 28 unique question IDs, 14 recall / 14 application.
+PASS No network dependencies in OPEN-PILOT.html.
+PASS Existing GitHub Pages serves pilot-core.mjs as text/javascript and the question bank as application/json.
+
+VERIFICATION LIMIT
+No rendered browser, screenshot or physical-phone layout test was possible in the build environment. Simulated-DOM checks exercise interactions and saved state but cannot establish visual layout, contrast or keyboard/viewport behaviour on actual devices. Use the review steps in GITHUB-UPLOAD.txt before a wider classroom trial.
+
+The repository has not been changed remotely. Upload the runtime folder contents to publish the pilot.

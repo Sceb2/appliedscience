@@ -1,60 +1,9 @@
-AAQ PHYSICS WAVES PILOT - CONTENT AND IMPLEMENTATION HANDOFF
-Version 0.1.0 | 15 October 2026
+AAQ PHYSICS WORKING PILOT 0.1.0 - 15 October 2026
 
-READ FIRST
-AAQ_Physics_Pilot_Brief.pdf is the teacher-facing brief and lesson map. This pack prepares the pilot content and reference logic. The browser interface is the next implementation stage; this pack is not a runnable website.
+The working browser interface is now implemented. index.html is the GitHub Pages entry point. There is no build step for the website. See GITHUB-UPLOAD.txt in the downloaded pilot package for publishing instructions.
 
-AUTHORITATIVE PILOT FILES
-- Pilot_Rules.json: agreed session, marking, feedback, design and release rules.
-- Physics_Lesson_Map.json: Waves (16 leaf lessons under the 12 teacher headings), Forces (17), Electricity (16). Estimates assume 50-60 minute slots; 18, 19 and 18 slots respectively, not official lesson allocations.
-- Pilot_Question_Bank.json: 28 questions, 14 recall and 14 application, 60 available practice marks. Exactly two answer-completion questions (W12, W27), five scaffolded calculations and one open written self-assessment test (W25).
-- Pilot_Question_Schema.json: JSON Schema 2020-12 contract. Semantic cross-references, mark sums and option keys also require validation.
-- assets/: nine original SVG diagrams, retained from the reviewed planning sample pack.
-- pilot-core.mjs: tested DOM-free reference selection, marking, numeric parsing and self-score validation.
-- verify-pilot.mjs: reference behaviour checks; run with Node using `node verify-pilot.mjs` from this folder.
-- VALIDATION.txt and Distractor_Review.txt: recorded checks and completion-distractor audit.
+The bank remains at 28 draft questions: 14 recall and 14 application. Normal sessions use 20 available marks where attainable, with the closest 50/50 question-count balance. Teacher single-question reviews do not affect learner scores. W12 and W27 are automatic answer completions; W25 is the only written self-assessment test.
 
-SOURCE BASELINE
-Preserve the UI from ocr-organic-revision-v1.4.1.zip (version 3, checked 15 October 2026). Do not modify or overwrite the chemistry project. Use its visual tokens and navigation patterns in a separate AAQ project. Do not copy the entire chemistry question bank or repurpose its storage keys.
-Palette: navy #172D3A; green #14563E; white #FFFFFF; soft green #EEF5EF; Finish #7A3548. Keep serif headings, system sans-serif instructions, the desktop sidebar and the current mobile session bar. Mobile session buttons: Change Topics and Mistakes in green; Finish Session in pink/red. Changes to palette, navigation destinations, page hierarchy or interaction pattern require a design question to the teacher. Normal implementation choices inside the existing answer area do not need a redesign.
+The UI baseline is the newer chemistry v1.4.2 package. All physics preferences, sessions and progress use separate AAQ storage keys. Question content is unchanged from the content pack.
 
-QUESTION RENDERER CONTRACT
-- Show the full command-word prompt, context and any table. Give diagrams meaningful accessible descriptions and an enlarge/close action that restores focus.
-- Use fieldsets/legends or equally clear labels for each choice part. Stable option IDs are authoritative; displayed letters are temporary. Persist shuffled option order and selected IDs in an active attempt.
-- For answer-completion questions, show the supplied opening followed by clearly labelled sentence gaps. Selecting a sentence fills that gap. All options remain available until the whole question is checked. The opening earns no marks. After checking, show the completed model paragraph and part-specific correction/feedback.
-- Numeric boxes show the authored unit or an allowed-unit selector. Preserve raw student values plus normalised values. Finite decimals, common grouped thousands and scientific notation are accepted. Do not evaluate arbitrary expressions. Inline syntax help must not erase an entry.
-- Check the whole question once, including all calculation boxes. If parts are empty, state which are empty and offer return-to-answer or intentional submission. Feedback must not leak later answers while those parts remain unsubmitted.
-- ECF marks require the rule on that numeric part; do not award them generally. Show the original error and label the later credit as 'Method mark awarded (error carried forward)'. A correct downstream value is direct credit. Display direct and ECF totals separately.
-- Four calculation questions provide a separately selected final-answer mode in the data (W03, W09, W11, W24). A correct final value in an allowed unit earns full practice credit in that explicit mode. A wrong value can return to scaffolding before submission; do not silently claim a method or award partial working. W07 has two independent calculations and retains its scaffold.
-- W25 is the only open response. Use a labelled text area; preserve the first submitted answer before revealing its four bullet marking points. Place an integer self-score box (0-4) at the end of that question's marking workflow. Empty is not zero. Preserve the writing on validation failure. Never claim automatic prose grading.
-
-SESSION CONTRACT
-- The target is 20 AVAILABLE marks, not 20 marks earned. Start with studied leaf lessons; eligibility requires ALL required lessons. Do not silently select a prerequisite or include future content.
-- Resolve a whole-question subset to exactly 20 where possible. Among equally sized mark totals, choose the closest to 50% recall by QUESTION COUNT. Prefer less-seen questions as a tie-break. The reference module uses a seeded shuffle and dynamic programming.
-- Keep question IDs unique. At most one question from each family: W12 and W25 are variants and never appear together. Do not duplicate an item or split its marks to fill a session.
-- If 20 cannot be reached, use the greatest attainable total below 20 and show it before starting. If zero questions are eligible, explain missing lessons instead of starting. A shortened session or balance deviation is explicit; never add untaught material to fix it.
-- Keep session composition fixed on resume, including question IDs, content versions, mark total, seed, option orders and first attempts. A question's required lessons cannot change the active session silently.
-- Keep question position for navigation; show completed available marks out of planned available marks as workload progress. Show marks earned separately. Submitted blank parts still belong to a submitted question; unfinished questions do not count as completed.
-
-PROGRESS RECORD CONTRACT
-Use namespaced keys such as aaqPhysics.prefs.v1, aaqPhysics.progress.v1 and aaqPhysics.active.v1. Version the saved envelope and bank. Do not clear unrelated storage.
-An attempt records: questionId, contentVersion, requiredLessonIds, strand, interaction, startedAt/submittedAt, raw responses, option orders, marking mode, part statuses, directMarks, ecfMarks, selfAssessedMarks (null until entered), maxMarks, hintUsed, revealed and attemptNumber.
-Keep the first submission immutable; retain later retries as later events. A model-answer reveal is not a correct attempt. Preserve both the written answer and its self-reported score. Treat incomplete/corrupt storage as recoverable; show a useful message and avoid overwriting recoverable data with an empty object.
-At session end, show direct + ECF automatic marks and self-assessed marks as distinct values with their respective denominators. Mark a self-assessment awaiting a score as pending. Do not silently combine self-reported scores with automatically verified performance.
-
-REVIEW AND RELEASE
-Every question is currently draft-for-teacher-review. The core defaults to excluding drafts; pass allowDrafts:true only for an explicitly labelled teacher preview. A student release uses teacher-approved questions. Review status is content approval, not an automatically checked fact.
-The earlier 24-question workbook/PDF remains the planning record. For pilot implementation use this bank: W12 has become a four-gap automated completion, W25 is the only written self-assessment, and W26-W28 extend the examples. All question and part identifiers are stable within this pack; the supplied bankVersion/contentVersion distinguish this iteration.
-
-FRONTEND ACCEPTANCE CHECKS
-1. Preserve layout at narrow phone, tablet and desktop widths; no sideways page scrolling. Enlarge diagrams rather than shrinking labels.
-2. Verify keyboard-only answer selection, focus after Check/Next/Close, accessible group labels and announced marking status. Convey ECF through text, not colour alone.
-3. Keep the mobile bar and virtual keyboard from hiding numeric fields, the written score field or Continue. Preserve minimum comfortable tap targets and reduced-motion preferences.
-4. Resume an incomplete calculation, a filled but unchecked completion, a marked question and a written answer awaiting a self-score without loss or reordering.
-5. Compare displayed question totals, workload progress and scores with the reference results, including partial submissions, reveal, shorter pools and dependent marks.
-6. Confirm selection and grading still work when permitted browser storage is unavailable. Provide an honest persistence message.
-7. Review with the teacher, then a small group of students. Record confusing distractors, time per mark, abandoned questions and the usefulness of the ECF explanation before expanding the bank.
-
-SCOPE
-The current Pearson Issue 7 specification was checked against the supplied earlier Unit 3 extract. Spec content and sources are recorded in the JSON files. Lesson divisions, practice marks and AO tags are authored judgements.
-Retain the teacher's Diffraction heading and double-slit path-difference/superposition practice. Preserve grating context and line-emission spectra in the source notes. Do not add a compulsory white-light rainbow question or an unrequested fringe-spacing equation.
+Core tests, simulated-DOM interface tests and self-contained preview checks passed. Browser-rendered and physical-phone visual QA remain to be performed. The DEVELOPMENT folder in the download contains reproducible tests and a preview builder; it does not need publishing.
