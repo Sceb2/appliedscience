@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "bankVersion": "0.3.0",
+  "bankVersion": "0.4.0",
   "date": "2026-10-15",
   "title": "AAQ Physics Waves – reviewed 110-question bank",
   "qualification": "Pearson AAQ Applied Science Extended Certificate (first teaching 2025)",
@@ -25,12 +25,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Determine the amplitude and wavelength of the wave shown. Select one answer.",
+      "prompt": "The graph shows a wave.\nWhat are the amplitude and wavelength of the wave?",
       "parts": [
         {
           "id": "pair",
           "type": "choice",
-          "prompt": "Identify the amplitude and wavelength.",
+          "prompt": "What are the amplitude and wavelength?",
           "marks": 1,
           "options": [
             {
@@ -59,7 +59,7 @@
           "correctFeedback": "The height from the centre is 3 cm; adjacent crests are 40 cm apart."
         }
       ],
-      "modelAnswer": "Amplitude = 3 cm; wavelength = 40 cm.",
+      "modelAnswer": "The amplitude is 3 cm. The distance between two adjacent crests is 40 cm, so the wavelength is 40 cm.",
       "generalFeedback": [
         "Amplitude is measured from equilibrium to a crest, not from trough to crest.",
         "Wavelength is measured between neighbouring points in the same phase, such as two crests."
@@ -101,7 +101,7 @@
       "commandWord": "Describe",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Describe the longitudinal sound wave shown by completing the two statements.",
+      "prompt": "The diagram shows a longitudinal sound wave.\nComplete the statements about the wave.",
       "parts": [
         {
           "id": "direction",
@@ -153,7 +153,7 @@
             {
               "id": "regions-b",
               "text": "nodes",
-              "feedback": "Nodes belong to stationary-wave patterns."
+              "feedback": "Nodes belong to standing-wave patterns."
             },
             {
               "id": "regions-c",
@@ -166,7 +166,7 @@
           "correctFeedback": "Rarefactions are the more spread-out regions."
         }
       ],
-      "modelAnswer": "The particles oscillate ___ to the direction of energy transfer. parallel The wave contains compressions and ___. rarefactions",
+      "modelAnswer": "The particles oscillate parallel to the direction of energy transfer. The wave contains compressions and rarefactions.",
       "generalFeedback": [
         "Perpendicular describes transverse oscillations.",
         "Particles move back and forth around their positions; they do not all travel to the receiver.",
@@ -208,7 +208,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 4,
-      "prompt": "An ultrasonic distance sensor produces a wave of frequency 85 kHz. Its speed in air is 340 m/s. Calculate the wavelength in millimetres. Use v = fλ.",
+      "prompt": "An ultrasound sensor produces waves with a frequency of 85 kHz.\nThe speed of the waves in air is 340 m/s.\nCalculate the wavelength in millimetres.\nUse v = fλ.",
       "parts": [
         {
           "id": "frequency",
@@ -373,12 +373,12 @@
       "commandWord": "Predict",
       "interaction": "selected-answer",
       "maxMarks": 3,
-      "prompt": "The graphs show two waves X and Y at the same position. Each has amplitude 2 mm. Determine their phase relationship and the result when they overlap.",
+      "prompt": "The graphs show two waves, X and Y, at the same position.\nEach wave has an amplitude of 2 mm.\nUse the graphs to answer the questions about the waves.",
       "parts": [
         {
           "id": "phase",
           "type": "choice",
-          "prompt": "Identify the phase relationship.",
+          "prompt": "What is the phase difference between X and Y?",
           "marks": 1,
           "options": [
             {
@@ -409,7 +409,7 @@
         {
           "id": "superposition",
           "type": "choice",
-          "prompt": "Identify the type of superposition.",
+          "prompt": "Which type of interference occurs when the waves overlap?",
           "marks": 1,
           "options": [
             {
@@ -440,7 +440,7 @@
         {
           "id": "result",
           "type": "choice",
-          "prompt": "Determine the resultant amplitude.",
+          "prompt": "What is the amplitude of the resultant wave?",
           "marks": 1,
           "options": [
             {
@@ -469,11 +469,10 @@
           "correctFeedback": "Add the equal in-phase amplitudes: 2 + 2 = 4 mm."
         }
       ],
-      "modelAnswer": "Identify the phase relationship. In phase: 0°. Identify the type of superposition. Constructive. Determine the resultant amplitude. 4 mm",
+      "modelAnswer": "The waves are in phase: their phase difference is 0°. Their displacements add, producing constructive interference. The resultant amplitude is 2 + 2 = 4 mm.",
       "generalFeedback": [
-        "Divide path difference by wavelength: 1000 nm is two wavelengths.",
-        "Whole-number wavelength differences give in-phase arrival. Displacements add, producing a bright fringe.",
-        "Odd half-wavelength differences give antiphase arrival. Equal, opposite displacements cancel, producing a dark fringe."
+        "The crests occur at the same times, so the waves are in phase.",
+        "In-phase displacements add: 2 + 2 = 4 mm."
       ],
       "hint": "Compare the times of corresponding crests before adding amplitudes.",
       "sources": [
@@ -512,12 +511,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 3,
-      "prompt": "The diagram shows reference emission spectra for gases P, Q and R, and the spectrum of a mixture. All spectra use the same wavelength scale.",
+      "prompt": "The diagram shows the emission spectra of gases P, Q and R, and a mixture of gases.\nAll the spectra use the same wavelength scale.\nUse the spectra to answer the questions.",
       "parts": [
         {
           "id": "gases",
           "type": "choice",
-          "prompt": "Identify the gases in the mixture.",
+          "prompt": "Which gases are in the mixture?",
           "marks": 1,
           "options": [
             {
@@ -548,7 +547,7 @@
         {
           "id": "reason",
           "type": "choice",
-          "prompt": "Identify the reason supporting the gas identification.",
+          "prompt": "Which observation supports your answer?",
           "marks": 1,
           "options": [
             {
@@ -582,7 +581,7 @@
         {
           "id": "transition",
           "type": "choice",
-          "prompt": "Identify the change that produces an emitted photon.",
+          "prompt": "Which electron transition emits a photon?",
           "marks": 1,
           "options": [
             {
@@ -611,7 +610,7 @@
           "correctFeedback": "An electron releases energy as a photon when it moves down."
         }
       ],
-      "modelAnswer": "Identify the gases in the mixture. P and R Identify the reason supporting the gas identification. Their combined line positions match every mixture line. Identify the change that produces an emitted photon. An electron moves to a lower energy level.",
+      "modelAnswer": "The mixture contains gases P and R. The lines from these two gases match all the lines in the mixture. A photon is emitted when an electron moves from a higher to a lower energy level.",
       "generalFeedback": [
         "The mixture contains lines at 420, 500, 610 and 680 nm. P and R together supply exactly those positions.",
         "Q has lines at 450 and 560 nm, which are absent from the mixture.",
@@ -655,12 +654,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "An ideal pipe is open on the left and closed on the right. The diagram represents air-displacement amplitude along the pipe. It is a pattern envelope, not the path followed by air particles.",
+      "prompt": "The diagram shows a standing sound wave in a pipe.\nThe pipe is open at one end and closed at the other.",
       "parts": [
         {
           "id": "length",
           "type": "choice",
-          "prompt": "Determine the length-wavelength relationship.",
+          "prompt": "Which expression gives the length of the pipe L in terms of the wavelength λ?",
           "marks": 1,
           "options": [
             {
@@ -681,7 +680,7 @@
             {
               "id": "length-b",
               "text": "L = λ/2",
-              "feedback": "One half-wavelength would have the same type of displacement condition at both ends."
+              "feedback": "One half-wavelength would have the same type of node or antinode at both ends."
             }
           ],
           "correctOptionId": "length-d",
@@ -691,7 +690,7 @@
         {
           "id": "open-end",
           "type": "choice",
-          "prompt": "Identify the displacement condition at the open end.",
+          "prompt": "Is the open end a displacement node or an antinode?",
           "marks": 1,
           "options": [
             {
@@ -710,18 +709,17 @@
           "correctFeedback": "Air displacement is greatest at the open end."
         }
       ],
-      "modelAnswer": "Determine the length-wavelength relationship. L = 3λ/4 Identify the displacement condition at the open end. Displacement antinode",
+      "modelAnswer": "L = 3λ/4. The pattern contains three quarters of a wavelength. The open end is a displacement antinode, where the air vibrates with maximum amplitude.",
       "generalFeedback": [
-        "The pattern contains three quarter-wavelength sections, so λ = 4L/3.",
-        "The air can oscillate most at an open end. At the closed end its displacement is zero.",
-        "For a pressure representation, node and antinode positions are reversed."
+        "The pipe contains three quarter-wavelength sections.",
+        "At an open end the air has its greatest amplitude of vibration. At a closed end its displacement is zero."
       ],
       "hint": "Count the quarter-wavelength sections between a node and the next antinode.",
       "sources": [
         "SAM Q3(b)(i); N23 Q1(a); PHYS2"
       ],
       "asset": "assets/closed_pipe.svg",
-      "accessibleDescription": "Pipe open left and closed right. Envelope has displacement antinodes at x = 0 and 2L/3, and displacement nodes at x = L/3 and L.",
+      "accessibleDescription": "The pipe is open on the left and closed on the right. Displacement antinodes are at x = 0 and x = 2L/3. Displacement nodes are at x = L/3 and x = L.",
       "reviewStatus": "draft-for-teacher-review",
       "enabled": true,
       "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
@@ -756,7 +754,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 4,
-      "prompt": "A string has wave speed 150 m/s and mass per unit length μ = 0.0020 kg/m. It is fixed at both ends, 0.50 m apart, and vibrates in its fundamental mode. Calculate its tension and fundamental frequency. Use v = √(T/μ) and v = fλ.",
+      "prompt": "A string is fixed at both ends. Its length is 0.50 m and its mass per unit length, μ, is 0.0020 kg/m.\nWaves travel along the string at 150 m/s.\nCalculate the tension in the string and its fundamental frequency.\nUse v = √(T/μ) and v = fλ.",
       "parts": [
         {
           "id": "tension-equation",
@@ -867,7 +865,7 @@
         "J23 Q3(b),(c); SAM Q3(c)(i),(ii)"
       ],
       "asset": "assets/string_fundamental.svg",
-      "accessibleDescription": "String fixed at two ends 0.50 m apart. Fundamental-mode envelope has a node at each end and one antinode at the centre.",
+      "accessibleDescription": "The string is fixed at both ends, 0.50 m apart. At its fundamental frequency there is a node at each end and an antinode at the centre.",
       "reviewStatus": "draft-for-teacher-review",
       "enabled": true,
       "provenance": "Original question. Sources inform scope and assessment pattern; wording, data and graphics are newly authored.",
@@ -904,12 +902,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Light travels from air into glass at the angle shown. Identify the diagram showing the principal refracted ray.",
+      "prompt": "A ray of light travels from air into glass.\nWhich diagram shows the correct path of the refracted ray?",
       "parts": [
         {
           "id": "ray",
           "type": "choice",
-          "prompt": "Identify the principal refracted ray.",
+          "prompt": "Which diagram shows the refracted ray?",
           "marks": 1,
           "options": [
             {
@@ -930,7 +928,7 @@
             {
               "id": "ray-d",
               "text": "Diagram D",
-              "feedback": "The ray should change direction at this oblique boundary."
+              "feedback": "The ray should bend as it enters the glass at an angle to the normal."
             }
           ],
           "correctOptionId": "ray-a",
@@ -938,12 +936,10 @@
           "correctFeedback": "The transmitted ray bends towards the normal in glass."
         }
       ],
-      "modelAnswer": "Diagram A: the transmitted ray enters glass and bends towards the normal.",
+      "modelAnswer": "Diagram A. The light slows down as it enters the glass and bends towards the normal.",
       "generalFeedback": [
-        "C shows a reflected ray in the air.",
-        "B bends away from the normal as though light were entering a lower-index medium.",
-        "D shows no change of direction despite oblique incidence into glass.",
-        "Light travels more slowly in glass; refraction angles are measured from the normal."
+        "Light bends towards the normal as it enters glass from air.",
+        "Measure angles from the normal, rather than from the glass surface."
       ],
       "hint": "Locate the normal and identify which side is glass.",
       "sources": [
@@ -980,7 +976,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "The refractive index of glass is 1.60. Calculate the critical angle at a glass-air boundary. Use sin C = 1/n. Give the angle in degrees.",
+      "prompt": "Glass has a refractive index of 1.60.\nCalculate the critical angle at the glass–air boundary.\nUse sin C = 1/n. Give your answer in degrees.",
       "parts": [
         {
           "id": "index",
@@ -1110,18 +1106,18 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "The graphs show possible signals in an optical communication system. Identify the binary digital signal and state how its information is represented.",
+      "prompt": "The graphs show signals used to transmit information.\nIdentify the binary digital signal and how it represents information.",
       "parts": [
         {
           "id": "graph",
           "type": "choice",
-          "prompt": "Identify the binary digital signal.",
+          "prompt": "Which graph shows the binary digital signal?",
           "marks": 1,
           "options": [
             {
               "id": "graph-d",
               "text": "Graph D",
-              "feedback": "D has two discrete signal levels."
+              "feedback": "Graph D has two separate signal levels."
             },
             {
               "id": "graph-a",
@@ -1141,12 +1137,12 @@
           ],
           "correctOptionId": "graph-d",
           "shuffleOptions": true,
-          "correctFeedback": "D has two discrete signal levels."
+          "correctFeedback": "Graph D has two separate signal levels."
         },
         {
           "id": "representation",
           "type": "choice",
-          "prompt": "State how binary digital information is represented.",
+          "prompt": "How is information represented by this signal?",
           "marks": 1,
           "options": [
             {
@@ -1175,10 +1171,10 @@
           "correctFeedback": "Binary digital signals represent information using two agreed levels, labelled 0 and 1."
         }
       ],
-      "modelAnswer": "Identify the binary digital signal. Graph D State how binary digital information is represented. Using two agreed levels representing 0 and 1.",
+      "modelAnswer": "Graph D shows the binary digital signal. Information is represented by two levels, corresponding to 0 and 1.",
       "generalFeedback": [
-        "Graph shape and agreed discrete levels distinguish this binary signal from a continuously varying analogue signal.",
-        "Digital regeneration is practised separately in W73."
+        "A binary digital signal uses two levels to represent 0 and 1.",
+        "An analogue signal varies continuously."
       ],
       "hint": "Look for two stable levels. Then consider whether the receiver can distinguish them.",
       "sources": [
@@ -1215,12 +1211,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "In an ideal model, a transmitter spreads its energy uniformly in all directions. Signal intensity is 0.072 W/m² at 3.0 m. Assume no absorption or obstacles. Calculate the intensity at 9.0 m. Use I = k/r².",
+      "prompt": "A transmitter emits radio waves.\nAt a distance of 3.0 m, the intensity of the waves is 0.072 W/m².\nCalculate the intensity at a distance of 9.0 m.\nAssume that the inverse-square law applies. Use I = k/r².",
       "parts": [
         {
           "id": "k",
           "type": "numeric",
-          "prompt": "Calculate k from the first position.",
+          "prompt": "Calculate k using the intensity at 3.0 m.",
           "marks": 1,
           "answer": {
             "value": 0.648,
@@ -1239,7 +1235,7 @@
         {
           "id": "substitution",
           "type": "choice",
-          "prompt": "Select the substitution at 9.0 m.",
+          "prompt": "Which expression gives the intensity at 9.0 m?",
           "marks": 1,
           "options": [
             {
@@ -1348,12 +1344,12 @@
       "commandWord": "Compare",
       "interaction": "answer-completion",
       "maxMarks": 4,
-      "prompt": "A technician sends instructions to a display 4 m away. People regularly pass between the transmitter and receiver. The table shows successful transmissions out of 10. Compare the methods, explain the effect of the obstruction and suggest the more suitable method for this room. Complete the answer by selecting one sentence for each gap.",
+      "prompt": "A technician uses infrared or Bluetooth to send instructions to a display 4 m away.\nPeople regularly walk between the transmitter and receiver.\nThe table shows the number of successful transmissions in 10 trials, with and without a plastic screen.\nCompare the results and explain which method is more suitable for this room.",
       "parts": [
         {
           "id": "comparison",
           "type": "choice",
-          "prompt": "Gap 1: Compare the obstructed results.",
+          "prompt": "Compare the results with the plastic screen in place.",
           "marks": 1,
           "options": [
             {
@@ -1384,7 +1380,7 @@
         {
           "id": "infrared",
           "type": "choice",
-          "prompt": "Gap 2: Explain the infrared result.",
+          "prompt": "Explain the effect of the screen on the infrared signal.",
           "marks": 1,
           "options": [
             {
@@ -1415,7 +1411,7 @@
         {
           "id": "bluetooth",
           "type": "choice",
-          "prompt": "Gap 3: Explain the Bluetooth result.",
+          "prompt": "Explain why Bluetooth still works with this screen in place.",
           "marks": 1,
           "options": [
             {
@@ -1446,7 +1442,7 @@
         {
           "id": "recommendation",
           "type": "choice",
-          "prompt": "Gap 4: Suggest a method and justify it for this room.",
+          "prompt": "Choose a method for this room and give a reason.",
           "marks": 1,
           "options": [
             {
@@ -1477,7 +1473,6 @@
       ],
       "modelAnswer": "Both methods transmitted successfully in all 10 trials without an obstruction. With the screen, infrared succeeded in 2/10 trials and Bluetooth in 9/10 trials. Infrared needs a clear path, and the screen blocked much of its signal. Bluetooth uses radio waves that passed through this screen well enough for reception. Use Bluetooth because interruptions are likely and it worked better with an obstruction.",
       "generalFeedback": [
-        "The supplied opening earns no marks. Each selected missing sentence earns one independent practice mark.",
         "Compare both methods, explain each result and relate the recommendation to this room."
       ],
       "hint": "Compare the two rows of results. Then explain the difference and relate your recommendation to the room.",
@@ -1536,12 +1531,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State what is meant by frequency and periodic time. Select one definition for each.",
+      "prompt": "Complete the definitions of frequency and periodic time.",
       "parts": [
         {
           "id": "frequency",
           "type": "choice",
-          "prompt": "State what is meant by frequency.",
+          "prompt": "Frequency is:",
           "marks": 1,
           "options": [
             {
@@ -1572,7 +1567,7 @@
         {
           "id": "period",
           "type": "choice",
-          "prompt": "State what is meant by periodic time.",
+          "prompt": "Periodic time is:",
           "marks": 1,
           "options": [
             {
@@ -1601,7 +1596,7 @@
           "correctFeedback": "Yes: period is the time for one full cycle."
         }
       ],
-      "modelAnswer": "State what is meant by frequency. The number of complete oscillations per second State what is meant by periodic time. The time for one complete oscillation",
+      "modelAnswer": "Frequency is the number of complete oscillations per second. Periodic time is the time taken for one complete oscillation.",
       "generalFeedback": [
         "Frequency counts complete oscillations per second, measured in hertz.",
         "Periodic time measures seconds for one cycle. The two quantities are reciprocals: f = 1/T."
@@ -1641,12 +1636,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State what is meant by amplitude and wavelength. Select one definition for each.",
+      "prompt": "Complete the definitions of amplitude and wavelength.",
       "parts": [
         {
           "id": "amplitude",
           "type": "choice",
-          "prompt": "State what is meant by amplitude.",
+          "prompt": "Amplitude is:",
           "marks": 1,
           "options": [
             {
@@ -1677,7 +1672,7 @@
         {
           "id": "wavelength",
           "type": "choice",
-          "prompt": "State what is meant by wavelength.",
+          "prompt": "Wavelength is:",
           "marks": 1,
           "options": [
             {
@@ -1706,7 +1701,7 @@
           "correctFeedback": "Yes: adjacent crests are one example."
         }
       ],
-      "modelAnswer": "State what is meant by amplitude. Maximum displacement from equilibrium State what is meant by wavelength. Distance between adjacent points in phase",
+      "modelAnswer": "Amplitude is the maximum displacement from the equilibrium position. Wavelength is the distance between adjacent points in phase, such as two neighbouring crests.",
       "generalFeedback": [
         "Amplitude starts at the equilibrium position; peak-to-peak displacement is twice the amplitude.",
         "Wavelength is a distance along the direction of propagation between adjacent points with the same phase."
@@ -1746,12 +1741,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the equation relating wave speed v, frequency f and wavelength λ. Select one answer.",
+      "prompt": "Which equation links wave speed v, frequency f and wavelength λ?",
       "parts": [
         {
           "id": "equation",
           "type": "choice",
-          "prompt": "Select the wave equation.",
+          "prompt": "Which is the wave equation?",
           "marks": 1,
           "options": [
             {
@@ -1780,7 +1775,7 @@
           "correctFeedback": "Yes: wave speed equals frequency × wavelength."
         }
       ],
-      "modelAnswer": "Select the wave equation. v = fλ",
+      "modelAnswer": "v = fλ.",
       "generalFeedback": [
         "Wave speed equals frequency multiplied by wavelength. This question asks you to recall the relationship, not to substitute numbers."
       ],
@@ -1818,17 +1813,17 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State what is meant by a transverse wave. Select one answer.",
+      "prompt": "Which statement describes a transverse wave?",
       "parts": [
         {
           "id": "definition",
           "type": "choice",
-          "prompt": "Select the definition of a transverse wave.",
+          "prompt": "Which statement describes a transverse wave?",
           "marks": 1,
           "options": [
             {
               "id": "definition-c",
-              "text": "Oscillations perpendicular to energy transfer",
+              "text": "Oscillations at right angles to the direction of energy transfer",
               "feedback": "Yes: the two directions are at right angles."
             },
             {
@@ -1852,7 +1847,7 @@
           "correctFeedback": "Yes: the two directions are at right angles."
         }
       ],
-      "modelAnswer": "Select the definition of a transverse wave. Oscillations perpendicular to energy transfer",
+      "modelAnswer": "The oscillations are at right angles to the direction of energy transfer.",
       "generalFeedback": [
         "Perpendicular means at right angles. Parallel oscillations describe a longitudinal wave.",
         "Up and down is incomplete because the relationship to energy transfer must be stated."
@@ -1891,12 +1886,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the two properties that define coherent waves. Select one answer.",
+      "prompt": "Which two properties do coherent waves have?",
       "parts": [
         {
           "id": "coherent",
           "type": "choice",
-          "prompt": "Select the two properties of coherent waves.",
+          "prompt": "Which pair of properties makes waves coherent?",
           "marks": 1,
           "options": [
             {
@@ -1925,7 +1920,7 @@
           "correctFeedback": "Yes: coherence means the phase relationship stays fixed."
         }
       ],
-      "modelAnswer": "Select the two properties of coherent waves. Same frequency and a constant phase difference",
+      "modelAnswer": "Coherent waves have the same frequency and a constant phase difference.",
       "generalFeedback": [
         "Coherent waves have a stable phase relationship. They do not have to be in phase: a constant non-zero phase difference is allowed.",
         "Equal amplitudes alone do not establish coherence."
@@ -1964,12 +1959,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the principle of superposition. Select one answer.",
+      "prompt": "Which statement describes the principle of superposition?",
       "parts": [
         {
           "id": "principle",
           "type": "choice",
-          "prompt": "Select the principle of superposition.",
+          "prompt": "Which statement describes superposition?",
           "marks": 1,
           "options": [
             {
@@ -1998,7 +1993,7 @@
           "correctFeedback": "Yes: include the signs of the displacements."
         }
       ],
-      "modelAnswer": "Select the principle of superposition. The resultant displacement is the sum of individual displacements.",
+      "modelAnswer": "When waves overlap, the resultant displacement is the sum of their individual displacements. Displacements in opposite directions have opposite signs.",
       "generalFeedback": [
         "Add displacements with their signs at the same point and time. Opposite signs can cancel; matching signs can reinforce.",
         "Superposition adds displacements, not frequencies or wave speeds."
@@ -2024,7 +2019,7 @@
     {
       "id": "W19",
       "contentVersion": 3,
-      "title": "Recall a node in a stationary wave",
+      "title": "Recall a node in a standing wave",
       "topic": "Waves",
       "primaryLessonId": "WA08",
       "requiredLessonIds": [
@@ -2037,12 +2032,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State what is meant by a node in an ideal stationary wave.",
+      "prompt": "What is a node in a standing wave?",
       "parts": [
         {
           "id": "node",
           "type": "choice",
-          "prompt": "Select one definition.",
+          "prompt": "Which statement describes a node?",
           "marks": 1,
           "options": [
             {
@@ -2058,7 +2053,7 @@
             {
               "id": "node-1",
               "text": "A point where there is no vibration: the amplitude is zero.",
-              "feedback": "At an ideal node the particle does not vibrate, so its oscillation amplitude is zero."
+              "feedback": "At a node the particle does not vibrate, so its amplitude is zero."
             },
             {
               "id": "node-2",
@@ -2068,10 +2063,10 @@
           ],
           "correctOptionId": "node-1",
           "shuffleOptions": true,
-          "correctFeedback": "At an ideal node the particle does not vibrate, so its oscillation amplitude is zero."
+          "correctFeedback": "At a node the particle does not vibrate, so its amplitude is zero."
         }
       ],
-      "modelAnswer": "Select one definition. A point where there is no vibration: the amplitude is zero.",
+      "modelAnswer": "A node is a point in a standing wave where the amplitude is zero.",
       "generalFeedback": [
         "A node remains at zero displacement. Other points may pass through equilibrium during a cycle, but they still oscillate.",
         "Maximum oscillation amplitude occurs at an antinode."
@@ -2111,12 +2106,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "A vibration generator supplies repeated vibrations to a stretched string. State when resonance occurs.",
+      "prompt": "A vibration generator makes a stretched string vibrate.\nWhen does resonance occur?",
       "parts": [
         {
           "id": "resonance",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "When does resonance occur?",
           "marks": 1,
           "options": [
             {
@@ -2145,7 +2140,7 @@
           "correctFeedback": "Energy is transferred effectively when forcing frequency matches a natural frequency, giving a large response."
         }
       ],
-      "modelAnswer": "Select one answer. The forcing frequency matches a natural frequency of the string, producing large-amplitude vibrations.",
+      "modelAnswer": "Resonance occurs when the frequency of the generator equals a natural frequency of the string. The string then vibrates with a large amplitude.",
       "generalFeedback": [
         "Resonance can produce a large oscillation amplitude because the driver transfers energy effectively at a natural frequency."
       ],
@@ -2185,17 +2180,17 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State both conditions required for total internal reflection. Select one answer for each part.",
+      "prompt": "State the two conditions needed for total internal reflection.",
       "parts": [
         {
           "id": "boundary",
           "type": "choice",
-          "prompt": "State the required direction through the boundary.",
+          "prompt": "In which direction must the light travel across the boundary?",
           "marks": 1,
           "options": [
             {
               "id": "boundary-b",
-              "text": "From higher to lower refractive index",
+              "text": "From a material of higher refractive index towards one of lower refractive index",
               "feedback": "Yes: light approaches from the higher-index medium."
             },
             {
@@ -2221,7 +2216,7 @@
         {
           "id": "angle",
           "type": "choice",
-          "prompt": "State the required angle of incidence.",
+          "prompt": "What must the angle of incidence be?",
           "marks": 1,
           "options": [
             {
@@ -2250,7 +2245,7 @@
           "correctFeedback": "Yes: the incidence angle must exceed the critical angle."
         }
       ],
-      "modelAnswer": "State the required direction through the boundary. From higher to lower refractive index State the required angle of incidence. Greater than the critical angle",
+      "modelAnswer": "The light must travel towards a boundary with a material of lower refractive index. The angle of incidence must be greater than the critical angle.",
       "generalFeedback": [
         "Both conditions are needed. More optically dense means a higher refractive index in this context.",
         "At the critical angle, the refracted ray travels along the boundary. TIR requires an angle greater than this."
@@ -2289,12 +2284,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State how analogue and digital information are represented. Select one answer for each.",
+      "prompt": "How is information represented by analogue and digital signals?",
       "parts": [
         {
           "id": "analogue",
           "type": "choice",
-          "prompt": "State how an analogue signal is represented.",
+          "prompt": "How does an analogue signal represent information?",
           "marks": 1,
           "options": [
             {
@@ -2325,13 +2320,13 @@
         {
           "id": "digital",
           "type": "choice",
-          "prompt": "State how digital information is represented.",
+          "prompt": "How does a digital signal represent information?",
           "marks": 1,
           "options": [
             {
               "id": "digital-c",
-              "text": "Discrete values or symbols",
-              "feedback": "Yes: digital representations use discrete values or symbols."
+              "text": "A set of separate values or symbols",
+              "feedback": "A digital signal uses a set of separate values or symbols."
             },
             {
               "id": "digital-d",
@@ -2351,15 +2346,15 @@
           ],
           "correctOptionId": "digital-c",
           "shuffleOptions": true,
-          "correctFeedback": "Yes: digital representations use discrete values or symbols."
+          "correctFeedback": "A digital signal uses a set of separate values or symbols."
         }
       ],
-      "modelAnswer": "State how an analogue signal is represented. Continuously varying values State how digital information is represented. Discrete values or symbols",
+      "modelAnswer": "An analogue signal varies continuously. A digital signal uses a set of separate values or symbols. A binary digital signal uses two levels, representing 0 and 1.",
       "generalFeedback": [
-        "Analogue signals vary continuously. Digital representations use discrete values or symbols.",
-        "Binary is a common digital representation, using two values. This does not mean all digital systems have only two physical signal levels."
+        "An analogue signal varies continuously.",
+        "A digital signal uses a set of separate values or symbols; a binary signal uses two levels."
       ],
-      "hint": "Recall the distinction between continuous and discrete.",
+      "hint": "Think about a continuously varying signal and a signal that uses separate levels.",
       "sources": [
         "SPEC A2.3"
       ],
@@ -2393,12 +2388,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the relationship between the speeds of electromagnetic waves in a vacuum. Select one answer.",
+      "prompt": "Which statement about the speed of electromagnetic waves in a vacuum is correct?",
       "parts": [
         {
           "id": "speed",
           "type": "choice",
-          "prompt": "Select the correct speed statement.",
+          "prompt": "Which statement is correct?",
           "marks": 1,
           "options": [
             {
@@ -2427,7 +2422,7 @@
           "correctFeedback": "Yes: they share the same vacuum speed."
         }
       ],
-      "modelAnswer": "Select the correct speed statement. All electromagnetic waves travel at the speed of light in a vacuum.",
+      "modelAnswer": "All electromagnetic waves travel at the same speed in a vacuum: 3.0 × 10⁸ m/s.",
       "generalFeedback": [
         "Their vacuum speed is the same, approximately 3.0 × 10⁸ m/s. Their frequencies and wavelengths can differ.",
         "At equal speed, a larger frequency corresponds to a shorter wavelength."
@@ -2469,7 +2464,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 4,
-      "prompt": "Graphs A and B represent the same travelling wave. A is a snapshot of displacement against distance; B shows displacement against time at one fixed point. Use both graphs to calculate the wave speed. Use f = 1/T and v = fλ.",
+      "prompt": "Graphs A and B show the same wave.\nGraph A shows displacement against distance. Graph B shows displacement against time at one point.\nCalculate the speed of the wave.\nUse f = 1/T and v = fλ.",
       "parts": [
         {
           "id": "period",
@@ -2619,7 +2614,7 @@
       "commandWord": "Compare",
       "interaction": "written-self-assessment",
       "maxMarks": 4,
-      "prompt": "The diagrams show transverse and longitudinal waves on two long springs. Compare the motion of the coils in the two waves. In each case, relate the direction of oscillation to the direction of energy transfer. Write your answer before revealing the marking points.",
+      "prompt": "The diagrams show a transverse wave and a longitudinal wave on springs.\nCompare the direction of movement of the coils in the two waves.\nIn your answer, refer to the direction of energy transfer.",
       "parts": [],
       "modelAnswer": "In the transverse wave, the coils oscillate up and down. This is perpendicular to the direction of energy transfer. In the longitudinal wave, the coils oscillate backwards and forwards along the spring. This is parallel to the direction of energy transfer.",
       "generalFeedback": [
@@ -2703,7 +2698,7 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the order of the electromagnetic regions from lowest to highest frequency. Select one answer.",
+      "prompt": "Which list shows the electromagnetic spectrum in order of increasing frequency?",
       "parts": [
         {
           "id": "order",
@@ -2737,9 +2732,9 @@
           "correctFeedback": "Yes: frequency increases from radio to gamma rays."
         }
       ],
-      "modelAnswer": "Radio → microwaves → infrared → visible → ultraviolet → X-rays → gamma rays.",
+      "modelAnswer": "Radio waves → microwaves → infrared → visible light → ultraviolet → X-rays → gamma rays.",
       "generalFeedback": [
-        "Remember the broad ordering; boundaries between regions are conventional and may overlap."
+        "Learn the order from radio waves to gamma rays. The ranges of some neighbouring regions overlap."
       ],
       "hint": "Recall the broad order from radio waves to gamma rays.",
       "sources": [
@@ -2778,12 +2773,12 @@
       "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "An optical fibre has core refractive index 1.50 and cladding refractive index 1.40. The critical angle at this boundary is 69°. A ray reaches the boundary from inside the core at an incidence angle of 75°. Explain how the light remains in the core. Complete the answer by selecting one sentence for each gap.",
+      "prompt": "An optical fibre has a core with a refractive index of 1.50 and cladding with a refractive index of 1.40.\nThe critical angle at the core–cladding boundary is 69°.\nLight in the core reaches this boundary at an angle of incidence of 75°.\nExplain why the light stays inside the core.",
       "parts": [
         {
           "id": "indices",
           "type": "choice",
-          "prompt": "Gap 1: Compare the refractive indices.",
+          "prompt": "Compare the refractive indices of the core and cladding.",
           "marks": 1,
           "options": [
             {
@@ -2814,7 +2809,7 @@
         {
           "id": "angle",
           "type": "choice",
-          "prompt": "Gap 2: Relate the incidence angle to the critical angle.",
+          "prompt": "Compare the angle of incidence with the critical angle.",
           "marks": 1,
           "options": [
             {
@@ -2845,7 +2840,7 @@
         {
           "id": "process",
           "type": "choice",
-          "prompt": "Gap 3: Explain how the light remains in the core.",
+          "prompt": "Explain how the light stays inside the core.",
           "marks": 1,
           "options": [
             {
@@ -2876,8 +2871,7 @@
       ],
       "modelAnswer": "The ray reaches the core-cladding boundary from inside the core. The core has a greater refractive index than the cladding. The incidence angle is greater than the critical angle at this boundary. Light is totally internally reflected back into the core at successive boundaries.",
       "generalFeedback": [
-        "Both TIR conditions are needed: higher-to-lower refractive index and incidence above the critical angle.",
-        "The supplied opening sentence earns no marks. Each missing explanation point is marked independently."
+        "Both TIR conditions are needed: higher-to-lower refractive index and incidence above the critical angle."
       ],
       "hint": "Read the information and link each point to the question.",
       "sources": [
@@ -2918,12 +2912,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State what is meant by refraction. Select one answer.",
+      "prompt": "Which statement describes refraction?",
       "parts": [
         {
           "id": "definition",
           "type": "choice",
-          "prompt": "Select the meaning of refraction.",
+          "prompt": "Which statement describes refraction?",
           "marks": 1,
           "options": [
             {
@@ -2933,7 +2927,7 @@
             },
             {
               "id": "definition-c",
-              "text": "Waves spreading when they pass through an aperture or past an edge.",
+              "text": "Waves spreading when they pass through a gap or past an edge.",
               "feedback": "This describes diffraction."
             },
             {
@@ -2944,15 +2938,15 @@
             {
               "id": "definition-a",
               "text": "A change in direction when a wave changes speed on crossing a boundary at an angle.",
-              "feedback": "Yes: speed change at an oblique boundary can change direction."
+              "feedback": "Yes: speed change at a boundary at an angle to the normal can change direction."
             }
           ],
           "correctOptionId": "definition-a",
           "shuffleOptions": true,
-          "correctFeedback": "Yes: speed change at an oblique boundary can change direction."
+          "correctFeedback": "Yes: speed change at a boundary at an angle to the normal can change direction."
         }
       ],
-      "modelAnswer": "A change in direction associated with a change in wave speed at an oblique boundary.",
+      "modelAnswer": "Refraction is a change in direction when a wave changes speed as it crosses a boundary at an angle to the normal.",
       "generalFeedback": [
         "At normal incidence the speed can change without a change in direction."
       ],
@@ -2990,12 +2984,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State what a travelling mechanical wave transfers between places.",
+      "prompt": "What does a travelling mechanical wave transfer from one place to another?",
       "parts": [
         {
           "id": "transfer",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What is transferred by the wave?",
           "marks": 1,
           "options": [
             {
@@ -3024,7 +3018,7 @@
           "correctFeedback": "Particles oscillate locally while energy travels through the medium."
         }
       ],
-      "modelAnswer": "Select one answer. Energy, with no net transfer of the medium.",
+      "modelAnswer": "A travelling mechanical wave transfers energy without a net transfer of the medium.",
       "generalFeedback": [
         "Separate the movement of the disturbance from the movement of individual particles."
       ],
@@ -3064,12 +3058,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State which statement about wave transmission is correct.",
+      "prompt": "Which statement about sound waves and electromagnetic waves is correct?",
       "parts": [
         {
           "id": "medium",
           "type": "choice",
-          "prompt": "Select one statement.",
+          "prompt": "Which statement is correct?",
           "marks": 1,
           "options": [
             {
@@ -3098,7 +3092,7 @@
           "correctFeedback": "Electromagnetic waves can propagate in a vacuum. Sound needs particles to oscillate."
         }
       ],
-      "modelAnswer": "Select one statement. Electromagnetic waves can travel through a vacuum; sound waves need a medium.",
+      "modelAnswer": "Electromagnetic waves can travel through a vacuum. Sound waves need a medium.",
       "generalFeedback": [
         "A transverse wave on a string and an electromagnetic wave are different types of wave."
       ],
@@ -3138,12 +3132,12 @@
       "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 2,
-      "prompt": "Explain why a small marker moves up and down while a transverse wave travels to the right along a string. Complete the answer.",
+      "prompt": "A small marker is attached to a string.\nA transverse wave travels to the right along the string, as shown.\nExplain why the marker moves up and down.",
       "parts": [
         {
           "id": "motion",
           "type": "choice",
-          "prompt": "Select the first sentence.",
+          "prompt": "Describe the movement of the marker about its equilibrium position.",
           "marks": 1,
           "options": [
             {
@@ -3174,7 +3168,7 @@
         {
           "id": "direction",
           "type": "choice",
-          "prompt": "Select the second sentence.",
+          "prompt": "Relate this movement to the direction of energy transfer.",
           "marks": 1,
           "options": [
             {
@@ -3203,7 +3197,7 @@
           "correctFeedback": "Up-down motion is at right angles to the rightward wave propagation."
         }
       ],
-      "modelAnswer": "Select the first sentence. The marker oscillates about its equilibrium position. Select the second sentence. Its oscillations are perpendicular to the direction of energy transfer.",
+      "modelAnswer": "The marker oscillates about its equilibrium position. Its movement is at right angles to the direction of energy transfer, so it moves up and down as the wave travels to the right.",
       "generalFeedback": [
         "Describe the marker motion first, then compare its direction with the wave direction."
       ],
@@ -3244,7 +3238,7 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State what is meant by displacement and by one complete oscillation.",
+      "prompt": "Complete the definitions of displacement and one complete oscillation.",
       "parts": [
         {
           "id": "displacement",
@@ -3309,7 +3303,7 @@
           "correctFeedback": "Returning to the same position with the same direction of motion completes a cycle."
         }
       ],
-      "modelAnswer": "Displacement is: The distance and direction from equilibrium. One complete oscillation is: One full repeated cycle, returning to the same position and direction of motion.",
+      "modelAnswer": "Displacement is the distance and direction from the equilibrium position. One complete oscillation is one full cycle, returning to the same position and direction of motion.",
       "generalFeedback": [
         "A full cycle returns both the position and the direction of motion to their starting values."
       ],
@@ -3414,7 +3408,7 @@
           "correctFeedback": "Speed is distance travelled per unit time."
         }
       ],
-      "modelAnswer": "Periodic time is measured in: Seconds, s. Wave speed is measured in: Metres per second, m/s.",
+      "modelAnswer": "Periodic time is measured in seconds, s. Wave speed is measured in metres per second, m/s.",
       "generalFeedback": [
         "Match the unit to the quantity: time, distance, cycles per second or distance per second."
       ],
@@ -3451,15 +3445,15 @@
       "assessmentObjectives": [
         "AO2"
       ],
-      "commandWord": "Determine",
+      "commandWord": "Calculate",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Determine the frequency of a vibrating point that completes 36 full oscillations in 12 s.",
+      "prompt": "A point on a wave completes 36 oscillations in 12 s.\nCalculate the frequency.",
       "parts": [
         {
           "id": "frequency",
           "type": "choice",
-          "prompt": "Select the frequency.",
+          "prompt": "What is the frequency?",
           "marks": 1,
           "options": [
             {
@@ -3488,7 +3482,7 @@
           "correctFeedback": "Frequency is oscillations divided by time: 36 ÷ 12 = 3 Hz."
         }
       ],
-      "modelAnswer": "Select the frequency. 3 Hz",
+      "modelAnswer": "Frequency = number of oscillations ÷ time = 36 ÷ 12 = 3 Hz.",
       "generalFeedback": [
         "Frequency is the number of complete oscillations in one second."
       ],
@@ -3528,12 +3522,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "The graph shows displacement against time for a travelling wave. State what this type of graph represents.",
+      "prompt": "The graph shows displacement against time for a wave.\nWhat does this graph show?",
       "parts": [
         {
           "id": "time-graph",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What does the graph represent?",
           "marks": 1,
           "options": [
             {
@@ -3562,7 +3556,7 @@
           "correctFeedback": "Time on the horizontal axis follows one point as it oscillates."
         }
       ],
-      "modelAnswer": "Select one answer. The motion of one point in the medium over time.",
+      "modelAnswer": "The graph shows how the displacement of one point in the medium changes with time.",
       "generalFeedback": [
         "Read the horizontal axis before deciding what the graph describes."
       ],
@@ -3602,12 +3596,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State which graph measurement gives wavelength.",
+      "prompt": "Which measurement on a wave graph gives the wavelength?",
       "parts": [
         {
           "id": "wavelength",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which measurement gives the wavelength?",
           "marks": 1,
           "options": [
             {
@@ -3636,7 +3630,7 @@
           "correctFeedback": "Wavelength is one complete spatial cycle, measured along the distance axis."
         }
       ],
-      "modelAnswer": "Select one answer. Crest-to-next-crest spacing on a displacement-distance graph.",
+      "modelAnswer": "On a displacement–distance graph, the distance between adjacent crests is one wavelength.",
       "generalFeedback": [
         "Wavelength is a distance along the wave, not a time or a vertical height."
       ],
@@ -3678,12 +3672,12 @@
       "commandWord": "Determine",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "Determine the periodic time from the graph, then calculate the frequency. Use f = 1/T.",
+      "prompt": "The graph shows displacement against time for a wave.\nUse the graph to find the periodic time, then calculate the frequency.\nUse f = 1/T.",
       "parts": [
         {
           "id": "period-ms",
           "type": "numeric",
-          "prompt": "Determine the period in ms.",
+          "prompt": "Read the periodic time from the graph in ms.",
           "marks": 1,
           "answer": {
             "value": 20,
@@ -3703,7 +3697,7 @@
         {
           "id": "period-s",
           "type": "numeric",
-          "prompt": "Convert the period to seconds.",
+          "prompt": "Convert the periodic time to seconds.",
           "marks": 1,
           "answer": {
             "value": 0.02,
@@ -3755,7 +3749,7 @@
           }
         }
       ],
-      "modelAnswer": "Determine the period in ms. 20 ms Convert the period to seconds. 0.02 s Calculate the frequency. 50 Hz",
+      "modelAnswer": "T = 20 ms = 0.020 s. f = 1/T = 1/0.020 = 50 Hz.",
       "generalFeedback": [
         "The crests at 5 ms and 25 ms are one complete cycle apart."
       ],
@@ -3799,12 +3793,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Determine the amplitude and wavelength from the displacement-distance graph.",
+      "prompt": "The graph shows displacement against distance for a wave.\nWhat are the amplitude and wavelength?",
       "parts": [
         {
           "id": "amplitude",
           "type": "choice",
-          "prompt": "Determine the amplitude.",
+          "prompt": "What is the amplitude?",
           "marks": 1,
           "options": [
             {
@@ -3835,7 +3829,7 @@
         {
           "id": "wavelength",
           "type": "choice",
-          "prompt": "Determine the wavelength.",
+          "prompt": "What is the wavelength?",
           "marks": 1,
           "options": [
             {
@@ -3864,7 +3858,7 @@
           "correctFeedback": "Neighbouring crests at 0.3 m and 1.5 m are 1.2 m apart."
         }
       ],
-      "modelAnswer": "Determine the amplitude. 8 mm Determine the wavelength. 1.2 m",
+      "modelAnswer": "The amplitude is 8 mm. The wavelength is 1.2 m, the distance between adjacent crests.",
       "generalFeedback": [
         "Use the vertical scale for amplitude and horizontal crest spacing for wavelength."
       ],
@@ -3906,12 +3900,12 @@
       "commandWord": "Compare",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Compare the frequency and amplitude of waves X and Y. Both graphs show displacement at one fixed point in the same medium.",
+      "prompt": "The graphs show displacement against time for waves X and Y in the same medium.\nCompare their frequencies and amplitudes.",
       "parts": [
         {
           "id": "frequency",
           "type": "choice",
-          "prompt": "Select the correct frequency comparison.",
+          "prompt": "Compare the frequencies of X and Y.",
           "marks": 1,
           "options": [
             {
@@ -3942,7 +3936,7 @@
         {
           "id": "amplitude",
           "type": "choice",
-          "prompt": "Select the correct amplitude comparison.",
+          "prompt": "Compare the amplitudes of X and Y.",
           "marks": 1,
           "options": [
             {
@@ -3971,7 +3965,7 @@
           "correctFeedback": "X reaches 6 mm from equilibrium and Y reaches 3 mm."
         }
       ],
-      "modelAnswer": "Select the correct frequency comparison. X and Y have the same frequency. Select the correct amplitude comparison. X has twice the amplitude of Y.",
+      "modelAnswer": "X and Y have the same frequency because they have the same periodic time. The amplitude of X is twice the amplitude of Y.",
       "generalFeedback": [
         "Compare horizontal cycle lengths separately from vertical maximum displacements."
       ],
@@ -4012,12 +4006,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the equation linking frequency f and periodic time T.",
+      "prompt": "Which equation links frequency f and periodic time T?",
       "parts": [
         {
           "id": "reciprocal",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which equation is correct?",
           "marks": 1,
           "options": [
             {
@@ -4046,7 +4040,7 @@
           "correctFeedback": "Frequency is the reciprocal of the time for one oscillation."
         }
       ],
-      "modelAnswer": "Select one answer. f = 1/T",
+      "modelAnswer": "f = 1/T.",
       "generalFeedback": [
         "A longer period means fewer oscillations each second."
       ],
@@ -4087,7 +4081,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "Calculate the wavelength of a 2.4 GHz microwave signal travelling at 3.0 × 10⁸ m/s. Use v = fλ.",
+      "prompt": "A microwave signal has a frequency of 2.4 GHz.\nIt travels at 3.0 × 10⁸ m/s.\nCalculate its wavelength in centimetres.\nUse v = fλ.",
       "parts": [
         {
           "id": "frequency",
@@ -4167,7 +4161,7 @@
           }
         }
       ],
-      "modelAnswer": "Convert 2.4 GHz to Hz. 2.4 × 10⁹ Hz Calculate the wavelength in metres. 0.125 m Convert the wavelength to centimetres. 12.5 cm",
+      "modelAnswer": "2.4 GHz = 2.4 × 10⁹ Hz. λ = v/f = (3.0 × 10⁸)/(2.4 × 10⁹) = 0.125 m = 12.5 cm.",
       "generalFeedback": [
         "Convert GHz to Hz before dividing speed by frequency."
       ],
@@ -4208,7 +4202,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "Calculate the frequency of water waves travelling at 6.0 m/s with wavelength 75 cm. Use v = fλ.",
+      "prompt": "Water waves travel at 6.0 m/s and have a wavelength of 75 cm.\nCalculate their frequency.\nUse v = fλ.",
       "parts": [
         {
           "id": "wavelength",
@@ -4291,7 +4285,7 @@
           }
         }
       ],
-      "modelAnswer": "Convert the wavelength to metres. 0.75 m Select the rearrangement for frequency. f = v/λ Calculate the frequency. 8 Hz",
+      "modelAnswer": "75 cm = 0.75 m. f = v/λ = 6.0/0.75 = 8.0 Hz.",
       "generalFeedback": [
         "Use metres for wavelength so the units match metres per second."
       ],
@@ -4331,12 +4325,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State the phase difference for waves in phase and for waves in antiphase.",
+      "prompt": "State the phase difference between waves that are in phase and waves that are in antiphase.",
       "parts": [
         {
           "id": "in-phase",
           "type": "choice",
-          "prompt": "In phase corresponds to:",
+          "prompt": "What is the phase difference for waves in phase?",
           "marks": 1,
           "options": [
             {
@@ -4367,7 +4361,7 @@
         {
           "id": "antiphase",
           "type": "choice",
-          "prompt": "Antiphase corresponds to:",
+          "prompt": "What is the phase difference for waves in antiphase?",
           "marks": 1,
           "options": [
             {
@@ -4396,7 +4390,7 @@
           "correctFeedback": "Antiphase means half a cycle apart, modulo whole cycles."
         }
       ],
-      "modelAnswer": "In phase corresponds to: 0°, or any whole number of 360°. Antiphase corresponds to: 180°, or an odd number of 180°.",
+      "modelAnswer": "Waves in phase have a phase difference of 0° or a whole number of complete cycles. Waves in antiphase have a phase difference of 180° or an odd number of half cycles.",
       "generalFeedback": [
         "One complete cycle is 360°; half a cycle is 180°."
       ],
@@ -4436,12 +4430,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Determine the smallest phase difference between wave traces X and Y, then select the supporting graph evidence. Both traces use the same time and displacement scales.",
+      "prompt": "The graph shows two waves, X and Y, on the same scales.\nUse the graph to find the smallest phase difference between the waves.\nGive a reason for your answer.",
       "parts": [
         {
           "id": "phase",
           "type": "choice",
-          "prompt": "Determine the smallest phase difference.",
+          "prompt": "What is the smallest phase difference?",
           "marks": 1,
           "options": [
             {
@@ -4472,7 +4466,7 @@
         {
           "id": "evidence",
           "type": "choice",
-          "prompt": "Select the supporting evidence.",
+          "prompt": "Which feature of the graph supports your answer?",
           "marks": 1,
           "options": [
             {
@@ -4504,7 +4498,7 @@
           ]
         }
       ],
-      "modelAnswer": "The smallest phase difference is 90°. Corresponding crests are 1 s apart, one quarter of the 4 s period.",
+      "modelAnswer": "90°. Corresponding crests are separated by one quarter of a full period.",
       "generalFeedback": [
         "Compare the separation of corresponding crests with one complete period."
       ],
@@ -4541,15 +4535,15 @@
       "assessmentObjectives": [
         "AO2"
       ],
-      "commandWord": "Determine",
+      "commandWord": "Calculate",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "The diagrams show the separate displacements produced by waves A and B at the same instant. At position P, A gives +3 mm and B gives −5 mm. Determine the displacement at P when both waves overlap. Positive displacement is above equilibrium.",
+      "prompt": "The diagrams show two waves at the same instant.\nAt P, wave A has a displacement of +3 mm and wave B has a displacement of −5 mm.\nCalculate the displacement at P when the waves overlap.\nPositive displacement is above the equilibrium position.",
       "parts": [
         {
           "id": "resultant",
           "type": "choice",
-          "prompt": "Select the resultant displacement.",
+          "prompt": "What is the resultant displacement at P?",
           "marks": 1,
           "options": [
             {
@@ -4578,7 +4572,7 @@
           "correctFeedback": "Add signed displacements: +3 + (−5) = −2 mm."
         }
       ],
-      "modelAnswer": "Select the resultant displacement. −2 mm",
+      "modelAnswer": "Resultant displacement = +3 + (−5) = −2 mm. The point is 2 mm below its equilibrium position.",
       "generalFeedback": [
         "Include the positive or negative sign when adding displacements."
       ],
@@ -4619,18 +4613,18 @@
       "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "Explain the resultant of two equal-frequency waves arriving in antiphase, with amplitudes 5 mm and 2 mm. Complete the answer.",
+      "prompt": "Two waves have the same frequency. Their amplitudes are 5 mm and 2 mm.\nThe waves meet in antiphase.\nExplain why the waves do not completely cancel each other, then calculate the amplitude of the resultant wave.",
       "parts": [
         {
           "id": "opposition",
           "type": "choice",
-          "prompt": "Select the first sentence.",
+          "prompt": "Explain the directions of the displacements when the waves overlap.",
           "marks": 1,
           "options": [
             {
               "id": "opposition-1",
               "text": "The displacements oppose each other.",
-              "feedback": "Antiphase makes the two displacements opposite at corresponding instants."
+              "feedback": "Antiphase makes the two displacements opposite at the same time."
             },
             {
               "id": "opposition-2",
@@ -4650,12 +4644,43 @@
           ],
           "correctOptionId": "opposition-1",
           "shuffleOptions": true,
-          "correctFeedback": "Antiphase makes the two displacements opposite at corresponding instants."
+          "correctFeedback": "Antiphase makes the two displacements opposite at the same time."
+        },
+        {
+          "id": "explanation",
+          "type": "choice",
+          "prompt": "Explain why cancellation is incomplete.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "explanation-3",
+              "text": "The waves must be in phase because some displacement remains.",
+              "feedback": "Unequal antiphase waves can leave a resultant displacement greater than zero."
+            },
+            {
+              "id": "explanation-4",
+              "text": "Each wave is permanently destroyed after overlapping.",
+              "feedback": "Superposition is temporary; the waves continue beyond the overlap."
+            },
+            {
+              "id": "explanation-1",
+              "text": "Cancellation is incomplete because the amplitudes are unequal.",
+              "feedback": "The smaller wave cannot cancel all of the larger wave displacement."
+            },
+            {
+              "id": "explanation-2",
+              "text": "Cancellation is incomplete because all coherent waves have different frequencies.",
+              "feedback": "Coherent waves have the same frequency and a constant phase difference."
+            }
+          ],
+          "correctOptionId": "explanation-1",
+          "shuffleOptions": true,
+          "correctFeedback": "The smaller wave cannot cancel all of the larger wave displacement."
         },
         {
           "id": "amplitude",
           "type": "choice",
-          "prompt": "Select the second sentence.",
+          "prompt": "Calculate the amplitude of the resultant wave.",
           "marks": 1,
           "options": [
             {
@@ -4682,40 +4707,9 @@
           "correctOptionId": "amplitude-1",
           "shuffleOptions": true,
           "correctFeedback": "For antiphase waves the resultant amplitude is the difference: 5 − 2 = 3 mm."
-        },
-        {
-          "id": "explanation",
-          "type": "choice",
-          "prompt": "Select the final sentence.",
-          "marks": 1,
-          "options": [
-            {
-              "id": "explanation-3",
-              "text": "The waves must be in phase because some displacement remains.",
-              "feedback": "Unequal antiphase waves can leave a non-zero resultant."
-            },
-            {
-              "id": "explanation-4",
-              "text": "Each wave is permanently destroyed after overlapping.",
-              "feedback": "Superposition is temporary; the waves continue beyond the overlap."
-            },
-            {
-              "id": "explanation-1",
-              "text": "Cancellation is incomplete because the amplitudes are unequal.",
-              "feedback": "The smaller wave cannot cancel all of the larger wave displacement."
-            },
-            {
-              "id": "explanation-2",
-              "text": "Cancellation is incomplete because all coherent waves have different frequencies.",
-              "feedback": "Coherent waves have the same frequency and a constant phase difference."
-            }
-          ],
-          "correctOptionId": "explanation-1",
-          "shuffleOptions": true,
-          "correctFeedback": "The smaller wave cannot cancel all of the larger wave displacement."
         }
       ],
-      "modelAnswer": "The waves overlap at the same position. The displacements oppose each other. The resultant amplitude is 3 mm. Cancellation is incomplete because the amplitudes are unequal.",
+      "modelAnswer": "The waves are in antiphase, so their displacements are in opposite directions. Their amplitudes are unequal, so they do not completely cancel. Resultant amplitude = 5 − 2 = 3 mm.",
       "generalFeedback": [
         "Complete cancellation needs equal amplitudes and antiphase."
       ],
@@ -4736,7 +4730,7 @@
       "specRefs": [
         "A1.3"
       ],
-      "answerOpening": "The waves overlap at the same position.",
+      "answerOpening": "The waves overlap.",
       "openingEarnsMarks": false,
       "teacherLessonTitle": "Phase Difference",
       "reviewNotes": "Original practice question; marks describe this scaffolded task, not an official exam tariff.",
@@ -4758,12 +4752,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State what is meant by diffraction.",
+      "prompt": "Which statement describes diffraction?",
       "parts": [
         {
           "id": "diffraction",
           "type": "choice",
-          "prompt": "Select one definition.",
+          "prompt": "Which statement describes diffraction?",
           "marks": 1,
           "options": [
             {
@@ -4792,7 +4786,7 @@
           "correctFeedback": "Diffraction describes wave spreading at gaps or edges."
         }
       ],
-      "modelAnswer": "Select one definition. Spreading of waves as they pass through a gap or around an obstacle.",
+      "modelAnswer": "Diffraction is the spreading of waves as they pass through a gap or around an obstacle.",
       "generalFeedback": [
         "Distinguish spreading at a gap from bending at a boundary."
       ],
@@ -4832,12 +4826,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State when a gap produces substantial diffraction of waves.",
+      "prompt": "Waves pass through a gap.\nWhen is there a large amount of diffraction?",
       "parts": [
         {
           "id": "gap",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which gap width produces a large amount of diffraction?",
           "marks": 1,
           "options": [
             {
@@ -4852,7 +4846,7 @@
             },
             {
               "id": "gap-1",
-              "text": "When the gap width is comparable to the wavelength.",
+              "text": "When the gap width is about the same as the wavelength.",
               "feedback": "A gap similar in size to the wavelength produces strong spreading."
             },
             {
@@ -4866,7 +4860,7 @@
           "correctFeedback": "A gap similar in size to the wavelength produces strong spreading."
         }
       ],
-      "modelAnswer": "Select one answer. When the gap width is comparable to the wavelength.",
+      "modelAnswer": "There is a large amount of diffraction when the gap width is about the same as the wavelength.",
       "generalFeedback": [
         "Compare gap width with wavelength, rather than with amplitude."
       ],
@@ -4905,15 +4899,15 @@
       "assessmentObjectives": [
         "AO2"
       ],
-      "commandWord": "Determine",
+      "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "A laser shines coherent light through a diffraction grating onto a screen. Explain how overlapping light waves produce bright and dark regions. Complete the answer.",
+      "prompt": "A laser shines light through a diffraction grating onto a screen.\nA pattern of bright and dark regions is formed.\nExplain how interference produces this pattern and why the pattern stays in the same position.",
       "parts": [
         {
           "id": "bright",
           "type": "choice",
-          "prompt": "Complete the explanation of a bright region.",
+          "prompt": "Explain how a bright region forms.",
           "marks": 1,
           "options": [
             {
@@ -4944,7 +4938,7 @@
         {
           "id": "dark",
           "type": "choice",
-          "prompt": "Complete the explanation of a dark region for equal-amplitude waves.",
+          "prompt": "Explain how a dark region forms when waves have equal amplitudes.",
           "marks": 1,
           "options": [
             {
@@ -4975,7 +4969,7 @@
         {
           "id": "stable",
           "type": "choice",
-          "prompt": "Explain why the pattern remains stable.",
+          "prompt": "Why does the interference pattern stay in the same position?",
           "marks": 1,
           "options": [
             {
@@ -5004,9 +4998,11 @@
           "correctFeedback": "Coherence keeps the reinforcement and cancellation positions fixed."
         }
       ],
-      "modelAnswer": "Light waves from different gaps in the grating overlap at the screen. Complete the explanation of a bright region. Waves arrive in phase, so their displacements reinforce by constructive superposition. Complete the explanation of a dark region for equal-amplitude waves. Waves arrive in antiphase, so their displacements cancel by destructive superposition. Explain why the pattern remains stable. The waves have the same frequency and a constant phase difference.",
+      "modelAnswer": "At a bright region, waves arrive in phase and their displacements add. At a dark region, waves arrive in antiphase and equal displacements cancel. The pattern stays in the same position because the waves are coherent: they have the same frequency and a constant phase difference.",
       "generalFeedback": [
-        "Calculate the difference of the paths before comparing it with one wavelength."
+        "In-phase waves reinforce each other, producing a bright region.",
+        "Equal-amplitude waves in antiphase cancel, producing a dark region.",
+        "A constant phase difference keeps the interference pattern in the same position."
       ],
       "hint": "Link phase relationship to whether displacements add or cancel.",
       "sources": [
@@ -5049,12 +5045,12 @@
       "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "Two separate light sources have the same average frequency, but their phase difference changes unpredictably. Explain why they do not produce a stable double-slit interference pattern. Complete the answer.",
+      "prompt": "Two light sources produce waves with the same frequency.\nThe phase difference between the waves changes randomly.\nExplain why these sources do not produce a steady interference pattern.",
       "parts": [
         {
           "id": "coherence",
           "type": "choice",
-          "prompt": "Select the first sentence.",
+          "prompt": "Explain why the waves are not coherent.",
           "marks": 1,
           "options": [
             {
@@ -5085,7 +5081,7 @@
         {
           "id": "phase-change",
           "type": "choice",
-          "prompt": "Select the second sentence.",
+          "prompt": "What happens to the phase difference at a point on the screen?",
           "marks": 1,
           "options": [
             {
@@ -5116,7 +5112,7 @@
         {
           "id": "pattern",
           "type": "choice",
-          "prompt": "Select the final sentence.",
+          "prompt": "What happens to the positions of bright and dark regions?",
           "marks": 1,
           "options": [
             {
@@ -5145,7 +5141,7 @@
           "correctFeedback": "A stable fringe pattern needs fixed positions of reinforcement and cancellation."
         }
       ],
-      "modelAnswer": "Consider the interference pattern produced by these sources. The waves are not coherent because their phase difference is not constant. The phase relationship at each screen point changes with time. The positions of constructive and destructive interference do not remain fixed.",
+      "modelAnswer": "The sources are not coherent because the phase difference changes. At each point on the screen, the waves move in and out of phase. The bright and dark regions therefore do not stay in the same positions.",
       "generalFeedback": [
         "Coherence needs both the same frequency and a constant phase difference."
       ],
@@ -5188,17 +5184,17 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the role of a diffraction grating when observing a gas emission spectrum.",
+      "prompt": "A diffraction grating is used to observe the emission spectrum of a gas.\nWhat is the purpose of the grating?",
       "parts": [
         {
           "id": "grating",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What does the grating do?",
           "marks": 1,
           "options": [
             {
               "id": "grating-1",
-              "text": "It directs different emitted wavelengths into different angles, separating the lines.",
+              "text": "It separates light of different wavelengths so the emission lines can be seen.",
               "feedback": "Diffraction and interference allow different wavelengths to be observed separately."
             },
             {
@@ -5209,12 +5205,12 @@
             {
               "id": "grating-3",
               "text": "It creates the electron energy levels inside the gas atoms.",
-              "feedback": "The atoms already have discrete energy levels before light reaches the grating."
+              "feedback": "The atoms have fixed energy levels. The grating does not create these levels."
             },
             {
               "id": "grating-4",
               "text": "It converts the line spectrum into a continuous spectrum.",
-              "feedback": "The gas still emits discrete wavelengths; the grating separates those lines."
+              "feedback": "The gas emits particular wavelengths. The grating separates the emission lines."
             }
           ],
           "correctOptionId": "grating-1",
@@ -5222,7 +5218,7 @@
           "correctFeedback": "Diffraction and interference allow different wavelengths to be observed separately."
         }
       ],
-      "modelAnswer": "Select one answer. It directs different emitted wavelengths into different angles, separating the lines.",
+      "modelAnswer": "The grating separates light of different wavelengths, so the separate emission lines can be seen.",
       "generalFeedback": [
         "The grating acts on light already emitted by the gas."
       ],
@@ -5262,12 +5258,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State why an excited gas produces separate emission lines rather than every wavelength.",
+      "prompt": "Why does an excited gas produce a line emission spectrum?",
       "parts": [
         {
           "id": "levels",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Why are only particular wavelengths emitted?",
           "marks": 1,
           "options": [
             {
@@ -5282,13 +5278,13 @@
             },
             {
               "id": "levels-1",
-              "text": "Electrons have discrete allowed energy levels, so transitions release particular photon energies.",
+              "text": "Electrons have fixed energy levels, so they emit photons with particular energies.",
               "feedback": "Only certain energy differences are possible, so only certain frequencies are emitted."
             },
             {
               "id": "levels-2",
               "text": "Electrons can have any energy, so every transition is identical.",
-              "feedback": "Discrete allowed levels give particular energy differences, not a continuous set."
+              "feedback": "Electrons move between fixed energy levels, so only particular photon energies are emitted."
             }
           ],
           "correctOptionId": "levels-1",
@@ -5296,7 +5292,7 @@
           "correctFeedback": "Only certain energy differences are possible, so only certain frequencies are emitted."
         }
       ],
-      "modelAnswer": "Select one answer. Electrons have discrete allowed energy levels, so transitions release particular photon energies.",
+      "modelAnswer": "Electrons in atoms have fixed energy levels. When electrons move to lower levels, they emit photons with particular energies, so only particular wavelengths are emitted.",
       "generalFeedback": [
         "Link allowed electron energy levels to the energy released in a transition."
       ],
@@ -5336,12 +5332,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Determine which transition emits the higher-frequency photon. Transition A falls from energy 5 units to 2 units; transition B falls from 2 units to 0 units. The energy units are the same.",
+      "prompt": "An electron loses energy in each of two transitions.\nIn transition A, its energy falls from 5 units to 2 units.\nIn transition B, its energy falls from 2 units to 0 units.\nWhich transition produces the photon with the higher frequency? Give a reason for your answer.",
       "parts": [
         {
           "id": "transition",
           "type": "choice",
-          "prompt": "Identify the higher-frequency transition.",
+          "prompt": "Which transition produces the higher-frequency photon?",
           "marks": 1,
           "options": [
             {
@@ -5372,7 +5368,7 @@
         {
           "id": "reason",
           "type": "choice",
-          "prompt": "Select the reason.",
+          "prompt": "Why does this transition produce a higher frequency?",
           "marks": 1,
           "options": [
             {
@@ -5404,7 +5400,7 @@
           ]
         }
       ],
-      "modelAnswer": "Identify the higher-frequency transition. A Select the reason. A larger energy decrease releases a photon of higher frequency.",
+      "modelAnswer": "Transition A. Its energy decrease is 3 units, compared with 2 units for transition B. A larger energy decrease produces a photon with more energy and a higher frequency.",
       "generalFeedback": [
         "Compare the sizes of the two energy drops, not just their final levels."
       ],
@@ -5443,12 +5439,12 @@
       "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "A technician observes light from one gas discharge tube through a narrow slit and a diffraction grating. The gas and viewing arrangement are unchanged. The supply current is increased and the line spectrum is measured again. Explain what the table shows about brightness and emitted frequencies. Complete the answer.",
+      "prompt": "A technician views light from a gas discharge tube through a slit and a diffraction grating, as shown.\nThe technician increases the current through the tube. The gas and the apparatus stay the same.\nThe table shows the results.\nExplain why the light becomes brighter but the wavelengths of the emission lines do not change.",
       "parts": [
         {
           "id": "evidence",
           "type": "choice",
-          "prompt": "Select the first sentence.",
+          "prompt": "Describe what happens to the line wavelengths.",
           "marks": 1,
           "options": [
             {
@@ -5479,7 +5475,7 @@
         {
           "id": "levels",
           "type": "choice",
-          "prompt": "Select the second sentence.",
+          "prompt": "Explain why the frequencies of the photons do not change.",
           "marks": 1,
           "options": [
             {
@@ -5510,7 +5506,7 @@
         {
           "id": "brightness",
           "type": "choice",
-          "prompt": "Select the final sentence.",
+          "prompt": "Explain why the light becomes brighter.",
           "marks": 1,
           "options": [
             {
@@ -5539,9 +5535,10 @@
           "correctFeedback": "Brightness can increase through a greater photon rate at the same line frequencies."
         }
       ],
-      "modelAnswer": "Select the first sentence. The line wavelengths are unchanged when the current increases. Select the second sentence. The same electron energy differences produce the same photon frequencies. Select the final sentence. More photons can be emitted each second without changing their individual frequencies.",
+      "modelAnswer": "The wavelengths of the lines do not change because the electron energy levels are unchanged. The same energy differences produce photons with the same frequencies. The light is brighter because more photons are emitted each second.",
       "generalFeedback": [
-        "Separate a change in brightness from a change in the positions of the lines."
+        "The energy levels do not change, so the frequencies of the emitted photons stay the same.",
+        "More photons emitted each second make the light brighter."
       ],
       "hint": "Separate a change in brightness from a change in the positions of the lines.",
       "sources": [
@@ -5588,7 +5585,7 @@
     {
       "id": "W55",
       "contentVersion": 2,
-      "title": "Recall how an ideal stationary wave forms",
+      "title": "Recall how a standing wave forms",
       "topic": "Waves",
       "primaryLessonId": "WA08",
       "requiredLessonIds": [
@@ -5602,18 +5599,18 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State how an ideal stationary wave is formed.",
+      "prompt": "How is a standing wave formed?",
       "parts": [
         {
           "id": "formation",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which combination of waves forms a standing wave?",
           "marks": 1,
           "options": [
             {
               "id": "formation-3",
               "text": "One pulse that stops transferring energy because its frequency is zero.",
-              "feedback": "A stationary wave has continuing oscillations and a non-zero frequency."
+              "feedback": "A standing wave has continuing oscillations and a non-zero frequency."
             },
             {
               "id": "formation-4",
@@ -5628,7 +5625,7 @@
             {
               "id": "formation-2",
               "text": "Two waves of different frequencies travelling in the same direction.",
-              "feedback": "This does not produce the ideal fixed-node stationary-wave pattern."
+              "feedback": "A standing wave needs waves of the same frequency travelling in opposite directions."
             }
           ],
           "correctOptionId": "formation-1",
@@ -5636,7 +5633,7 @@
           "correctFeedback": "Incident and reflected waves can overlap to produce fixed nodes and antinodes."
         }
       ],
-      "modelAnswer": "Superposition of equal-amplitude waves of the same type and frequency travelling along the same line in opposite directions.",
+      "modelAnswer": "Waves of the same type, frequency and amplitude travel in opposite directions and overlap. Their superposition produces fixed nodes and antinodes.",
       "generalFeedback": [
         "Think about the incident wave meeting its reflected wave."
       ],
@@ -5676,12 +5673,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Determine the number of nodes and antinodes and the wavelength of the stationary wave shown. Count the fixed ends as nodes.",
+      "prompt": "The diagram shows a standing wave on a string fixed at both ends.\nUse the diagram to find the number of nodes, the number of antinodes and the wavelength.\nInclude both fixed ends when counting nodes.",
       "parts": [
         {
           "id": "counts",
           "type": "choice",
-          "prompt": "Determine the node and antinode counts.",
+          "prompt": "How many nodes and antinodes are there?",
           "marks": 1,
           "options": [
             {
@@ -5712,7 +5709,7 @@
         {
           "id": "wavelength",
           "type": "choice",
-          "prompt": "Determine the wavelength.",
+          "prompt": "What is the wavelength?",
           "marks": 1,
           "options": [
             {
@@ -5741,7 +5738,7 @@
           "correctFeedback": "Adjacent nodes are 0.20 m apart, which is half a wavelength."
         }
       ],
-      "modelAnswer": "Determine the node and antinode counts. 4 nodes and 3 antinodes. Determine the wavelength. 0.40 m",
+      "modelAnswer": "There are 4 nodes and 3 antinodes. The 0.60 m string contains three half-wavelengths, so λ = (2 × 0.60)/3 = 0.40 m.",
       "generalFeedback": [
         "Each loop contains half a wavelength. Count both fixed ends."
       ],
@@ -5751,7 +5748,7 @@
         "GUIDE: 43526.jpg pp.102-103"
       ],
       "asset": "assets/w75_stationary_string.svg",
-      "accessibleDescription": "A 0.60 m string fixed at both ends has three stationary-wave loops. Nodes are at 0, 0.20, 0.40 and 0.60 m. Antinodes lie halfway between neighbouring nodes. Solid and dashed curves show opposite extreme displacements.",
+      "accessibleDescription": "A 0.60 m string fixed at both ends has three standing-wave loops. Nodes are at 0, 0.20, 0.40 and 0.60 m. Antinodes lie halfway between neighbouring nodes. Solid and dashed curves show opposite extreme displacements.",
       "reviewStatus": "draft-for-teacher-review",
       "enabled": true,
       "provenance": "Original wording, data, distractors and diagrams. The supplied guide informs teaching scope; Pearson sources inform assessment demand. Teacher review remains required.",
@@ -5782,12 +5779,12 @@
       "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "A vibration generator drives the stretched string shown. Its length, tension and driving amplitude remain constant. The student changes the forcing frequency and measures vibration amplitude. Explain the large response in the table. Complete the answer.",
+      "prompt": "A student uses a vibration generator to make a stretched string vibrate.\nThe student changes the frequency and measures the amplitude. The results are shown in the table.\nThe length and tension of the string and the amplitude of the generator are kept constant.\nExplain why the largest amplitude is measured at 120 Hz.",
       "parts": [
         {
           "id": "peak",
           "type": "choice",
-          "prompt": "Select the first sentence.",
+          "prompt": "At which tested frequency is the amplitude greatest?",
           "marks": 1,
           "options": [
             {
@@ -5818,7 +5815,7 @@
         {
           "id": "resonance",
           "type": "choice",
-          "prompt": "Select the second sentence.",
+          "prompt": "What does this suggest about a natural frequency of the string?",
           "marks": 1,
           "options": [
             {
@@ -5849,7 +5846,7 @@
         {
           "id": "energy",
           "type": "choice",
-          "prompt": "Complete the explanation of the large vibration amplitude.",
+          "prompt": "Explain why the amplitude is large at this frequency.",
           "marks": 1,
           "options": [
             {
@@ -5878,11 +5875,12 @@
           "correctFeedback": "Near a natural frequency the repeated driving transfers energy effectively, producing a large response."
         }
       ],
-      "modelAnswer": "Only four driving frequencies were tested. Select the first sentence. The greatest measured amplitude occurs at 120 Hz. Select the second sentence. A natural frequency is close to 120 Hz. Complete the explanation of the large vibration amplitude. The forcing frequency is close to a natural frequency, so energy is transferred effectively to the string.",
+      "modelAnswer": "The greatest measured amplitude is at 120 Hz. This frequency is close to a natural frequency of the string, so resonance occurs. Energy is transferred efficiently from the generator to the string, producing a large amplitude.",
       "generalFeedback": [
-        "Identify the largest response, then consider the spacing of the tested frequencies."
+        "The greatest measured amplitude is at 120 Hz. The results suggest a natural frequency close to this value.",
+        "At resonance, energy is transferred efficiently to the string."
       ],
-      "hint": "Find the largest measured amplitude, then link forcing frequency, natural frequency and energy transfer.",
+      "hint": "Find the largest amplitude, then compare the frequency of the generator with a natural frequency of the string.",
       "sources": [
         "SPEC A1.5",
         "Guide pp.102–103 provides the resonance and apparatus context. Original data-based application; not a reproduced exam item."
@@ -5944,12 +5942,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State what is meant by fundamental frequency, then state the fundamental wavelength relationship for an ideal pipe open at both ends. L is the pipe length.",
+      "prompt": "State what is meant by the fundamental frequency.\nFor a pipe of length L open at both ends, which expression gives the wavelength at the fundamental frequency?",
       "parts": [
         {
           "id": "fundamental",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What is the fundamental frequency?",
           "marks": 1,
           "options": [
             {
@@ -5980,7 +5978,7 @@
         {
           "id": "open-pipe",
           "type": "choice",
-          "prompt": "For the fundamental of an ideal pipe open at both ends:",
+          "prompt": "Which expression gives the fundamental wavelength for a pipe open at both ends?",
           "marks": 1,
           "options": [
             {
@@ -6009,7 +6007,7 @@
           "correctFeedback": "The fundamental open-open pipe contains half a wavelength between its two displacement antinodes."
         }
       ],
-      "modelAnswer": "Select one answer. Its lowest resonant frequency. For the fundamental of an ideal pipe open at both ends: λ = 2L",
+      "modelAnswer": "The fundamental frequency is the lowest resonant frequency. A pipe open at both ends contains half a wavelength at its fundamental, so λ = 2L.",
       "generalFeedback": [
         "Fundamental means the first and lowest-frequency resonant mode."
       ],
@@ -6037,7 +6035,7 @@
     {
       "id": "W59",
       "contentVersion": 2,
-      "title": "Recall displacement conditions at pipe ends",
+      "title": "Recall node or antinodes at pipe ends",
       "topic": "Waves",
       "primaryLessonId": "WA09",
       "requiredLessonIds": [
@@ -6051,12 +6049,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "The diagrams show air-filled pipes. Pipe A is open to the surrounding air at both ends. Pipe B has a solid cap at its left end and is open to air at its right end. For a stationary sound wave, state what happens to the air-displacement amplitude at an open end and at a capped end. Consider displacement, not pressure.",
+      "prompt": "The diagrams show two pipes containing air.\nPipe A is open at both ends. Pipe B has one end closed by a cap.\nFor a standing sound wave, state whether an open end and a closed end are displacement nodes or antinodes.",
       "parts": [
         {
           "id": "open",
           "type": "choice",
-          "prompt": "At an open pipe end there is:",
+          "prompt": "Is an open end a displacement node or an antinode?",
           "marks": 1,
           "options": [
             {
@@ -6072,22 +6070,22 @@
             {
               "id": "open-1",
               "text": "A displacement antinode.",
-              "feedback": "Air particles at an ideal open end can have maximum displacement."
+              "feedback": "The air vibrates with its greatest amplitude at an open end."
             },
             {
               "id": "open-2",
               "text": "A displacement node.",
-              "feedback": "A displacement node occurs at an ideal closed end."
+              "feedback": "A closed end is a displacement node because the air cannot move at the cap."
             }
           ],
           "correctOptionId": "open-1",
           "shuffleOptions": true,
-          "correctFeedback": "Air particles at an ideal open end can have maximum displacement."
+          "correctFeedback": "The air vibrates with its greatest amplitude at an open end."
         },
         {
           "id": "closed",
           "type": "choice",
-          "prompt": "At a closed pipe end there is:",
+          "prompt": "Is a closed end a displacement node or an antinode?",
           "marks": 1,
           "options": [
             {
@@ -6098,7 +6096,7 @@
             {
               "id": "closed-2",
               "text": "A displacement antinode.",
-              "feedback": "An antinode is the displacement condition at an ideal open end."
+              "feedback": "An open end is a displacement antinode. A closed end is a displacement node."
             },
             {
               "id": "closed-3",
@@ -6116,17 +6114,17 @@
           "correctFeedback": "The rigid closed end prevents air displacement at the boundary."
         }
       ],
-      "modelAnswer": "At an open pipe end there is: A displacement antinode. At a closed pipe end there is: A displacement node.",
+      "modelAnswer": "An open end is a displacement antinode: the air has its greatest amplitude of vibration. A closed end is a displacement node: the air cannot move at the cap.",
       "generalFeedback": [
-        "These are displacement conditions, rather than pressure conditions."
+        "These are displacement nodes and antinodes. At a closed end the air cannot move; at an open end it vibrates with maximum amplitude."
       ],
-      "hint": "At a cap the air cannot oscillate into the solid wall. At an open end the air can move most freely.",
+      "hint": "Think about where the air can move freely and where the cap prevents it moving.",
       "sources": [
         "SPEC A1.5.1, A1.5.2",
         "GUIDE: 43526.jpg p.103 and 43527.jpg p.104"
       ],
       "asset": "assets/w110_pipe_ends.svg",
-      "accessibleDescription": "Pipe A is open at both ends. Pipe B has a solid cap at the left end and an open right end. No wave envelopes are supplied.",
+      "accessibleDescription": "Pipe A is open at both ends. Pipe B has a solid cap at the left end and is open at the right end.",
       "reviewStatus": "draft-for-teacher-review",
       "enabled": true,
       "provenance": "Original wording, data, distractors and diagrams. The supplied guide informs teaching scope; Pearson sources inform assessment demand. Teacher review remains required.",
@@ -6157,12 +6155,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "The two systems have the same fundamental frequency of 100 Hz. A string fixed at both ends can form the 1st, 2nd, 3rd and higher harmonics. A pipe closed at one end forms only odd harmonics: 1st, 3rd, 5th and so on. Determine the next allowed resonant frequency after the fundamental for each system.",
+      "prompt": "A string fixed at both ends and a pipe closed at one end each have a fundamental frequency of 100 Hz.\nThe string can produce the 1st, 2nd, 3rd and higher harmonics. The pipe can produce only the 1st, 3rd, 5th and higher odd harmonics.\nFind the next resonant frequency above 100 Hz for each.",
       "parts": [
         {
           "id": "string",
           "type": "choice",
-          "prompt": "For the string fixed at both ends:",
+          "prompt": "What is the next resonant frequency of the string?",
           "marks": 1,
           "options": [
             {
@@ -6193,7 +6191,7 @@
         {
           "id": "pipe",
           "type": "choice",
-          "prompt": "For the pipe closed at one end:",
+          "prompt": "What is the next resonant frequency of the pipe?",
           "marks": 1,
           "options": [
             {
@@ -6222,7 +6220,7 @@
           "correctFeedback": "The next allowed mode is the third harmonic: 3 × 100 = 300 Hz."
         }
       ],
-      "modelAnswer": "For the string fixed at both ends: 200 Hz For the pipe closed at one end: 300 Hz",
+      "modelAnswer": "The next resonance of the string is its second harmonic: 2 × 100 = 200 Hz. The pipe has only odd harmonics, so its next resonance is its third harmonic: 3 × 100 = 300 Hz.",
       "generalFeedback": [
         "A string fixed at both ends allows whole-number harmonics. A pipe closed at one end allows odd harmonics only.",
         "Use the supplied sequence to identify the next allowed mode."
@@ -6233,7 +6231,7 @@
         "Guide pp.103–104: harmonic sequences and closed-pipe application."
       ],
       "asset": "assets/w110_harmonics.svg",
-      "accessibleDescription": "The fundamental mode of a string fixed at both ends and the air-displacement envelope of a pipe closed at its left end are shown. Each has fundamental frequency 100 Hz.",
+      "accessibleDescription": "The diagram shows the fundamental standing waves on a string fixed at both ends and in a pipe closed at its left end. Both have a fundamental frequency of 100 Hz.",
       "reviewStatus": "draft-for-teacher-review",
       "enabled": true,
       "provenance": "Original wording, data, distractors and diagrams. The supplied guide informs teaching scope; Pearson sources inform assessment demand. Teacher review remains required.",
@@ -6266,7 +6264,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "Calculate the speed of transverse waves on a string of mass 6.0 g, length 1.50 m and tension 40 N. Use μ = mass/length and v = √(T/μ).",
+      "prompt": "A string has a mass of 6.0 g and a length of 1.50 m.\nThe tension in the string is 40 N.\nCalculate the speed of transverse waves along the string.\nUse μ = mass/length and v = √(T/μ).",
       "parts": [
         {
           "id": "mass",
@@ -6342,7 +6340,7 @@
           }
         }
       ],
-      "modelAnswer": "Convert the string mass to kilograms. 0.006 kg Calculate mass per unit length μ. 0.004 kg/m Calculate wave speed. 100 m/s",
+      "modelAnswer": "6.0 g = 0.0060 kg. μ = mass/length = 0.0060/1.50 = 0.0040 kg/m. v = √(T/μ) = √(40/0.0040) = 100 m/s.",
       "generalFeedback": [
         "Convert the mass first. μ is mass divided by length, not the total mass."
       ],
@@ -6385,7 +6383,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "Calculate the fundamental frequency and the next allowed resonant frequency of an ideal pipe closed at one end. Its length is 0.60 m and sound speed is 330 m/s. Ignore end corrections. Use v = fλ.",
+      "prompt": "A pipe is 0.60 m long and is closed at one end.\nThe speed of sound in the pipe is 330 m/s.\nCalculate the fundamental frequency and the next resonant frequency.\nUse λ = 4L for the fundamental, v = fλ, and the fact that this pipe produces only odd harmonics. Ignore end corrections.",
       "parts": [
         {
           "id": "wavelength",
@@ -6460,7 +6458,7 @@
           }
         }
       ],
-      "modelAnswer": "Calculate the fundamental wavelength. 2.4 m Calculate the fundamental frequency. 137.5 Hz Calculate the next allowed resonant frequency. 412.5 Hz",
+      "modelAnswer": "λ = 4L = 4 × 0.60 = 2.40 m. f = v/λ = 330/2.40 = 137.5 Hz. The next resonance is the third harmonic: 3 × 137.5 = 412.5 Hz.",
       "generalFeedback": [
         "A closed-open pipe has odd harmonics, so its next resonance is not twice the fundamental."
       ],
@@ -6501,12 +6499,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State the definition of refractive index n and whether it has a unit.",
+      "prompt": "Which expression defines refractive index n?\nDoes refractive index have a unit?",
       "parts": [
         {
           "id": "index",
           "type": "choice",
-          "prompt": "Select the correct definition.",
+          "prompt": "Which expression defines refractive index?",
           "marks": 1,
           "options": [
             {
@@ -6537,7 +6535,7 @@
         {
           "id": "unit",
           "type": "choice",
-          "prompt": "Select the unit.",
+          "prompt": "What is the unit of refractive index?",
           "marks": 1,
           "options": [
             {
@@ -6566,11 +6564,11 @@
           "correctFeedback": "The identical speed units cancel in c/v."
         }
       ],
-      "modelAnswer": "Select the correct definition. Speed of light in a vacuum divided by its speed in the material. Select the unit. No unit: n is a ratio of two speeds.",
+      "modelAnswer": "n = c/v: the speed of light in a vacuum divided by its speed in the material. Refractive index has no unit because it is a ratio of two speeds.",
       "generalFeedback": [
-        "A ratio of quantities with the same units is dimensionless."
+        "Refractive index is a ratio of two speeds, so the units cancel."
       ],
-      "hint": "A ratio of quantities with the same units is dimensionless.",
+      "hint": "Both speeds are measured in m/s. What happens to these units when you divide?",
       "sources": [
         "SPEC A2.1.1",
         "GUIDE: 43527.jpg pp.104-105"
@@ -6605,7 +6603,7 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "Calculate the refractive index of glass and the speed of light in it. Light enters from air at i = 30.0° and refracts at r = 19.5°, measured from the normal. Take the refractive index of air as 1.00. Use n = sin i/sin r and n = c/v, with c = 3.0 × 10⁸ m/s.",
+      "prompt": "Light travels from air into glass.\nThe angle of incidence is 30.0° and the angle of refraction is 19.5°. Both angles are measured from the normal.\nCalculate the refractive index of the glass and the speed of light in the glass.\nUse n = sin i/sin r and n = c/v. Take c = 3.0 × 10⁸ m/s and the refractive index of air as 1.00.",
       "parts": [
         {
           "id": "sin-r",
@@ -6681,7 +6679,7 @@
           }
         }
       ],
-      "modelAnswer": "Evaluate sin 19.5°. Use degree mode. 0.333807 Calculate refractive index n. 1.49787 Calculate the speed of light in the glass. 2.00284 × 10⁸ m/s",
+      "modelAnswer": "sin 19.5° = 0.3338. n = sin 30.0°/sin 19.5° = 0.5000/0.3338 ≈ 1.50. v = c/n ≈ (3.0 × 10⁸)/1.50 = 2.0 × 10⁸ m/s.",
       "generalFeedback": [
         "Calculate the sines of the angles; do not divide the angles themselves."
       ],
@@ -6721,12 +6719,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State what happens to the refracted ray when the incidence angle inside glass equals the critical angle at a glass-air boundary.",
+      "prompt": "Light travels inside glass towards a glass–air boundary.\nThe angle of incidence equals the critical angle.\nWhat happens to the refracted ray?",
       "parts": [
         {
           "id": "critical",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What happens to the refracted ray?",
           "marks": 1,
           "options": [
             {
@@ -6755,7 +6753,7 @@
           "correctFeedback": "At the critical angle the angle of refraction is 90°. Total internal reflection requires a larger incidence angle."
         }
       ],
-      "modelAnswer": "Select one answer. The refracted ray travels along the boundary, at 90° to the normal.",
+      "modelAnswer": "The refracted ray travels along the boundary. Its angle to the normal is 90°.",
       "generalFeedback": [
         "At the critical angle, r = 90°; TIR requires i greater than C."
       ],
@@ -6796,12 +6794,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Identify the ray that undergoes total internal reflection and explain why. The glass-air critical angle is 42°. Read the angle descriptions carefully.",
+      "prompt": "The critical angle at a glass–air boundary is 42°.\nWhich ray undergoes total internal reflection? Give a reason for your answer.\nUse the angle information given for each ray.",
       "parts": [
         {
           "id": "ray",
           "type": "choice",
-          "prompt": "Identify the ray.",
+          "prompt": "Which ray undergoes total internal reflection?",
           "marks": 1,
           "options": [
             {
@@ -6832,7 +6830,7 @@
         {
           "id": "reason",
           "type": "choice",
-          "prompt": "Select the reason for your choice.",
+          "prompt": "Why does this ray undergo total internal reflection?",
           "marks": 1,
           "options": [
             {
@@ -6864,7 +6862,7 @@
           ]
         }
       ],
-      "modelAnswer": "Identify the ray. A Select the reason for your choice. It travels from glass to air at 60° to the normal, exceeding the critical angle.",
+      "modelAnswer": "Ray A. It travels from glass towards air, and its angle of incidence is 60° to the normal. This is greater than the critical angle of 42°.",
       "generalFeedback": [
         "Convert an angle to the surface into an angle to the normal by subtracting from 90°."
       ],
@@ -6933,12 +6931,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State an application of optical fibres in medicine and in engineering.",
+      "prompt": "Identify a use of optical fibres in medicine and a use in engineering.",
       "parts": [
         {
           "id": "medicine",
           "type": "choice",
-          "prompt": "Select the medical application.",
+          "prompt": "Which is a medical use of optical fibres?",
           "marks": 1,
           "options": [
             {
@@ -6969,7 +6967,7 @@
         {
           "id": "engineering",
           "type": "choice",
-          "prompt": "Select the engineering application.",
+          "prompt": "Which is an engineering use of optical fibres?",
           "marks": 1,
           "options": [
             {
@@ -6998,7 +6996,7 @@
           "correctFeedback": "A fibre-optic viewing instrument guides light to and from inaccessible locations."
         }
       ],
-      "modelAnswer": "Select the medical application. Carrying illumination and an image through a fibre-optic endoscope. Select the engineering application. Viewing hidden machine parts using a flexible fibre-optic inspection instrument.",
+      "modelAnswer": "In medicine, optical fibres carry light and images in an endoscope. In engineering, a fibre-optic inspection instrument is used to view parts inside a machine.",
       "generalFeedback": [
         "An optical fibre guides light to places where a straight viewing path may be impractical."
       ],
@@ -7038,12 +7036,12 @@
       "commandWord": "Compare",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "Compare the behaviour of a ray incident at 60° to the normal inside the same glass core, first with air outside and then with cladding outside. Use the supplied critical angles. Complete the answer.",
+      "prompt": "Light travels inside a glass core and reaches its surface at an angle of incidence of 60°.\nCompare what happens when the material outside the core is air and when it is cladding.\nUse the critical angles in the table.",
       "parts": [
         {
           "id": "bare",
           "type": "choice",
-          "prompt": "Select the first sentence.",
+          "prompt": "Explain what happens at the core–air boundary.",
           "marks": 1,
           "options": [
             {
@@ -7074,7 +7072,7 @@
         {
           "id": "clad",
           "type": "choice",
-          "prompt": "Select the second sentence.",
+          "prompt": "Explain what happens at the core–cladding boundary.",
           "marks": 1,
           "options": [
             {
@@ -7105,7 +7103,7 @@
         {
           "id": "range",
           "type": "choice",
-          "prompt": "Select the final sentence.",
+          "prompt": "How does a higher critical angle affect the range of angles that gives total internal reflection?",
           "marks": 1,
           "options": [
             {
@@ -7134,11 +7132,11 @@
           "correctFeedback": "Raising the threshold leaves fewer angles between that threshold and 90°."
         }
       ],
-      "modelAnswer": "The ray is incident inside the glass core. At the core-air boundary, the ray undergoes total internal reflection because 60° is greater than 41.8°. At the core-cladding boundary, some light refracts into the cladding because 60° is less than 69°. A larger critical angle means a smaller range of incidence angles satisfies i > C.",
+      "modelAnswer": "At the core–air boundary, 60° is greater than the critical angle of 41.8°, so total internal reflection occurs. At the core–cladding boundary, 60° is less than the critical angle of 69°, so some light refracts into the cladding. The higher critical angle means that fewer angles of incidence produce total internal reflection.",
       "generalFeedback": [
-        "Use the critical angle for the actual pair of media at the boundary."
+        "Use the critical angle for each boundary separately. The angle of incidence must be greater than that critical angle for total internal reflection."
       ],
-      "hint": "Use the critical angle for the actual pair of media at the boundary.",
+      "hint": "Compare 60° with the critical angle for each boundary.",
       "sources": [
         "SPEC A2.1.4",
         "GUIDE: 43527.jpg p.105 and 43528.jpg p.106"
@@ -7192,7 +7190,7 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State what is meant by wave intensity and give its SI unit.",
+      "prompt": "What is wave intensity, and what is its SI unit?",
       "parts": [
         {
           "id": "intensity",
@@ -7257,7 +7255,7 @@
           "correctFeedback": "Power per area is watts divided by square metres."
         }
       ],
-      "modelAnswer": "Intensity is: Power transferred per unit area. The SI unit of intensity is: W/m²",
+      "modelAnswer": "Intensity is the power transferred per unit area. Its SI unit is W/m².",
       "generalFeedback": [
         "Intensity uses both power and area."
       ],
@@ -7296,12 +7294,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "State the intensity change predicted by the inverse-square law and an assumption of the ideal model.",
+      "prompt": "A wave obeys the inverse-square law.\nWhat happens to its intensity when the distance from the source doubles?\nWhich condition is assumed in this model?",
       "parts": [
         {
           "id": "double",
           "type": "choice",
-          "prompt": "If distance from an ideal point source doubles, intensity becomes:",
+          "prompt": "What happens to the intensity when distance doubles?",
           "marks": 1,
           "options": [
             {
@@ -7332,7 +7330,7 @@
         {
           "id": "assumption",
           "type": "choice",
-          "prompt": "Select an assumption of the ideal point-source model.",
+          "prompt": "Which condition is assumed?",
           "marks": 1,
           "options": [
             {
@@ -7361,7 +7359,7 @@
           "correctFeedback": "These conditions allow the same power to spread over growing spherical areas."
         }
       ],
-      "modelAnswer": "If distance from an ideal point source doubles, intensity becomes: One quarter of its original value. Select an assumption of the ideal point-source model. Power spreads uniformly in all directions without absorption or obstacles.",
+      "modelAnswer": "The intensity becomes one quarter of its original value. The model assumes that the source spreads energy equally in all directions, with no absorption or obstacles.",
       "generalFeedback": [
         "The intensity model assumes the source and transmission conditions stay the same."
       ],
@@ -7401,12 +7399,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 3,
-      "prompt": "Calculate the ideal intensity at 4.0 m from the transmitter using I = k/r². The table gives unobstructed measurements from a constant-power source. A wall is then placed in the path at 4.0 m and the measured intensity is 1.0 mW/m². Explain the difference.",
+      "prompt": "The table shows wave intensities at different distances from a transmitter when there are no obstacles.\nThe power of the transmitter is constant.\nCalculate the intensity expected at 4.0 m using I = k/r².\nA wall is then placed between the transmitter and receiver. The intensity at 4.0 m is now 1.0 mW/m².\nExplain why this reading is lower than the calculated value.",
       "parts": [
         {
           "id": "constant",
           "type": "numeric",
-          "prompt": "Calculate k from the unobstructed measurements.",
+          "prompt": "Calculate k using the table.",
           "marks": 1,
           "answer": {
             "value": 72,
@@ -7426,7 +7424,7 @@
         {
           "id": "prediction",
           "type": "numeric",
-          "prompt": "Calculate the predicted intensity at 4.0 m without the wall.",
+          "prompt": "Calculate the intensity at 4.0 m with no wall.",
           "marks": 1,
           "answer": {
             "value": 4.5,
@@ -7453,7 +7451,7 @@
         {
           "id": "loss",
           "type": "choice",
-          "prompt": "Select the explanation for the lower measured intensity with the wall.",
+          "prompt": "Why is the intensity lower when the wall is present?",
           "marks": 1,
           "options": [
             {
@@ -7468,7 +7466,7 @@
             },
             {
               "id": "loss-1",
-              "text": "The wall absorbs or redirects some wave energy, adding loss to geometric spreading.",
+              "text": "The wall absorbs or redirects some of the wave energy.",
               "feedback": "The unobstructed prediction does not include absorption or reflection by the wall."
             },
             {
@@ -7482,7 +7480,7 @@
           "correctFeedback": "The unobstructed prediction does not include absorption or reflection by the wall."
         }
       ],
-      "modelAnswer": "Calculate k from the unobstructed measurements. 72 mW Calculate the predicted intensity at 4.0 m without the wall. 4.5 mW/m² Select the explanation for the lower measured intensity with the wall. The wall absorbs or redirects some wave energy, adding loss to geometric spreading.",
+      "modelAnswer": "k = Ir² = 72 mW. At 4.0 m, I = 72/4.0² = 4.5 mW/m². The measured intensity is lower because the wall absorbs or redirects some of the wave energy.",
       "generalFeedback": [
         "First predict the unobstructed signal, then consider the extra effect of the wall."
       ],
@@ -7544,12 +7542,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Determine what can be concluded about radiation of frequency 5.0 × 10¹⁹ Hz using the approximate ranges in the table. Then determine its wavelength in a vacuum using c = fλ, where c = 3.0 × 10⁸ m/s.",
+      "prompt": "Electromagnetic radiation has a frequency of 5.0 × 10¹⁹ Hz.\nUse the ranges in the table to identify the regions of the spectrum that include this frequency.\nCalculate the wavelength in a vacuum.\nUse c = fλ, where c = 3.0 × 10⁸ m/s.",
       "parts": [
         {
           "id": "region",
           "type": "choice",
-          "prompt": "Select the justified classification from these ranges alone.",
+          "prompt": "Which regions in the table include this frequency?",
           "marks": 1,
           "options": [
             {
@@ -7580,7 +7578,7 @@
         {
           "id": "wavelength",
           "type": "choice",
-          "prompt": "Determine the wavelength.",
+          "prompt": "What is the wavelength in a vacuum?",
           "marks": 1,
           "options": [
             {
@@ -7609,11 +7607,11 @@
           "correctFeedback": "λ = c/f = (3.0 × 10⁸)/(5.0 × 10¹⁹) = 6.0 × 10⁻¹² m."
         }
       ],
-      "modelAnswer": "Select the justified classification from these ranges alone. The frequency falls within both listed ranges. Determine the wavelength. 6.0 × 10⁻¹² m",
+      "modelAnswer": "The frequency is within both the X-ray and gamma-ray ranges in this table. These ranges overlap. λ = c/f = (3.0 × 10⁸)/(5.0 × 10¹⁹) = 6.0 × 10⁻¹² m.",
       "generalFeedback": [
-        "Use the given intervals rather than assuming the region boundaries are exact."
+        "Use the ranges in the table. X-ray and gamma-ray frequency ranges overlap."
       ],
-      "hint": "Use the given intervals rather than assuming the region boundaries are exact.",
+      "hint": "Check both frequency ranges, then rearrange c = fλ.",
       "sources": [
         "SPEC A3.1, A3.3, A1.4",
         "GUIDE: 43529.jpg p.108"
@@ -7668,12 +7666,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State why a noisy binary digital signal can be regenerated while its two levels remain distinguishable.",
+      "prompt": "Noise is added to a binary digital signal. The receiver can still distinguish the two signal levels.\nHow can the receiver restore the original signal?",
       "parts": [
         {
           "id": "regeneration",
           "type": "choice",
-          "prompt": "Select one explanation.",
+          "prompt": "How can the receiver remove this noise?",
           "marks": 1,
           "options": [
             {
@@ -7702,7 +7700,7 @@
           "correctFeedback": "A level can be classified as 0 or 1 while noise has not made the levels indistinguishable."
         }
       ],
-      "modelAnswer": "Select one explanation. The receiver recognises the two agreed levels and restores the corresponding clean levels.",
+      "modelAnswer": "The receiver identifies each signal level as a 0 or a 1 and restores the original levels. This is possible while the two levels can still be distinguished despite the noise.",
       "generalFeedback": [
         "Regeneration relies on recognising the intended level, not on a complete absence of noise."
       ],
@@ -7741,12 +7739,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 3,
-      "prompt": "State the roles of GPS signals, mobile-phone base stations and a communication satellite relay.",
+      "prompt": "Identify the function of each communication system.",
       "parts": [
         {
           "id": "gps",
           "type": "choice",
-          "prompt": "GPS satellite signals are used to:",
+          "prompt": "What are GPS satellite signals used for?",
           "marks": 1,
           "options": [
             {
@@ -7777,7 +7775,7 @@
         {
           "id": "mobile",
           "type": "choice",
-          "prompt": "In a mobile-phone network, a base station:",
+          "prompt": "What does a mobile-phone base station do?",
           "marks": 1,
           "options": [
             {
@@ -7808,7 +7806,7 @@
         {
           "id": "satellite",
           "type": "choice",
-          "prompt": "A communication satellite used as a relay:",
+          "prompt": "What does a communication satellite do as a relay?",
           "marks": 1,
           "options": [
             {
@@ -7837,9 +7835,9 @@
           "correctFeedback": "A satellite can relay electromagnetic signals between ground locations."
         }
       ],
-      "modelAnswer": "GPS satellite signals are used to: Determine the position of a receiver. In a mobile-phone network, a base station: Provides a radio link between nearby mobile devices and the wider network. A communication satellite used as a relay: Receives an uplink signal and retransmits information towards a ground receiver.",
+      "modelAnswer": "GPS signals allow a receiver to calculate its position. A mobile-phone base station connects nearby phones to the wider network using radio waves. A communication satellite receives a signal from Earth and retransmits the information towards a ground receiver.",
       "generalFeedback": [
-        "Identify the role of each system rather than memorising a particular commercial frequency band."
+        "GPS gives position. A base station connects nearby phones to a network. A satellite relay receives and retransmits signals."
       ],
       "hint": "Identify the role of each system rather than memorising a particular commercial frequency band.",
       "sources": [
@@ -7877,12 +7875,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 3,
-      "prompt": "State the communication method most closely associated with each description.",
+      "prompt": "Identify the communication method used in each example.",
       "parts": [
         {
           "id": "bluetooth",
           "type": "choice",
-          "prompt": "A low-power wireless link between nearby devices, such as a phone and headphones:",
+          "prompt": "A phone connects to nearby wireless headphones. Which method is used?",
           "marks": 1,
           "options": [
             {
@@ -7913,7 +7911,7 @@
         {
           "id": "infrared",
           "type": "choice",
-          "prompt": "A typical television remote-control link that needs a clear path:",
+          "prompt": "A television receives a signal from a remote control along a clear path. Which method is used?",
           "marks": 1,
           "options": [
             {
@@ -7944,7 +7942,7 @@
         {
           "id": "wifi",
           "type": "choice",
-          "prompt": "A local wireless network connecting devices through an access point:",
+          "prompt": "Devices connect to a local wireless network through an access point. Which method is used?",
           "marks": 1,
           "options": [
             {
@@ -7973,7 +7971,7 @@
           "correctFeedback": "Wi-Fi commonly connects devices to a local network through an access point."
         }
       ],
-      "modelAnswer": "A low-power wireless link between nearby devices, such as a phone and headphones: Bluetooth. A typical television remote-control link that needs a clear path: Infrared. A local wireless network connecting devices through an access point: Wi-Fi.",
+      "modelAnswer": "Bluetooth connects a phone to nearby wireless headphones. Infrared is used by a typical television remote control. Wi-Fi connects devices to a local wireless network through an access point.",
       "generalFeedback": [
         "Match each description to the usual purpose of that communication system."
       ],
@@ -8013,12 +8011,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 1,
-      "prompt": "Calculate the speed of a wave with frequency 12 Hz and wavelength 0.25 m. Use v = fλ.",
+      "prompt": "A wave has a frequency of 12 Hz and a wavelength of 0.25 m.\nCalculate its speed.\nUse v = fλ.",
       "parts": [
         {
           "id": "value",
           "type": "numeric",
-          "prompt": "Enter your answer.",
+          "prompt": "Calculate the wave speed.",
           "marks": 1,
           "answer": {
             "value": 3,
@@ -8035,11 +8033,11 @@
           "incorrectFeedback": "v = 12 × 0.25 = 3.0 m/s."
         }
       ],
-      "modelAnswer": "Enter your answer. 3 m/s",
+      "modelAnswer": "v = fλ = 12 × 0.25 = 3.0 m/s.",
       "generalFeedback": [
-        "Use the units to check whether you need multiplication, division or a reciprocal."
+        "Multiply frequency by wavelength."
       ],
-      "hint": "Use the units to check whether you need multiplication, division or a reciprocal.",
+      "hint": "Multiply frequency by wavelength.",
       "sources": [
         "SPEC A1.4",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -8074,12 +8072,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 1,
-      "prompt": "Calculate the frequency of a sound wave with speed 340 m/s and wavelength 0.85 m. Use v = fλ.",
+      "prompt": "A sound wave travels at 340 m/s and has a wavelength of 0.85 m.\nCalculate its frequency.\nUse v = fλ.",
       "parts": [
         {
           "id": "value",
           "type": "numeric",
-          "prompt": "Enter your answer.",
+          "prompt": "Calculate the frequency.",
           "marks": 1,
           "answer": {
             "value": 400,
@@ -8096,11 +8094,11 @@
           "incorrectFeedback": "f = v/λ = 340/0.85 = 400 Hz."
         }
       ],
-      "modelAnswer": "Enter your answer. 400 Hz",
+      "modelAnswer": "f = v/λ = 340/0.85 = 400 Hz.",
       "generalFeedback": [
-        "Use the units to check whether you need multiplication, division or a reciprocal."
+        "Rearrange v = fλ to give f = v/λ."
       ],
-      "hint": "Use the units to check whether you need multiplication, division or a reciprocal.",
+      "hint": "Rearrange v = fλ to give f = v/λ.",
       "sources": [
         "SPEC A1.4",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -8135,12 +8133,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 1,
-      "prompt": "Calculate the wavelength of a wave with speed 150 m/s and frequency 75 Hz. Use v = fλ.",
+      "prompt": "A wave travels at 150 m/s and has a frequency of 75 Hz.\nCalculate its wavelength.\nUse v = fλ.",
       "parts": [
         {
           "id": "value",
           "type": "numeric",
-          "prompt": "Enter your answer.",
+          "prompt": "Calculate the wavelength.",
           "marks": 1,
           "answer": {
             "value": 2,
@@ -8157,11 +8155,11 @@
           "incorrectFeedback": "λ = v/f = 150/75 = 2.0 m."
         }
       ],
-      "modelAnswer": "Enter your answer. 2 m",
+      "modelAnswer": "λ = v/f = 150/75 = 2.0 m.",
       "generalFeedback": [
-        "Use the units to check whether you need multiplication, division or a reciprocal."
+        "Rearrange v = fλ to give λ = v/f."
       ],
-      "hint": "Use the units to check whether you need multiplication, division or a reciprocal.",
+      "hint": "Rearrange v = fλ to give λ = v/f.",
       "sources": [
         "SPEC A1.4",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -8196,12 +8194,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 1,
-      "prompt": "Calculate the frequency of an oscillation with periodic time 0.040 s. Use f = 1/T.",
+      "prompt": "An oscillation has a periodic time of 0.040 s.\nCalculate its frequency.\nUse f = 1/T.",
       "parts": [
         {
           "id": "value",
           "type": "numeric",
-          "prompt": "Enter your answer.",
+          "prompt": "Calculate the frequency.",
           "marks": 1,
           "answer": {
             "value": 25,
@@ -8218,11 +8216,11 @@
           "incorrectFeedback": "f = 1/0.040 = 25 Hz."
         }
       ],
-      "modelAnswer": "Enter your answer. 25 Hz",
+      "modelAnswer": "f = 1/T = 1/0.040 = 25 Hz.",
       "generalFeedback": [
-        "Use the units to check whether you need multiplication, division or a reciprocal."
+        "Frequency is the reciprocal of periodic time."
       ],
-      "hint": "Use the units to check whether you need multiplication, division or a reciprocal.",
+      "hint": "Frequency is the reciprocal of periodic time.",
       "sources": [
         "SPEC A1.4",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -8258,12 +8256,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 1,
-      "prompt": "Calculate the periodic time of a wave with frequency 50 Hz. Use T = 1/f.",
+      "prompt": "A wave has a frequency of 50 Hz.\nCalculate its periodic time.\nUse T = 1/f.",
       "parts": [
         {
           "id": "value",
           "type": "numeric",
-          "prompt": "Enter your answer.",
+          "prompt": "Calculate the periodic time.",
           "marks": 1,
           "answer": {
             "value": 0.02,
@@ -8280,11 +8278,11 @@
           "incorrectFeedback": "T = 1/50 = 0.020 s."
         }
       ],
-      "modelAnswer": "Enter your answer. 0.02 s",
+      "modelAnswer": "T = 1/f = 1/50 = 0.020 s.",
       "generalFeedback": [
-        "Use the units to check whether you need multiplication, division or a reciprocal."
+        "Periodic time is the reciprocal of frequency."
       ],
-      "hint": "Use the units to check whether you need multiplication, division or a reciprocal.",
+      "hint": "Periodic time is the reciprocal of frequency.",
       "sources": [
         "SPEC A1.4",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -8320,12 +8318,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 1,
-      "prompt": "Calculate the frequency of a vibrating point that completes 84 oscillations in 12 s.",
+      "prompt": "A vibrating point completes 84 oscillations in 12 s.\nCalculate its frequency.",
       "parts": [
         {
           "id": "value",
           "type": "numeric",
-          "prompt": "Enter your answer.",
+          "prompt": "Calculate the frequency.",
           "marks": 1,
           "answer": {
             "value": 7,
@@ -8342,11 +8340,11 @@
           "incorrectFeedback": "Frequency = oscillations/time = 84/12 = 7 Hz."
         }
       ],
-      "modelAnswer": "Enter your answer. 7 Hz",
+      "modelAnswer": "f = number of oscillations/time = 84/12 = 7.0 Hz.",
       "generalFeedback": [
-        "Use the units to check whether you need multiplication, division or a reciprocal."
+        "Divide the number of oscillations by the time."
       ],
-      "hint": "Use the units to check whether you need multiplication, division or a reciprocal.",
+      "hint": "Divide the number of oscillations by the time.",
       "sources": [
         "SPEC A1.1.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -8382,12 +8380,12 @@
       "commandWord": "Calculate",
       "interaction": "scaffolded-calculation",
       "maxMarks": 1,
-      "prompt": "Calculate the periodic time of a vibrating point that completes 60 oscillations in 12 s.",
+      "prompt": "A vibrating point completes 60 oscillations in 12 s.\nCalculate its periodic time.",
       "parts": [
         {
           "id": "value",
           "type": "numeric",
-          "prompt": "Enter your answer.",
+          "prompt": "Calculate the periodic time.",
           "marks": 1,
           "answer": {
             "value": 0.2,
@@ -8404,11 +8402,11 @@
           "incorrectFeedback": "Time per oscillation = 12/60 = 0.20 s."
         }
       ],
-      "modelAnswer": "Enter your answer. 0.2 s",
+      "modelAnswer": "T = time/number of oscillations = 12/60 = 0.20 s.",
       "generalFeedback": [
-        "Use the units to check whether you need multiplication, division or a reciprocal."
+        "Divide the total time by the number of oscillations."
       ],
-      "hint": "Use the units to check whether you need multiplication, division or a reciprocal.",
+      "hint": "Divide the total time by the number of oscillations.",
       "sources": [
         "SPEC A1.1.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -8444,12 +8442,12 @@
       "commandWord": "Calculate",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the equation relating number of complete oscillations N, frequency f and elapsed time t.",
+      "prompt": "Which equation links the number of complete oscillations N, frequency f and time t?",
       "parts": [
         {
           "id": "equation",
           "type": "choice",
-          "prompt": "Select one equation.",
+          "prompt": "Which equation is correct?",
           "marks": 1,
           "options": [
             {
@@ -8478,11 +8476,11 @@
           "correctFeedback": "Frequency is oscillations per second, so multiply by elapsed time."
         }
       ],
-      "modelAnswer": "Select one equation. N = ft",
+      "modelAnswer": "N = ft.",
       "generalFeedback": [
-        "Use the units to check whether you need multiplication, division or a reciprocal."
+        "Frequency counts the oscillations in one second, so N = ft."
       ],
-      "hint": "Use the units to check whether you need multiplication, division or a reciprocal.",
+      "hint": "Frequency counts the oscillations in one second, so N = ft.",
       "sources": [
         "SPEC A1.1.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -8518,12 +8516,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Determine the smallest phase difference between X and Y, then select the graph evidence.",
+      "prompt": "The graph shows two waves, X and Y.\nFind the smallest phase difference between the waves. Give a reason for your answer.",
       "parts": [
         {
           "id": "phase",
           "type": "choice",
-          "prompt": "Select the smallest phase difference.",
+          "prompt": "What is the smallest phase difference?",
           "marks": 1,
           "options": [
             {
@@ -8554,7 +8552,7 @@
         {
           "id": "evidence",
           "type": "choice",
-          "prompt": "Select the supporting evidence.",
+          "prompt": "Which feature of the graph supports your answer?",
           "marks": 1,
           "options": [
             {
@@ -8586,7 +8584,7 @@
           ]
         }
       ],
-      "modelAnswer": "Select the smallest phase difference. 180° Select the supporting evidence. A crest of one trace occurs at the same time as a trough of the other.",
+      "modelAnswer": "The phase difference is 180°. A crest of one wave occurs at the same time as a trough of the other.",
       "generalFeedback": [
         "One full cycle is 360°. Compare matching crests."
       ],
@@ -8626,12 +8624,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Determine the smallest phase difference between X and Y, then select the graph evidence.",
+      "prompt": "The graph shows two waves, X and Y.\nFind the smallest phase difference between the waves. Give a reason for your answer.",
       "parts": [
         {
           "id": "phase",
           "type": "choice",
-          "prompt": "Select the smallest phase difference.",
+          "prompt": "What is the smallest phase difference?",
           "marks": 1,
           "options": [
             {
@@ -8662,7 +8660,7 @@
         {
           "id": "evidence",
           "type": "choice",
-          "prompt": "Select the supporting evidence.",
+          "prompt": "Which feature of the graph supports your answer?",
           "marks": 1,
           "options": [
             {
@@ -8694,7 +8692,7 @@
           ]
         }
       ],
-      "modelAnswer": "Select the smallest phase difference. 0° Select the supporting evidence. Corresponding crests occur at the same times.",
+      "modelAnswer": "The smallest phase difference is 0°. Corresponding crests occur at the same times.",
       "generalFeedback": [
         "One full cycle is 360°. Compare matching crests."
       ],
@@ -8734,12 +8732,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "Determine the smallest phase difference between X and Y, then select the graph evidence.",
+      "prompt": "The graph shows two waves, X and Y.\nFind the smallest phase difference between the waves. Give a reason for your answer.",
       "parts": [
         {
           "id": "phase",
           "type": "choice",
-          "prompt": "Select the smallest phase difference.",
+          "prompt": "What is the smallest phase difference?",
           "marks": 1,
           "options": [
             {
@@ -8770,7 +8768,7 @@
         {
           "id": "evidence",
           "type": "choice",
-          "prompt": "Select the supporting evidence.",
+          "prompt": "Which feature of the graph supports your answer?",
           "marks": 1,
           "options": [
             {
@@ -8802,7 +8800,7 @@
           ]
         }
       ],
-      "modelAnswer": "Select the smallest phase difference. 90° Select the supporting evidence. Corresponding crests are separated by one quarter of a period.",
+      "modelAnswer": "The phase difference is 90°. Corresponding crests are separated by one quarter of a period.",
       "generalFeedback": [
         "One full cycle is 360°. Compare matching crests."
       ],
@@ -8839,20 +8837,20 @@
       "assessmentObjectives": [
         "AO2"
       ],
-      "commandWord": "Determine",
+      "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "Two waves of the same frequency overlap at one position. They arrive in phase, with amplitudes 3 mm and 2 mm. Explain the resultant oscillation. Complete the answer.",
+      "prompt": "Two waves have the same frequency. Their amplitudes are 3 mm and 2 mm.\nThe waves meet in phase.\nExplain how the waves combine and calculate the amplitude of the resultant wave.",
       "parts": [
         {
           "id": "phase",
           "type": "choice",
-          "prompt": "Complete the phase explanation.",
+          "prompt": "Explain the directions of the displacements when the waves overlap.",
           "marks": 1,
           "options": [
             {
               "id": "phase-1",
-              "text": "Their displacements act in the same direction at corresponding instants.",
+              "text": "Their displacements act in the same direction at the same time.",
               "feedback": "The phase relationship determines whether instantaneous displacements reinforce or oppose."
             },
             {
@@ -8876,40 +8874,9 @@
           "correctFeedback": "The phase relationship determines whether instantaneous displacements reinforce or oppose."
         },
         {
-          "id": "amplitude",
-          "type": "choice",
-          "prompt": "Complete the amplitude explanation.",
-          "marks": 1,
-          "options": [
-            {
-              "id": "amplitude-4",
-              "text": "The resultant amplitude is 10 mm.",
-              "feedback": "Distinguish amplitude from peak-to-peak displacement."
-            },
-            {
-              "id": "amplitude-1",
-              "text": "The resultant amplitude is 5 mm.",
-              "feedback": "For these waves, 3 + 2 = 5 mm."
-            },
-            {
-              "id": "amplitude-2",
-              "text": "The resultant amplitude is 1 mm.",
-              "feedback": "Use the given phase relationship when combining amplitudes."
-            },
-            {
-              "id": "amplitude-3",
-              "text": "The resultant amplitude is 3 mm.",
-              "feedback": "Use both original amplitudes rather than retaining or doubling only one of them."
-            }
-          ],
-          "correctOptionId": "amplitude-1",
-          "shuffleOptions": true,
-          "correctFeedback": "For these waves, 3 + 2 = 5 mm."
-        },
-        {
           "id": "reason",
           "type": "choice",
-          "prompt": "Complete the final explanation.",
+          "prompt": "Identify the type of interference.",
           "marks": 1,
           "options": [
             {
@@ -8936,9 +8903,40 @@
           "correctOptionId": "reason-1",
           "shuffleOptions": true,
           "correctFeedback": "Both the phase relationship and amplitudes explain the resultant."
+        },
+        {
+          "id": "amplitude",
+          "type": "choice",
+          "prompt": "Calculate the amplitude of the resultant wave.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "amplitude-4",
+              "text": "The resultant amplitude is 10 mm.",
+              "feedback": "Distinguish amplitude from peak-to-peak displacement."
+            },
+            {
+              "id": "amplitude-1",
+              "text": "The resultant amplitude is 5 mm.",
+              "feedback": "For these waves, 3 + 2 = 5 mm."
+            },
+            {
+              "id": "amplitude-2",
+              "text": "The resultant amplitude is 1 mm.",
+              "feedback": "Use the given phase relationship when combining amplitudes."
+            },
+            {
+              "id": "amplitude-3",
+              "text": "The resultant amplitude is 3 mm.",
+              "feedback": "Use both original amplitudes rather than retaining or doubling only one of them."
+            }
+          ],
+          "correctOptionId": "amplitude-1",
+          "shuffleOptions": true,
+          "correctFeedback": "For these waves, 3 + 2 = 5 mm."
         }
       ],
-      "modelAnswer": "When these waves overlap, Complete the phase explanation. Their displacements act in the same direction at corresponding instants. Complete the amplitude explanation. The resultant amplitude is 5 mm. Complete the final explanation. Constructive superposition adds the in-phase displacements.",
+      "modelAnswer": "The waves are in phase, so their displacements act in the same direction and add. This is constructive interference. Resultant amplitude = 3 + 2 = 5 mm.",
       "generalFeedback": [
         "Decide whether to add amplitudes or subtract them before describing the resultant."
       ],
@@ -8960,7 +8958,7 @@
         "A1.3"
       ],
       "reviewNotes": "Practice marks apply to the displayed question, not an official exam tariff.",
-      "answerOpening": "When these waves overlap,",
+      "answerOpening": "The waves overlap.",
       "openingEarnsMarks": false,
       "familyId": "interference-completion"
     },
@@ -8978,15 +8976,15 @@
       "assessmentObjectives": [
         "AO2"
       ],
-      "commandWord": "Determine",
+      "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "Two waves of the same frequency overlap at one position. They arrive in antiphase, with amplitudes 4 mm and 4 mm. Explain the resultant oscillation. Complete the answer.",
+      "prompt": "Two waves have the same frequency. Each has an amplitude of 4 mm.\nThe waves meet in antiphase.\nExplain why the waves completely cancel each other and state the amplitude of the resultant wave.",
       "parts": [
         {
           "id": "phase",
           "type": "choice",
-          "prompt": "Complete the phase explanation.",
+          "prompt": "Explain the directions of the displacements when the waves overlap.",
           "marks": 1,
           "options": [
             {
@@ -9006,7 +9004,7 @@
             },
             {
               "id": "phase-1",
-              "text": "Their displacements act in opposite directions at corresponding instants.",
+              "text": "Their displacements act in opposite directions at the same time.",
               "feedback": "The phase relationship determines whether instantaneous displacements reinforce or oppose."
             }
           ],
@@ -9015,40 +9013,9 @@
           "correctFeedback": "The phase relationship determines whether instantaneous displacements reinforce or oppose."
         },
         {
-          "id": "amplitude",
-          "type": "choice",
-          "prompt": "Complete the amplitude explanation.",
-          "marks": 1,
-          "options": [
-            {
-              "id": "amplitude-3",
-              "text": "The resultant amplitude is 4 mm.",
-              "feedback": "Use both original amplitudes rather than retaining or doubling only one of them."
-            },
-            {
-              "id": "amplitude-4",
-              "text": "The resultant amplitude is 16 mm.",
-              "feedback": "Distinguish amplitude from peak-to-peak displacement."
-            },
-            {
-              "id": "amplitude-1",
-              "text": "The resultant amplitude is 0 mm.",
-              "feedback": "For these waves, 4 − 4 = 0 mm."
-            },
-            {
-              "id": "amplitude-2",
-              "text": "The resultant amplitude is 8 mm.",
-              "feedback": "Use the given phase relationship when combining amplitudes."
-            }
-          ],
-          "correctOptionId": "amplitude-1",
-          "shuffleOptions": true,
-          "correctFeedback": "For these waves, 4 − 4 = 0 mm."
-        },
-        {
           "id": "reason",
           "type": "choice",
-          "prompt": "Complete the final explanation.",
+          "prompt": "Explain why the waves cancel completely.",
           "marks": 1,
           "options": [
             {
@@ -9075,9 +9042,40 @@
           "correctOptionId": "reason-1",
           "shuffleOptions": true,
           "correctFeedback": "Both the phase relationship and amplitudes explain the resultant."
+        },
+        {
+          "id": "amplitude",
+          "type": "choice",
+          "prompt": "State the amplitude of the resultant wave.",
+          "marks": 1,
+          "options": [
+            {
+              "id": "amplitude-3",
+              "text": "The resultant amplitude is 4 mm.",
+              "feedback": "Use both original amplitudes rather than retaining or doubling only one of them."
+            },
+            {
+              "id": "amplitude-4",
+              "text": "The resultant amplitude is 16 mm.",
+              "feedback": "Distinguish amplitude from peak-to-peak displacement."
+            },
+            {
+              "id": "amplitude-1",
+              "text": "The resultant amplitude is 0 mm.",
+              "feedback": "For these waves, 4 − 4 = 0 mm."
+            },
+            {
+              "id": "amplitude-2",
+              "text": "The resultant amplitude is 8 mm.",
+              "feedback": "Use the given phase relationship when combining amplitudes."
+            }
+          ],
+          "correctOptionId": "amplitude-1",
+          "shuffleOptions": true,
+          "correctFeedback": "For these waves, 4 − 4 = 0 mm."
         }
       ],
-      "modelAnswer": "When these waves overlap, Complete the phase explanation. Their displacements act in opposite directions at corresponding instants. Complete the amplitude explanation. The resultant amplitude is 0 mm. Complete the final explanation. Complete cancellation occurs because the waves are in antiphase and have equal amplitudes.",
+      "modelAnswer": "The waves are in antiphase, so their displacements are in opposite directions. Their amplitudes are equal, so the displacements cancel completely. Resultant amplitude = 4 − 4 = 0 mm.",
       "generalFeedback": [
         "Decide whether to add amplitudes or subtract them before describing the resultant."
       ],
@@ -9099,7 +9097,7 @@
         "A1.3"
       ],
       "reviewNotes": "Practice marks apply to the displayed question, not an official exam tariff.",
-      "answerOpening": "When these waves overlap,",
+      "answerOpening": "The waves overlap.",
       "openingEarnsMarks": false,
       "familyId": "interference-completion"
     },
@@ -9120,12 +9118,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "The diagrams show waves of the same wavelength approaching three gaps. Identify the gap producing the greatest spreading and explain why.",
+      "prompt": "The diagrams show waves of the same wavelength passing through three gaps.\nWhich gap produces the greatest diffraction? Give a reason for your answer.",
       "parts": [
         {
           "id": "gap",
           "type": "choice",
-          "prompt": "Identify the diagram.",
+          "prompt": "Which gap produces the greatest diffraction?",
           "marks": 1,
           "options": [
             {
@@ -9156,7 +9154,7 @@
         {
           "id": "reason",
           "type": "choice",
-          "prompt": "Select the explanation.",
+          "prompt": "Why does this gap produce the greatest diffraction?",
           "marks": 1,
           "options": [
             {
@@ -9176,19 +9174,19 @@
             },
             {
               "id": "reason-1",
-              "text": "The gap width is comparable to the wavelength.",
-              "feedback": "Diffraction is substantial when gap size is comparable to wavelength."
+              "text": "The gap width is about the same as the wavelength.",
+              "feedback": "There is a large amount of diffraction when the gap width is about the same as the wavelength."
             }
           ],
           "correctOptionId": "reason-1",
           "shuffleOptions": true,
-          "correctFeedback": "Diffraction is substantial when gap size is comparable to wavelength.",
+          "correctFeedback": "There is a large amount of diffraction when the gap width is about the same as the wavelength.",
           "requiresCorrectParts": [
             "gap"
           ]
         }
       ],
-      "modelAnswer": "Identify the diagram. B Select the explanation. The gap width is comparable to the wavelength.",
+      "modelAnswer": "Gap B. Its width is about the same as the wavelength, so the waves spread out most after passing through it.",
       "generalFeedback": [
         "Compare each gap with the spacing between incoming wavefronts."
       ],
@@ -9214,7 +9212,7 @@
     {
       "id": "W90",
       "contentVersion": 1,
-      "title": "Read another stationary-wave string pattern",
+      "title": "Read another standing-wave string pattern",
       "topic": "Waves",
       "primaryLessonId": "WA08",
       "requiredLessonIds": [
@@ -9228,12 +9226,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "The diagrams show opposite extreme positions of a stationary wave on a string of length 0.8 m, fixed at both ends. Determine the numbers of nodes and antinodes and the wavelength. Count both fixed ends as nodes.",
+      "prompt": "The diagram shows a standing wave on a string 0.80 m long, fixed at both ends.\nFind the number of nodes, the number of antinodes and the wavelength.\nInclude both fixed ends when counting nodes.",
       "parts": [
         {
           "id": "counts",
           "type": "choice",
-          "prompt": "Select the node and antinode counts.",
+          "prompt": "How many nodes and antinodes are there?",
           "marks": 1,
           "options": [
             {
@@ -9264,7 +9262,7 @@
         {
           "id": "wavelength",
           "type": "choice",
-          "prompt": "Select the wavelength.",
+          "prompt": "What is the wavelength?",
           "marks": 1,
           "options": [
             {
@@ -9293,7 +9291,7 @@
           "correctFeedback": "Each loop spans half a wavelength; double the distance between adjacent nodes."
         }
       ],
-      "modelAnswer": "Select the node and antinode counts. 3 nodes and 2 antinodes. Select the wavelength. 0.8 m",
+      "modelAnswer": "There are 3 nodes and 2 antinodes. The string contains two half-wavelengths, so λ = 0.80 m.",
       "generalFeedback": [
         "Count the loops. Two adjacent loops make one wavelength."
       ],
@@ -9320,7 +9318,7 @@
     {
       "id": "W91",
       "contentVersion": 1,
-      "title": "Read another stationary-wave string pattern",
+      "title": "Read another standing-wave string pattern",
       "topic": "Waves",
       "primaryLessonId": "WA08",
       "requiredLessonIds": [
@@ -9334,12 +9332,12 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "The diagrams show opposite extreme positions of a stationary wave on a string of length 1.2 m, fixed at both ends. Determine the numbers of nodes and antinodes and the wavelength. Count both fixed ends as nodes.",
+      "prompt": "The diagram shows a standing wave on a string 1.20 m long, fixed at both ends.\nFind the number of nodes, the number of antinodes and the wavelength.\nInclude both fixed ends when counting nodes.",
       "parts": [
         {
           "id": "counts",
           "type": "choice",
-          "prompt": "Select the node and antinode counts.",
+          "prompt": "How many nodes and antinodes are there?",
           "marks": 1,
           "options": [
             {
@@ -9370,7 +9368,7 @@
         {
           "id": "wavelength",
           "type": "choice",
-          "prompt": "Select the wavelength.",
+          "prompt": "What is the wavelength?",
           "marks": 1,
           "options": [
             {
@@ -9399,7 +9397,7 @@
           "correctFeedback": "Each loop spans half a wavelength; double the distance between adjacent nodes."
         }
       ],
-      "modelAnswer": "Select the node and antinode counts. 5 nodes and 4 antinodes. Select the wavelength. 0.6 m",
+      "modelAnswer": "There are 5 nodes and 4 antinodes. The string contains four half-wavelengths, so λ = (2 × 1.20)/4 = 0.60 m.",
       "generalFeedback": [
         "Count the loops. Two adjacent loops make one wavelength."
       ],
@@ -9426,7 +9424,7 @@
     {
       "id": "W92",
       "contentVersion": 1,
-      "title": "Read another stationary-wave string pattern",
+      "title": "Read another standing-wave string pattern",
       "topic": "Waves",
       "primaryLessonId": "WA08",
       "requiredLessonIds": [
@@ -9440,17 +9438,17 @@
       "commandWord": "Determine",
       "interaction": "selected-answer",
       "maxMarks": 2,
-      "prompt": "The diagrams show opposite extreme positions of a stationary wave on a string of length 0.35 m, fixed at both ends. Determine the numbers of nodes and antinodes and the wavelength. Count both fixed ends as nodes.",
+      "prompt": "The diagram shows a standing wave on a string 0.35 m long, fixed at both ends.\nFind the number of nodes, the number of antinodes and the wavelength.\nInclude both fixed ends when counting nodes.",
       "parts": [
         {
           "id": "counts",
           "type": "choice",
-          "prompt": "Select the node and antinode counts.",
+          "prompt": "How many nodes and antinodes are there?",
           "marks": 1,
           "options": [
             {
               "id": "counts-3",
-              "text": "3 nodes and 1 antinodes.",
+              "text": "3 nodes and 1 antinode.",
               "feedback": "There is one more node than the number of loops on this fixed string."
             },
             {
@@ -9460,12 +9458,12 @@
             },
             {
               "id": "counts-1",
-              "text": "2 nodes and 1 antinodes.",
+              "text": "2 nodes and 1 antinode.",
               "feedback": "Each loop contains one antinode; include both end nodes."
             },
             {
               "id": "counts-2",
-              "text": "1 nodes and 2 antinodes.",
+              "text": "1 node and 2 antinodes.",
               "feedback": "The fixed ends are nodes and must be included."
             }
           ],
@@ -9476,7 +9474,7 @@
         {
           "id": "wavelength",
           "type": "choice",
-          "prompt": "Select the wavelength.",
+          "prompt": "What is the wavelength?",
           "marks": 1,
           "options": [
             {
@@ -9505,7 +9503,7 @@
           "correctFeedback": "Each loop spans half a wavelength; double the distance between adjacent nodes."
         }
       ],
-      "modelAnswer": "Select the node and antinode counts. 2 nodes and 1 antinodes. Select the wavelength. 0.7 m",
+      "modelAnswer": "There are 2 nodes and 1 antinode. The string contains half a wavelength, so λ = 2 × 0.35 = 0.70 m.",
       "generalFeedback": [
         "Count the loops. Two adjacent loops make one wavelength."
       ],
@@ -9515,7 +9513,7 @@
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
       ],
       "asset": "assets/w110_string1.svg",
-      "accessibleDescription": "A string of length 0.35 m has 1 loops between fixed ends. Opposite extreme positions are shown.",
+      "accessibleDescription": "A string of length 0.35 m has 1 loop between fixed ends. Opposite extreme positions are shown.",
       "reviewStatus": "draft-for-teacher-review",
       "enabled": true,
       "provenance": "Original question, data, diagrams and distractors; scope informed by supplied guide and assessment examples.",
@@ -9532,7 +9530,7 @@
     {
       "id": "W93",
       "contentVersion": 1,
-      "title": "Explain how a stationary wave forms on a string",
+      "title": "Explain how a standing wave forms on a string",
       "topic": "Waves",
       "primaryLessonId": "WA08",
       "requiredLessonIds": [
@@ -9543,15 +9541,15 @@
       "assessmentObjectives": [
         "AO2"
       ],
-      "commandWord": "Determine",
+      "commandWord": "Explain",
       "interaction": "answer-completion",
       "maxMarks": 3,
-      "prompt": "A vibration generator sends waves along the stretched string towards its fixed end. Explain how a stationary wave can form. Complete the answer.",
+      "prompt": "A vibration generator sends waves along a stretched string towards a fixed end.\nExplain how a standing wave can form on the string.",
       "parts": [
         {
           "id": "reflection",
           "type": "choice",
-          "prompt": "Complete the first step.",
+          "prompt": "Describe what happens at the fixed end.",
           "marks": 1,
           "options": [
             {
@@ -9582,7 +9580,7 @@
         {
           "id": "overlap",
           "type": "choice",
-          "prompt": "Complete the next step.",
+          "prompt": "Describe how the incident and reflected waves meet.",
           "marks": 1,
           "options": [
             {
@@ -9613,7 +9611,7 @@
         {
           "id": "pattern",
           "type": "choice",
-          "prompt": "Complete the resulting pattern.",
+          "prompt": "Describe the standing-wave pattern that forms.",
           "marks": 1,
           "options": [
             {
@@ -9624,7 +9622,7 @@
             {
               "id": "pattern-2",
               "text": "Every point has the same maximum amplitude at all times.",
-              "feedback": "A stationary wave has varying amplitude along the string."
+              "feedback": "A standing wave has varying amplitude along the string."
             },
             {
               "id": "pattern-3",
@@ -9642,7 +9640,7 @@
           "correctFeedback": "At resonance the stable pattern has nodes and antinodes at fixed positions."
         }
       ],
-      "modelAnswer": "The generator supplies energy to the string. Complete the first step. The wave reflects at the fixed end and travels back along the string. Complete the next step. The incident and reflected waves of the same frequency superpose while travelling in opposite directions. Complete the resulting pattern. Fixed nodes and antinodes form along the string at a resonant frequency.",
+      "modelAnswer": "The wave reflects at the fixed end and travels back along the string. The incident and reflected waves have the same frequency and travel in opposite directions. At a resonant frequency they form a standing wave with fixed nodes and antinodes.",
       "generalFeedback": [
         "Follow the wave to the fixed end, then consider how the returning wave overlaps the incident wave."
       ],
@@ -9684,12 +9682,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the type of wave of all electromagnetic radiation.",
+      "prompt": "Which type of wave is electromagnetic radiation?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which type of wave is electromagnetic radiation?",
           "marks": 1,
           "options": [
             {
@@ -9699,7 +9697,7 @@
             },
             {
               "id": "recall-3",
-              "text": "Only a stationary wave.",
+              "text": "Only a standing wave.",
               "feedback": "Electromagnetic waves can travel; they are not restricted to stationary patterns."
             },
             {
@@ -9718,11 +9716,11 @@
           "correctFeedback": "Electromagnetic oscillations are perpendicular to energy transfer."
         }
       ],
-      "modelAnswer": "Select one answer. Transverse.",
+      "modelAnswer": "Electromagnetic waves are transverse waves.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Electromagnetic waves are transverse waves."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Compare the direction of oscillation with the direction of energy transfer.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -9758,12 +9756,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State why electromagnetic waves can carry signals between Earth and a satellite.",
+      "prompt": "Why can electromagnetic waves carry signals between Earth and a satellite?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Why can electromagnetic waves carry signals between Earth and a satellite?",
           "marks": 1,
           "options": [
             {
@@ -9792,11 +9790,11 @@
           "correctFeedback": "Electromagnetic waves can propagate through a vacuum."
         }
       ],
-      "modelAnswer": "Select one answer. They can travel through the vacuum of space.",
+      "modelAnswer": "Electromagnetic waves can travel through the vacuum of space.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Electromagnetic waves can travel through the vacuum of space."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Think about whether there are particles in the space between Earth and a satellite.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -9832,12 +9830,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the approximate speed of all electromagnetic waves in a vacuum.",
+      "prompt": "What is the approximate speed of electromagnetic waves in a vacuum?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What is the approximate speed of electromagnetic waves in a vacuum?",
           "marks": 1,
           "options": [
             {
@@ -9866,11 +9864,11 @@
           "correctFeedback": "The vacuum speed is approximately 300 million metres per second."
         }
       ],
-      "modelAnswer": "Select one answer. 3.0 × 10⁸ m/s",
+      "modelAnswer": "3.0 × 10⁸ m/s.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "3.0 × 10⁸ m/s."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Use the speed of light in a vacuum.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -9906,12 +9904,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Identify the region with the longest wavelengths in the broad electromagnetic spectrum.",
+      "prompt": "Which region of the electromagnetic spectrum has the longest wavelengths?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which region of the electromagnetic spectrum has the longest wavelengths?",
           "marks": 1,
           "options": [
             {
@@ -9940,11 +9938,11 @@
           "correctFeedback": "Radio waves occupy the long-wavelength end of the broad spectrum."
         }
       ],
-      "modelAnswer": "Select one answer. Radio waves.",
+      "modelAnswer": "Radio waves have the longest wavelengths.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Radio waves have the longest wavelengths."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Recall the spectrum from radio waves to gamma rays.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -9980,12 +9978,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Identify the region at the highest-frequency end of the electromagnetic spectrum.",
+      "prompt": "Which region of the electromagnetic spectrum has the highest frequencies?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which region of the electromagnetic spectrum has the highest frequencies?",
           "marks": 1,
           "options": [
             {
@@ -10014,11 +10012,11 @@
           "correctFeedback": "Gamma rays occupy the high-frequency end of the broad spectrum."
         }
       ],
-      "modelAnswer": "Select one answer. Gamma rays.",
+      "modelAnswer": "Gamma rays have the highest frequencies.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Gamma rays have the highest frequencies."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Recall the spectrum from radio waves to gamma rays.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10054,12 +10052,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State what happens to wavelength when electromagnetic frequency increases in a vacuum.",
+      "prompt": "What happens to the wavelength of electromagnetic radiation in a vacuum as its frequency increases?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What happens to the wavelength of electromagnetic radiation in a vacuum as its frequency increases?",
           "marks": 1,
           "options": [
             {
@@ -10088,11 +10086,11 @@
           "correctFeedback": "At constant speed, frequency and wavelength vary inversely."
         }
       ],
-      "modelAnswer": "Select one answer. Wavelength decreases.",
+      "modelAnswer": "The wavelength decreases. The speed in a vacuum stays constant, so wavelength decreases as frequency increases.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "The wavelength decreases. The speed in a vacuum stays constant, so wavelength decreases as frequency increases."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "The speed in a vacuum is constant. Use c = fλ.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10128,12 +10126,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Identify which visible colour has the greater frequency.",
+      "prompt": "Which statement compares the frequencies of red and blue light correctly?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which statement compares the frequencies of red and blue light correctly?",
           "marks": 1,
           "options": [
             {
@@ -10162,11 +10160,11 @@
           "correctFeedback": "Blue has a shorter vacuum wavelength and higher frequency than red."
         }
       ],
-      "modelAnswer": "Select one answer. Blue light has a greater frequency than red light.",
+      "modelAnswer": "Blue light has a higher frequency than red light.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Blue light has a higher frequency than red light."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Compare the red and blue ends of the visible spectrum.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10202,12 +10200,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Identify a common use of infrared waves in communication.",
+      "prompt": "Which example uses infrared waves to communicate?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which example uses infrared waves to communicate?",
           "marks": 1,
           "options": [
             {
@@ -10236,11 +10234,11 @@
           "correctFeedback": "A typical television remote uses infrared light to send coded commands."
         }
       ],
-      "modelAnswer": "Select one answer. A television remote sending commands to its receiver.",
+      "modelAnswer": "A television remote control uses infrared waves to send instructions to the television.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "A television remote control uses infrared waves to send instructions to the television."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Think about how a television remote control sends instructions.",
       "sources": [
         "SPEC A3.3.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10275,12 +10273,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Identify the type of electromagnetic wave commonly used for satellite communication.",
+      "prompt": "Which type of electromagnetic wave is commonly used for satellite communication?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which type of electromagnetic wave is commonly used for satellite communication?",
           "marks": 1,
           "options": [
             {
@@ -10309,11 +10307,11 @@
           "correctFeedback": "Microwaves are widely used for satellite radio links."
         }
       ],
-      "modelAnswer": "Select one answer. Microwaves.",
+      "modelAnswer": "Microwaves are commonly used for satellite communication.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Microwaves are commonly used for satellite communication."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Recall the waves used to transmit signals to satellites.",
       "sources": [
         "SPEC A3.3.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10348,12 +10346,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the main purpose of a GPS receiver.",
+      "prompt": "What is the main purpose of a GPS receiver?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What is the main purpose of a GPS receiver?",
           "marks": 1,
           "options": [
             {
@@ -10382,11 +10380,11 @@
           "correctFeedback": "GPS positioning uses signals received from satellites."
         }
       ],
-      "modelAnswer": "Select one answer. Determining its position using signals from satellites.",
+      "modelAnswer": "A GPS receiver uses signals from satellites to calculate its position.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "A GPS receiver uses signals from satellites to calculate its position."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "GPS stands for Global Positioning System.",
       "sources": [
         "SPEC A3.3.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10421,12 +10419,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the wave type used for the wireless link between a mobile phone and its base station.",
+      "prompt": "Which type of wave carries signals between a mobile phone and a base station?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which type of wave carries signals between a mobile phone and a base station?",
           "marks": 1,
           "options": [
             {
@@ -10455,11 +10453,11 @@
           "correctFeedback": "The wireless phone link uses radio-frequency electromagnetic radiation."
         }
       ],
-      "modelAnswer": "Select one answer. Radio-frequency electromagnetic waves.",
+      "modelAnswer": "Radio-frequency electromagnetic waves carry the signals.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Radio-frequency electromagnetic waves carry the signals."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "The signal travels wirelessly between the phone and the base station.",
       "sources": [
         "SPEC A3.3.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10494,12 +10492,12 @@
       "commandWord": "Identify",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "Identify the method commonly used for a low-power radio link between a phone and nearby wireless headphones.",
+      "prompt": "Which method uses a low-power radio link to connect a phone to nearby wireless headphones?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which method uses a low-power radio link to connect a phone to nearby wireless headphones?",
           "marks": 1,
           "options": [
             {
@@ -10528,11 +10526,11 @@
           "correctFeedback": "Bluetooth commonly links nearby devices using low-power radio signals."
         }
       ],
-      "modelAnswer": "Select one answer. Bluetooth.",
+      "modelAnswer": "Bluetooth.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Bluetooth."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Think about pairing a phone with headphones.",
       "sources": [
         "SPEC A3.3.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10567,12 +10565,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State the usual role of Wi-Fi.",
+      "prompt": "What is Wi-Fi used for?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What is Wi-Fi used for?",
           "marks": 1,
           "options": [
             {
@@ -10601,11 +10599,11 @@
           "correctFeedback": "Wi-Fi provides local wireless networking."
         }
       ],
-      "modelAnswer": "Select one answer. Connecting devices to a local wireless network through an access point.",
+      "modelAnswer": "Wi-Fi connects devices to a local wireless network through an access point.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "Wi-Fi connects devices to a local wireless network through an access point."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Think about connecting a device to a local wireless network.",
       "sources": [
         "SPEC A3.3.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10640,12 +10638,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State a common limitation of a typical infrared remote-control link.",
+      "prompt": "What can prevent a television from receiving an infrared signal from a remote control?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What can prevent a television from receiving an infrared signal from a remote control?",
           "marks": 1,
           "options": [
             {
@@ -10674,11 +10672,11 @@
           "correctFeedback": "A clear light path is normally needed for a reliable infrared remote link."
         }
       ],
-      "modelAnswer": "Select one answer. An opaque obstruction can block the path to the receiver.",
+      "modelAnswer": "An opaque object between the remote control and the television can block the infrared signal.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "An opaque object between the remote control and the television can block the infrared signal."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "Think about what happens when an object blocks the path of the signal.",
       "sources": [
         "SPEC A3.3.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10713,12 +10711,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State what a communication satellite acting as a relay does.",
+      "prompt": "What does a communication satellite do when it acts as a relay?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What does a communication satellite do when it acts as a relay?",
           "marks": 1,
           "options": [
             {
@@ -10747,11 +10745,11 @@
           "correctFeedback": "A relay receives and retransmits information by electromagnetic signals."
         }
       ],
-      "modelAnswer": "Select one answer. Receives an uplink signal and retransmits the information towards a ground receiver.",
+      "modelAnswer": "The satellite receives a signal sent from Earth and retransmits the information towards a ground receiver.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "The satellite receives a signal sent from Earth and retransmits the information towards a ground receiver."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "A relay receives a signal and sends it on.",
       "sources": [
         "SPEC A3.3.1",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10786,17 +10784,17 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State which statement about electromagnetic spectrum region boundaries is correct.",
+      "prompt": "Which statement about the frequency ranges of regions in the electromagnetic spectrum is correct?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "Which statement about the frequency ranges of regions in the electromagnetic spectrum is correct?",
           "marks": 1,
           "options": [
             {
               "id": "recall-2",
-              "text": "Every region has an exact boundary with no overlap in any convention.",
+              "text": "The frequency ranges of all regions have exact boundaries with no overlap.",
               "feedback": "The specification recognises overlapping frequency and wavelength ranges."
             },
             {
@@ -10820,11 +10818,11 @@
           "correctFeedback": "Region boundaries are approximate and some ranges overlap."
         }
       ],
-      "modelAnswer": "Select one answer. Some neighbouring region frequency ranges overlap.",
+      "modelAnswer": "The frequency ranges of some neighbouring regions overlap. The boundaries are approximate.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "The frequency ranges of some neighbouring regions overlap. The boundaries are approximate."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "The boundaries between regions of the spectrum are approximate.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."
@@ -10860,12 +10858,12 @@
       "commandWord": "State",
       "interaction": "selected-answer",
       "maxMarks": 1,
-      "prompt": "State how the energy of an individual photon changes as its frequency increases.",
+      "prompt": "What happens to the energy of a photon as its frequency increases?",
       "parts": [
         {
           "id": "recall",
           "type": "choice",
-          "prompt": "Select one answer.",
+          "prompt": "What happens to the energy of a photon as its frequency increases?",
           "marks": 1,
           "options": [
             {
@@ -10894,11 +10892,11 @@
           "correctFeedback": "Higher-frequency photons carry more energy each."
         }
       ],
-      "modelAnswer": "Select one answer. Photon energy increases.",
+      "modelAnswer": "The energy of the photon increases as its frequency increases.",
       "generalFeedback": [
-        "Recall the property or usual communication application of this region."
+        "The energy of the photon increases as its frequency increases."
       ],
-      "hint": "Recall the property or usual communication application of this region.",
+      "hint": "A higher frequency means more energy for each photon.",
       "sources": [
         "SPEC A3.1, A3.3",
         "GUIDE: teacher-supplied pp.97–109; original practice variant."

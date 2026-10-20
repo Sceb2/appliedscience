@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "id": "r-4ef47b0d0f64362951b1",
-  "label": "0.5.0",
-  "bankVersion": "0.3.0",
-  "questionsSha256": "96e2ec7297f73f13b208218ab0cbf38929722a01070592885ece4f19b23e8124",
+  "id": "r-64a551bc1cbb50fc02e4",
+  "label": "0.6.0",
+  "bankVersion": "0.4.0",
+  "questionsSha256": "b9448f8f89b278fc8957c7ecf20b06a0d561a82a66b2d9ef2ab811c27cc7285a",
   "mapSha256": "82121dda59b580f2cac61217b2fb03c43100a1f85dec441d1ade470b05dc5d0e"
 }
